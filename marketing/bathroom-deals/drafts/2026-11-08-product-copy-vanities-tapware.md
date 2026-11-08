@@ -857,7 +857,7 @@ Moving the tap to the wall leaves nothing on the basin or bath edge to clean aro
 | WaterMark | TBC (licence number not listed) |
 | Rough-in body / wall depth range | TBC |
 | Suggested mixer and spout heights | TBC |
-| Warranty | TBC (conflict, see questions). Feature list says 20-year cartridge replacement, 10-year body replacement, 7-year finish, 5-year labour |
+| Warranty | TBC (footer disagrees with features, see questions). Feature list says 20-year cartridge replacement, 10-year body replacement, 7-year finish, 5-year labour |
 | Price | $249 |
 
 **Pairs well with**
@@ -976,15 +976,42 @@ Note: every vanity in the category is discounted, and none has sold through the 
 
 ---
 
+# Black products whose live warranty text may be wrong
+
+Owner correction (8 Nov): black-finish Lucito products carry a different, shorter (5-year) warranty than the other finishes, because of the black coating process. I checked all 24 live Lucito black products on 8 Nov. The products below mention a **10-year** term somewhere in their live text. For any copy written about these products, the warranty is to read **"TBC: black finish carries a different warranty, confirm length"**. None of them is in this rewrite's scope, but two are suggested as pairings (1283, and 1076, which is listed for reference only).
+
+| ID | Product | What the live text says now |
+|---|---|---|
+| 714 | Lucito Twin Shower On Rail With 250mm ABS Shower Head Black | Features: "**10 Year Warranty On Finish**", 10-year shower head. Footer: "5 years on the black finish". This is the clearest error. |
+| 673 | Lucito Wall Mixer and Spout Black | Features: 10-year body, 20-year cartridge, 5-year finish. Footer: "10-year cartridge warranty and a **10-year finish warranty**" (generic tapware footer). |
+| 1244 | Lucito Twin Shower On Rail With 250mm Stainless Steel Shower Head Black | "10 year warranty" / "Product: 10 years", 5-year finish |
+| 1093 | Lucito Shower On Rail Black | "Replacement parts or product: 10 years", 5-year finish, 2-year labour (also repeated in the page FAQ) |
+| 738 | Lucito Gooseneck Sink Mixer Black | 10-year body, 20-year cartridge, 5-year finish |
+| 670 | Lucito Bath Filler Floor Mounted Black | 10-year body, 20-year cartridge, 5-year finish |
+| 1222 | Lucito 220mm Curved Bath Spout Black | 10-year manufacturing, 5-year finish |
+| 1307 | Lucito Soap Dish Black | Long description: 10-year manufacturing, 5-year finish. Short description: "5 year manufacturing and finish warranty" (contradicts itself) |
+| 1301 | Lucito Shower Shelf Black | Same pattern as 1307 |
+| 1295 | Lucito Robe Hook Black | Same pattern as 1307 |
+| 1289 | Lucito Hand Towel Rail Black | Same pattern as 1307 |
+| 1283 | Lucito 750 Single Towel Rail Black | Same pattern as 1307 (suggested as a pairing for 746) |
+| 1277 | Lucito 750 Double Towel Rail Black | Same pattern as 1307 |
+| 1271 | Lucito 600 Single Towel Rail Black | Same pattern as 1307 |
+| 1265 | Lucito 600 Double Towel Rail Black | Same pattern as 1307 |
+
+**Checked and not listed** (no 10-year figure in live text): 945 Toilet Roll Holder Black (5-year manufacturing and finish), 1076 Tower Curved Spout Basin Mixer Black, 731 Straight Spout Basin Mixer Black, 719 Curved Spout Basin Mixer Black (all 20-year cartridge, 5-year body, 5-year finish, 5-year labour).
+
+**Question for the owner:** most of these pages split the terms: 10 years on body or manufacturing, 5 years on finish, and 20 years on cartridge for the tapware. Is the 5-year term **only on the black finish**, with the body and cartridge terms the same as other finishes? Or is the **whole black product** limited to 5 years? The answer decides whether pages like 738 and 670 are actually correct, and whether 1076/731/719 (5-year body) or 738/670/673 (10-year body) are the ones that need fixing.
+
+---
+
 # Summary: open questions for the team
 
 **Compliance (decide first)**
 1. **Was/now evidence** for the 9 in-scope products above (and 6 Murcia pairings). Keep, or drop to current price only?
-2. **Warranty conflicts across Lucito:**
-   - Lucito accessories (e.g. 1291 Hand Towel Rail Brushed Brass) say "10 year manufacturing warranty". **945 Lucito Toilet Roll Holder Black** says "Five year manufacturing and finish warranty".
-   - Lucito tapware gives a **7-year finish** warranty (688, 667, 687, 702).
-   - **687** contradicts itself: 20-year cartridge in the feature list, 10-year in the footer.
-   - Which terms are correct for each product type? I've only stated terms where the product's own page agrees with itself.
+2. **Lucito warranty by finish.** Per the owner, black differs from the other finishes, so the earlier "945 vs others" conflict question has been dropped. Still open:
+   - **Black products with "10 year" in live text:** 15 products (see the [section above](#black-products-whose-live-warranty-text-may-be-wrong)). Confirm the black warranty length, and whether it covers the whole product or only the finish. 714 is the clearest error (it states a 10-year finish).
+   - **Brushed brass tapware finish term:** 688, 667, 687 and 702 say a **7-year finish** warranty (with 10-year body). Confirm this still stands against the "10-year manufacturing" description for non-black finishes. The draft keeps 7 years as per the product data.
+   - **687** footer boilerplate says a 10-year cartridge warranty; its feature list says 20-year. Which is right?
 3. **Murcia warranty:** 746 says 10-year cartridge, and the footer adds a 10-year finish. 739 says "10 years structural" in features and "10 years on the chrome finish" in the footer. What is actually covered?
 4. **Vanity warranty:** Tarnos, Nimis, Akala and the Tall Boy list "5 years" with no scope. **The Shaker vanities list none.** The vanity pages also carry the *tapware* warranty footer, which should come off.
 5. **Remove the generic "WELS registered and WaterMark certified where required" row** from the vanity spec tables, and on tapware replace it with the actual WaterMark licence numbers (none are in the data).
