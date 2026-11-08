@@ -22,6 +22,6 @@ Then click **Schedule** at the bottom. That's the week done.
 - Instagram can't click links in captions, so the text says "bathroomdeals.au/…" instead of "link below".
 
 ## Notes
-- Post 2 image: the Nimis photo shows **two drawers**, but the product page says "2 x soft-close doors". The post text doesn't mention doors or drawers. **Owner to confirm which is right** so the page can be fixed.
+- Post 2: owner confirmed the Nimis 900 has **two soft-close drawers** (8 Nov). The product page and caption are corrected.
 - Post 4 image is a styled bathroom photo from the media library. Check that you're happy it shows products from your range.
 - `posts.csv` is kept as a record of the week; Business Suite's bulk scheduler is a form, not a file upload.

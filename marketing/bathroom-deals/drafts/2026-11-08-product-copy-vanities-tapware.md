@@ -1,3 +1,5 @@
+> **Correction (8 Nov):** the owner confirmed the **Nimis 900 has 2 soft-close drawers**, not doors. Read any "doors" reference to the Nimis below as drawers.
+
 # Product copy rewrite: vanities and top tapware (DRAFT)
 
 **Prepared:** 8 Nov 2026 · **Author:** bd-product-copywriter · **Status:** draft for review. Nothing has been changed on the website.
@@ -16,7 +18,7 @@
 2. **Vanity pages carry the tapware warranty footer** ("Tapware in this range carries a 10-year cartridge warranty and a 10-year finish warranty…"). Vanities don't have cartridges. This is wrong on all 7 vanity pages.
 3. **Vanity spec tables say "WELS registered and WaterMark certified where the product category requires it."** That is not a product-specific certification and shouldn't be on a cabinet page.
 4. **Template opener** "sets the tone for the whole bathroom" / "clears the bench entirely" is identical across products, which makes the pages thin for SEO and Shopping.
-5. **Template line "here, the soft-close drawers"** appears on the Nimis 900 and Tarnos Tall Boy, which have soft-close **doors**, not drawers.
+5. **Template line "here, the soft-close drawers"** appears on the Tarnos Tall Boy, which has soft-close **doors**, not drawers. (The Nimis 900 does have drawers: owner confirmed 8 Nov.)
 6. **The warranty footer is boilerplate that sometimes disagrees with the product's own feature list.** For example, 687 says a 20-year cartridge warranty in its features and 10-year in its footer. Details are given per product.
 
 ---
@@ -26,7 +28,7 @@
 **Current description (quoted):**
 > "Your vanity sets the tone for the whole bathroom, so it is worth getting right. Our range covers wall-hung and freestanding units from 600mm to 1500mm, in matte white, satin and timber-look finishes, with soft-close drawers as standard. …"
 
-Note: the current text says "600mm to 1500mm". The live range is 750, 900, 1200 and 1500mm vanities plus a 350mm tall boy. There is no 600mm vanity in the category. Soft-close **drawers** are not standard either: the Nimis has soft-close doors.
+Note: the current text says "600mm to 1500mm". The live range is 750, 900, 1200 and 1500mm vanities plus a 350mm tall boy. There is no 600mm vanity in the category. Soft-close drawers are on the Nimis 900 (owner confirmed 8 Nov) and the Shaker range.
 
 ### New category intro (approx. 215 words)
 
