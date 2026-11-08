@@ -1,64 +1,27 @@
-# Meta Business Suite upload pack: Mon 9 – Sun 15 Nov 2026
+# Week of 9–15 Nov 2026: Business Suite bulk schedule pack
 
-**Status: DRAFT. Nothing has been posted or scheduled.** A person needs to approve each post exactly as written before it's scheduled.
-All times are **Australia/Brisbane** (AEST, no daylight saving). Before scheduling, check that the Business Suite time zone is set to Brisbane.
-Stock and prices were checked live through the WooCommerce REST API on **8 Nov 2026**.
+**Status:** all 4 posts approved by compliance review (8 Nov). Product pages updated: was/now prices removed and vanities marked collection only.
 
-## Preview
+## How to load (Business Suite › Planner › Bulk schedule posts)
+For each row below, click **Add post** and:
+1. **Post to:** Bathroom Deals (Facebook + Instagram).
+2. **Media:** Add photo/video → upload the image file(s) listed.
+3. **Text:** open the `post-N.txt` file, copy it all, paste it in.
+4. **Scheduling options:** change "Publish now" to **Schedule** → set the date and time (Brisbane).
+Then click **Schedule** at the bottom. That's the week done.
 
-| # | Date | Time | Platform | First line (hook) | Product(s) and price used | Link |
-|---|---|---|---|---|---|---|
-| 1 | Tue 10 Nov | 7:30 pm | FB + IG | Which would you pick? Same Lucito Curved Spout Basin Mixer, four finishes. | Lucito Curved Spout Basin Mixer: Chrome $169 (728), Brushed Brass $199 (704), Gun Metal $199 (705), Black $169 (719) | https://bathroomdeals.au/product-category/basin-mixers/ |
-| 2 | Thu 12 Nov | 7:30 pm | FB + IG | Small bathroom? Lift the vanity off the floor. | Nimis 900 Wall Hung Vanity $965 (679); Shaker 750mm Double Drawer Vanity $499 (662, floor-mounted, used as the comparison) | https://bathroomdeals.au/wall-hung-vs-freestanding-vanities-which-suits-a-small-bathroom/ |
-| 3 | Sat 14 Nov | 9:00 am | FB + IG | The drain that disappears into your tiles. | Neston Square Tile Insert SS, DN80, $49 (651); Square Max Tile Insert SS, DN100, $109 (648); Linear Tile Insert Kit SS 800mm, DN40, $229 (655) | https://bathroomdeals.au/product-category/floor-wastes/ |
-| 4 | Sun 15 Nov | 10:00 am | FB + IG | Send us your schedule and we'll match the whole room. | None (package-quote offer, no prices) | https://bathroomdeals.au/contact/ |
+| # | Date / time (Brisbane) | Image file(s) | Text file | Link mentioned |
+|---|---|---|---|---|
+| 1 | Tue 10 Nov, 19:30 | post-1a.jpg, post-1b.jpg, post-1c.jpg, post-1d.jpg (in this order) | post-1.txt | https://bathroomdeals.au/product/lucito-curved-spout-basin-mixer-chrome/ |
+| 2 | Thu 12 Nov, 19:30 | post-2.jpg | post-2.txt | https://bathroomdeals.au/wall-hung-vs-freestanding-vanities-which-suits-a-small-bathroom/ |
+| 3 | Sat 14 Nov, 09:00 | post-3.jpg | post-3.txt | https://bathroomdeals.au/product/neston-square-tile-insert-floor-waste-grate-stainless-steel/ |
+| 4 | Sun 15 Nov, 10:00 | post-4.jpg | post-4.txt | https://bathroomdeals.au/contact/ |
 
-## What's in this folder
-- `posts.csv`: one row per post, with the columns `scheduled_date, scheduled_time, platforms, post_text, link, image_file, alt_text`. Every field is double-quoted. `post_text` holds the hook, body, CTA and hashtags.
-  - No `meta-bulk-template.csv` was found in `marketing/bathroom-deals/social/`, so this file uses the standard column set. If you download Meta's own template, copy each field into its columns.
-- `images.md`: the images couldn't be downloaded automatically (the network blocked bathroomdeals.au). It lists the exact URLs to save as `post-1a.jpg` … `post-4.jpg`, cropped to 1080 × 1080.
+## Before each post goes out
+- **Tue/Sat:** stock is low (1–2 units). On the morning, check that the products are still in stock. If one has sold out, delete that line from the text or skip the post.
+- Instagram can't click links in captions, so the text says "bathroomdeals.au/…" instead of "link below".
 
-## Upload steps
-1. Download the images in `images.md` and save them in this folder under the names shown.
-2. **Recheck stock on the morning of each post** (especially the Neston items in post 3: only one outlet size of each is in stock). If anything has sold out, don't post it, and ask for a replacement.
-3. Business Suite › **Planner** › **Bulk upload** (or **Create post › Schedule**) › upload `posts.csv` and the images.
-4. **Post 1 has four images.** If Bulk upload won't take several images on one row, create it with **Create post** instead: add the four images in order 1a–1d (an Instagram carousel), paste `post_text`, and add the alt text.
-5. Review each post: text, link, image, alt text (Instagram › Advanced settings › Write alt text), and Facebook + Instagram both selected.
-6. **Schedule.** Only do this after a named person has approved the exact wording.
-
-## Compliance self-check (against BRAND.md)
-| Rule | Result |
-|---|---|
-| No was/now, "save", "% off", RRP, "lowest"/"cheapest" | Pass. Only current prices are quoted. An automated word scan found none of these terms. |
-| Prices are real and current | Pass. All prices came from the live `price` field on 8 Nov. For variable Neston products, the price is that of the in-stock variation. |
-| Only in-stock products | Pass on 8 Nov. The Tarnos 900 (draft, out of stock) isn't mentioned. |
-| Lucito warranty: black 5-year finish, other finishes 7-year finish, never 10 years on a finish | Pass. The 20-year cartridge term matches each product page. Body warranty isn't mentioned (see open issues). |
-| Licensed plumber where relevant | Pass. Posts 1 and 3 say so. |
-| WELS quoted only where product data has it | Pass. The product pages list "WELS 6 Star 4L/Min" for all four Lucito mixers. |
-| No stock or dispatch-time promises, no fake urgency | Pass. No "in stock", "ships today" or time limits. |
-| Australian English, brand voice, at most one emoji, 5–10 hashtags | Pass. 0 emoji; 10 / 9 / 9 / 8 hashtags. |
-| No fake reviews, giveaways or testimonials | Pass. |
-
-**Still to do (workflow step 5):** this pack hasn't been through `bd-compliance-reviewer` yet. I had no way to hand it over from this session.
-
-## Open issues for the owner (site data, not the posts)
-1. **Linked pages still show was/now pricing.** Nimis 900 ($965, "was" $1,799) and Shaker 750 ($499, "was" $799) are sale-priced on the site, and their descriptions say "Currently reduced from …". The posts quote only the current price, but people who click through will see the strikethrough price. This is one of the 27 products in baseline §4 that need reference-price evidence.
-2. **Black Lucito body warranty conflict.** BRAND.md says black carries a 10-year manufacturing/body warranty, but the Curved Spout Black page (719) says "5 Years Body Replacement Warranty". Post 1 avoids the body term. Please check which is right and fix the page.
-3. **Vanity pages carry the wrong warranty boilerplate.** Nimis 900 (679) and Shaker 750 (662) both include "Tapware in this range carries a 10-year cartridge warranty and a 10-year finish warranty", which doesn't apply to vanities. Nimis also lists "5 Year Warranty" in its features.
-4. **Nimis 900 dimensions don't match.** The description says 900 × 460 × 570mm H, but the dimensions field says 920 × 500 × 600. Post 2 gives only "900mm wide".
-5. **Wrong permalink.** Lucito Straight Spout Basin Mixer Brushed Brass (732) has the permalink `/product/vanity-basins/`. It isn't used this week.
-6. **Floor Wastes category:** 21 of its 24 products are out of stock, so post 3's link lands on a mostly sold-out page. An alternative is to link the "Why Linear Shower Drains…" blog post or the Square Tile Insert product page.
-7. **Neston stock is thin:** only one outlet size of each featured product is in stock (Square Tile Insert DN80, Square Max DN100, Linear 800 DN40). The caption names the outlet size alongside each price.
-8. Post 4 would be stronger with a real Acacia Ridge warehouse or team photo. The media library doesn't have one.
-
----
-
-## Compliance review (8 Nov 2026): status
-| Post | Verdict | Status |
-|---|---|---|
-| 1 Tue: Lucito finishes | FIX → **fixed** | Ready. Recheck stock on the morning (2 units each). |
-| 2 Thu: Wall-hung vanities | **HOLD** | The linked pages show unverified was/now prices (Nimis $1,799→$965, Shaker $799→$499, Tarnos Tall Boy $649→$399), and blog post 968 still links the discontinued Tarnos 900. **Don't schedule until the owner decides.** |
-| 3 Sat: Tile-insert drains | FIX → wording **fixed**, **HOLD** | The Neston prices shown are sale prices against unverified "regular" prices ($65/$119/$259). Only 1 unit of each left. **Don't schedule until the owner decides.** |
-| 4 Sun: Package quote | **PASS** | Ready. Check the 1:1 crop of the image. |
-
-The captions now use "bathroomdeals.au/…" text instead of "link below", so they work on Instagram, where captions can't hold clickable links.
+## Notes
+- Post 2 image: the Nimis photo shows **two drawers**, but the product page says "2 x soft-close doors". The post text doesn't mention doors or drawers. **Owner to confirm which is right** so the page can be fixed.
+- Post 4 image is a styled bathroom photo from the media library. Check that you're happy it shows products from your range.
+- `posts.csv` is kept as a record of the week; Business Suite's bulk scheduler is a form, not a file upload.
