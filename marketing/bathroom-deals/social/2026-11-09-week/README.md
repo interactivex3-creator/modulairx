@@ -50,3 +50,15 @@ Stock and prices were checked live through the WooCommerce REST API on **8 Nov 2
 6. **Floor Wastes category:** 21 of its 24 products are out of stock, so post 3's link lands on a mostly sold-out page. An alternative is to link the "Why Linear Shower Drains…" blog post or the Square Tile Insert product page.
 7. **Neston stock is thin:** only one outlet size of each featured product is in stock (Square Tile Insert DN80, Square Max DN100, Linear 800 DN40). The caption names the outlet size alongside each price.
 8. Post 4 would be stronger with a real Acacia Ridge warehouse or team photo. The media library doesn't have one.
+
+---
+
+## Compliance review (8 Nov 2026): status
+| Post | Verdict | Status |
+|---|---|---|
+| 1 Tue: Lucito finishes | FIX → **fixed** | Ready. Recheck stock on the morning (2 units each). |
+| 2 Thu: Wall-hung vanities | **HOLD** | The linked pages show unverified was/now prices (Nimis $1,799→$965, Shaker $799→$499, Tarnos Tall Boy $649→$399), and blog post 968 still links the discontinued Tarnos 900. **Don't schedule until the owner decides.** |
+| 3 Sat: Tile-insert drains | FIX → wording **fixed**, **HOLD** | The Neston prices shown are sale prices against unverified "regular" prices ($65/$119/$259). Only 1 unit of each left. **Don't schedule until the owner decides.** |
+| 4 Sun: Package quote | **PASS** | Ready. Check the 1:1 crop of the image. |
+
+The captions now use "bathroomdeals.au/…" text instead of "link below", so they work on Instagram, where captions can't hold clickable links.
