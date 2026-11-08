@@ -8,7 +8,7 @@ Every Bathroom Deals marketing agent reads this file before it starts. If someth
 - **Model:** Online retailer that buys direct from trusted manufacturers and wholesalers (no distributor margin). Australian stock, held in a warehouse in **Acacia Ridge, QLD** rather than a showroom.
 - **Delivery:** Nationwide from Australian stock, metro and regional, tracked on every order.
 - **Warranties:** Selected tapware carries 10-year cartridge and finish warranties; some ranges carry 15-year manufacturer cover. Never say "15-year warranty" about a product unless that product's page says so.
-- **Lucito warranty depends on the finish:** chrome, brushed stainless, brushed brass, brushed bronze and gun metal carry a 10-year manufacturing warranty. **Black carries a shorter, 5-year warranty because of its coating process.** Always state the warranty for the specific finish, and never apply the 10-year figure to black.
+- **Lucito black finish (confirmed by owner, 8 Nov 2026):** black carries a **10-year manufacturing / body warranty and a 5-year finish warranty**. The finish is shorter because of the coating process. Cartridge, labour and hose terms follow each product's own page (e.g. 20-year cartridge on most mixers). Never claim more than 5 years on a black finish. For other finishes, use the terms on that product's page (e.g. some brushed brass pages say 7-year finish; confirm before rounding up).
 - **Phone:** 07 4271 4620 (a real person who knows the range).
 - **Main conversion paths:** (1) Buy in the shop `/shop/`; (2) "Get a package quote" via `/contact/`, where a customer sends a schedule or room and gets back a matched set and a real price.
 - **Home market:** Brisbane / South-East Queensland first, then all of Australia.
