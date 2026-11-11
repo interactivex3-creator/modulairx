@@ -1,5 +1,7 @@
 # Bathroom Deals — Marketing Brief (shared by all `bd-*` agents)
 
+> **EMAIL MARKETING IS PAUSED (owner instruction, 11 Nov 2026).** No agent may draft, plan, schedule or send any marketing email, newsletter, flow or abandoned-cart email until the owner lifts the pause and this notice is removed.
+
 Every Bathroom Deals marketing agent reads this file before it starts. If something here is wrong or old, fix it here once and every agent picks it up.
 
 ## The business

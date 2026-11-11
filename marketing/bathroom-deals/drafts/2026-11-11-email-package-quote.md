@@ -1,3 +1,5 @@
+> **ON HOLD: email marketing paused by the owner on 11 Nov 2026. Do not send.**
+
 # Email draft: Package quote (Lucito brushed brass example)
 
 **Author:** bd-email-marketer · **Date:** 11 Nov 2026 · **Brief:** `drafts/2026-11-10-weekly-plan.md`, section D
