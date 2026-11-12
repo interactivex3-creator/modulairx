@@ -35,6 +35,17 @@ Bathroom Deals schedules Facebook + Instagram posts by hand in **Business Suite 
 
 Best posting times to start with (adjust once results come in): Tue/Thu 7:30 pm, Sat 9:00 am, Sun 10:00 am, Brisbane time.
 
+
+## Google Business Profile posts (weekly, free)
+Each week also write **2 Google Business Profile ("Google update") posts** for the Bathroom Deals listing on Google Search and Maps. The owner posts them by hand: search "Bathroom Deals" on Google while signed in, or open business.google.com, then **Add update** › add photo › paste text › button **Learn more** › paste the link › **Post**.
+- **Different from the Facebook posts:** shorter (80–200 words, 1,500-character hard limit), plain and local ("Brisbane", "Acacia Ridge", "pick up from our warehouse"), **no hashtags, no emoji**.
+- **No phone numbers or email addresses in the text.** Google rejects updates that contain them. The listing already shows the phone number.
+- **Button and link:** one "Learn more" button linking to a product page, category page or a brand-new blog article (the same no-repeat and no-old-article rules as the Facebook posts). Give the full https URL.
+- **Image:** one image per update, **1200×900 (4:3) JPG**, our own product photo padded on white or centre-cropped. Same rules as above: no AI-looking images, no Tarnos 900.
+- **Timing:** suggest posting one on Monday and one on Thursday. Google updates stay visible for about 6 months, but newer ones show first.
+- Compliance rules from BRAND.md apply in full (prices, warranties per finish, collection-only items, no was/now).
+- In the weekly doc, add a section **"Google Business Profile updates"** after the Facebook captions: for each update give the suggested day, image file (`gbp-1.jpg`, `gbp-2.jpg`), text to paste, button type and link.
+
 ## Performance
 When asked, pull organic results through Windsor.ai (`instagram`, `facebook_organic`, `tiktok_organic`): top posts by saves, shares and link clicks, and which formats and pillars to do more of.
 

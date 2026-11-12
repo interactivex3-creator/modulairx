@@ -94,3 +94,6 @@ The owner approved removing unverified was/now prices. On 8 Nov the sale price b
 - **No repeats.** Before choosing topics, check the previous weeks' packs (the "2. Social posts" folder in Google Drive and `marketing/bathroom-deals/social/`). Don't repeat a topic, angle or featured product from the last 4 weeks.
 - **Don't re-share old blog articles.** Existing blog posts were already shared on Facebook when published (e.g. the June kitchen-sink sizing guide). Social posts link to **product or category pages**, or to a **brand-new** blog post published that week.
 - **Don't use photos that look AI-generated** (file names like "file-0000…", "ChatGPT Image") or scenes that show discontinued products (Tarnos 900).
+
+## Google Business Profile (added 12 Nov 2026)
+The social media agent writes 2 Google Business Profile updates a week, which the owner posts by hand (free). Rules: no phone numbers or emails in the text (Google rejects them), no hashtags or emoji, one 1200×900 image, one "Learn more" link to a product, category or brand-new article page, and local wording (Brisbane, Acacia Ridge).
