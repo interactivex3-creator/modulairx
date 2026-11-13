@@ -97,3 +97,6 @@ The owner approved removing unverified was/now prices. On 8 Nov the sale price b
 
 ## Google Business Profile (added 12 Nov 2026)
 The social media agent writes 2 Google Business Profile updates a week, which the owner posts by hand (free). Rules: no phone numbers or emails in the text (Google rejects them), no hashtags or emoji, one 1200×900 image, one "Learn more" link to a product, category or brand-new article page, and local wording (Brisbane, Acacia Ridge).
+
+## Reels and Shorts (added 13 Nov 2026)
+`bd-video-creator` makes 1–2 short vertical videos a week (1080×1920 MP4, 10–20 s) from our own product photos, using the free script `marketing/bathroom-deals/tools/make_reel.py`. The owner schedules them by hand in Business Suite (Create reel). On-screen text follows every compliance rule above: real current prices, warranty per finish, collection-only items labelled, no was/now. No AI-generated product footage, and no commercial music added to the file (the owner may pick a track from the app's licensed library when posting).

@@ -16,6 +16,7 @@ Turn a business goal ("move more vanities", "grow Brisbane quote requests", "lau
 | `bd-seo-content-writer` | Blog posts, buyer's guides, landing-page copy, on-page SEO |
 | `bd-product-copywriter` | WooCommerce product and category descriptions |
 | `bd-social-media-manager` | Instagram / Facebook / Pinterest / TikTok posts, reels scripts, Canva creative |
+| `bd-video-creator` | Short vertical videos (Reels, Shorts, TikTok): storyboard, finished 1080×1920 MP4, cover, caption |
 | `bd-email-marketer` | Newsletters, promo emails, Klaviyo flows (abandoned cart, post-purchase) |
 | `bd-paid-ads-specialist` | Google Ads and Meta Ads copy, structure, budgets, performance |
 | `bd-analytics-reporter` | Performance reports from GA4, Search Console, ads and email data |

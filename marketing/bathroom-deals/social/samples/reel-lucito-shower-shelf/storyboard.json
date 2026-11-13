@@ -1,0 +1,70 @@
+{
+ "out": "reel-1.mp4",
+ "cover": "reel-1-cover.jpg",
+ "scenes": [
+  {
+   "image": "img/chrome-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "One shower shelf. Six finishes. Which one's yours?",
+   "bottom": "Lucito Shower Shelf",
+   "seconds": 3
+  },
+  {
+   "image": "img/chrome-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "1. Chrome",
+   "bottom": "$95",
+   "seconds": 1.8
+  },
+  {
+   "image": "img/brushed-stainless-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "2. Brushed Stainless",
+   "bottom": "$95",
+   "seconds": 1.8
+  },
+  {
+   "image": "img/matte-black-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "3. Black",
+   "bottom": "$95",
+   "seconds": 1.8
+  },
+  {
+   "image": "img/gun-metal-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "4. Gun Metal",
+   "bottom": "$106",
+   "seconds": 1.8
+  },
+  {
+   "image": "img/brushed-brass-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "5. Brushed Brass",
+   "bottom": "$106",
+   "seconds": 1.8
+  },
+  {
+   "image": "img/brushed-bronze-tiled-shower-wall.jpg",
+   "fit": "crop",
+   "top": "6. Brushed Bronze",
+   "bottom": "$106",
+   "seconds": 1.8
+  }
+ ],
+ "end": {
+  "images": [
+   "img/chrome-tiled-shower-wall.jpg",
+   "img/brushed-stainless-tiled-shower-wall.jpg",
+   "img/matte-black-tiled-shower-wall.jpg",
+   "img/gun-metal-tiled-shower-wall.jpg",
+   "img/brushed-brass-tiled-shower-wall.jpg",
+   "img/brushed-bronze-tiled-shower-wall.jpg"
+  ],
+  "fit": "crop",
+  "top": "Which number would you pick?",
+  "bottom": "bathroomdeals.au",
+  "small": "Bathroom Deals, Acacia Ridge, Brisbane",
+  "seconds": 3.5
+ }
+}
