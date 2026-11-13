@@ -4,49 +4,49 @@
  "scenes": [
   {
    "image": "img/chrome-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "One shower shelf. Six finishes. Which one's yours?",
    "bottom": "Lucito Shower Shelf",
    "at": 0
   },
   {
    "image": "img/chrome-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "1. Chrome",
    "bottom": "$95",
    "at": 4.2
   },
   {
    "image": "img/brushed-stainless-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "2. Brushed Stainless",
    "bottom": "$95",
    "at": 5.1
   },
   {
    "image": "img/matte-black-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "3. Black",
    "bottom": "$95",
    "at": 6.4
   },
   {
    "image": "img/gun-metal-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "4. Gun Metal",
    "bottom": "$106",
    "at": 8.7
   },
   {
    "image": "img/brushed-brass-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "5. Brushed Brass",
    "bottom": "$106",
    "at": 9.7
   },
   {
    "image": "img/brushed-bronze-tiled-shower-wall.jpg",
-   "fit": "crop",
+   "fit": "full",
    "top": "6. Brushed Bronze",
    "bottom": "$106",
    "at": 10.85
@@ -61,7 +61,7 @@
    "img/brushed-brass-tiled-shower-wall.jpg",
    "img/brushed-bronze-tiled-shower-wall.jpg"
   ],
-  "fit": "crop",
+  "fit": "full",
   "top": "Which number would you pick?",
   "bottom": "bathroomdeals.au",
   "at": 13.5

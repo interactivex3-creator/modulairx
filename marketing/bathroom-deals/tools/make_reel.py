@@ -10,14 +10,16 @@ Storyboard format (paths are relative to the storyboard file):
   "out": "reel-1.mp4",
   "cover": "reel-1-cover.jpg",            # optional: 1080x1920 cover frame
   "scenes": [
-    {"image": "img/chrome.jpg",            # product photo (cut-out or scene)
-     "fit": "pad",                         # "pad" (cut-out on white) or "crop" (fill the photo box)
-     "top": "Pick a finish",               # big text above the photo
-     "bottom": "Chrome  $95",              # text under the photo
+    {"image": "img/chrome.jpg",            # product photo, shown FULL FRAME
+     "fit": "full",                        # "full" (default): whole photo, frame filled with a blurred copy;
+                                           # "crop": crop to 9:16 (tall photos only); "pad": cut-out on white
+     "focus_x": 0.5, "focus_y": 0.5,       # what to keep centred with "crop" (0-1)
+     "top": "Pick a finish",               # headline, white on a navy panel near the top
+     "bottom": "Chrome  $95",              # price/fact pill in the lower third
      "small": "Lucito Shower Shelf",       # optional smaller line under "bottom"
      "seconds": 2.5}
   ],
-  # any scene can use "images": [up to 6 paths] instead of "image" for a collage
+  # any scene can use "images": [up to 6 paths] instead of "image" for a full-frame collage
   "end": {"top": "6 finishes, one shelf", "bottom": "bathroomdeals.au", "seconds": 3},
   "logo": "logo.png",                     # optional; defaults to ../brand-assets/bathroom-deals-logo.png
 
@@ -33,17 +35,18 @@ time in seconds on the final timeline (voice time + voice_delay). Find the cue p
 with:  ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -
 The end card then runs until the voice finishes plus 1.2 s.
 
-Every frame carries the Bathroom Deals logo at the top. Never put the store location
-(suburb/city) on screen or in the voiceover (owner rule).
-Layout keeps all text inside the Reels/Shorts safe area (clear of the top 220 px and
-the bottom 420 px, where the app's buttons and caption sit).
+Owner rules: every scene fills the whole frame and shows the whole photo, the Bathroom Deals logo sits on a white
+card at the bottom of every frame, and the store location (suburb/city) never appears
+on screen or in the voiceover.
+Text and logo stay inside the Reels/Shorts safe area (clear of the top 220 px and the
+bottom ~360 px, where the app's buttons and caption sit).
 """
 import json
 import os
 import subprocess
 import sys
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageEnhance
 
 W, H, FPS = 1080, 1920, 30
 FADE = 0.4  # seconds of crossfade between scenes
@@ -51,8 +54,7 @@ NAVY = (52, 73, 94)      # logo navy
 TEAL = (137, 188, 190)   # logo teal
 GREY = (90, 98, 110)
 BG = (255, 255, 255)
-PHOTO_BOX = (60, 600, 1020, 1360)  # x0, y0, x1, y1
-LOGO_BOX = (200, 225, 880, 365)    # logo sits here on every scene, inside the safe area
+LOGO_CARD = (250, 1395, 830, 1555)  # white card with the logo, at the bottom of every frame
 DEFAULT_LOGO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "brand-assets", "bathroom-deals-logo.png")
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -89,84 +91,113 @@ def draw_block(draw, text, fnt, colour, y, max_w=960, gap=12):
     return y
 
 
+def rounded_panel(layer, box, fill, radius=28):
+    ImageDraw.Draw(layer).rounded_rectangle(box, radius=radius, fill=fill)
+
+
 def text_layer(scene, logo=None):
-    """Transparent overlay: the Bathroom Deals logo at the top, then the scene's text."""
+    """Transparent overlay drawn over the full-frame photo: headline panel near the top,
+    price/fact pill lower down, and the Bathroom Deals logo card at the bottom."""
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    if logo is not None:
-        lw, lh = LOGO_BOX[2] - LOGO_BOX[0], LOGO_BOX[3] - LOGO_BOX[1]
-        scale = min(lw / logo.width, lh / logo.height)
-        lg = logo.resize((round(logo.width * scale), round(logo.height * scale)), Image.LANCZOS)
-        layer.alpha_composite(lg, ((W - lg.width) // 2, LOGO_BOX[1] + (lh - lg.height) // 2))
     d = ImageDraw.Draw(layer)
-    big, mid, small = font(FONT_BOLD, 76), font(FONT_BOLD, 60), font(FONT_REG, 40)
     if scene.get("top"):
-        size = 76  # shrink long headlines until they fit in the gap between logo and photo
-        while True:
+        size = 72
+        while True:  # shrink long headlines to at most 3 lines
             big = font(FONT_BOLD, size)
-            block_h = len(wrap(d, scene["top"], big, 960)) * (size + 12)
-            if block_h <= PHOTO_BOX[1] - 25 - (LOGO_BOX[3] + 20) or size <= 44:
+            lines = wrap(d, scene["top"], big, 900)
+            if len(lines) <= 3 or size <= 44:
                 break
             size -= 4
-        draw_block(d, scene["top"], big, NAVY, max(LOGO_BOX[3] + 20, PHOTO_BOX[1] - 25 - block_h))
-    y = PHOTO_BOX[3] + 40
-    if scene.get("bottom"):
-        y = draw_block(d, scene["bottom"], mid, NAVY, y)
-    if scene.get("small"):
-        draw_block(d, scene["small"], small, GREY, y + 6)
+        block_h = len(lines) * (size + 12) - 12
+        y0 = 250
+        rounded_panel(layer, (40, y0 - 32, W - 40, y0 + block_h + 36), (*NAVY, 225))
+        draw_block(d, scene["top"], big, (255, 255, 255), y0, max_w=900)
+    y = 1180
+    for key, fnt_ in (("bottom", font(FONT_BOLD, 64)), ("small", font(FONT_BOLD, 40))):
+        if scene.get(key):
+            lines = wrap(d, scene[key], fnt_, 880)
+            for line in lines:
+                tw = d.textlength(line, font=fnt_)
+                pad = 34 if key == "bottom" else 26
+                h = fnt_.size + 2 * (pad - 10)
+                rounded_panel(layer, ((W - tw) / 2 - pad, y, (W + tw) / 2 + pad, y + h), (255, 255, 255, 235), radius=h // 2)
+                d.text(((W - tw) / 2, y + pad - 14), line, font=fnt_, fill=NAVY)
+                y += h + 12
+    if logo is not None:
+        rounded_panel(layer, LOGO_CARD, (255, 255, 255, 240), radius=30)
+        lw, lh = LOGO_CARD[2] - LOGO_CARD[0] - 60, LOGO_CARD[3] - LOGO_CARD[1] - 36
+        scale = min(lw / logo.width, lh / logo.height)
+        lg = logo.resize((round(logo.width * scale), round(logo.height * scale)), Image.LANCZOS)
+        layer.alpha_composite(lg, ((W - lg.width) // 2, LOGO_CARD[1] + (LOGO_CARD[3] - LOGO_CARD[1] - lg.height) // 2))
     return layer
 
 
-def load_photo(path, fit):
-    img = Image.open(path).convert("RGB")
-    bw, bh = PHOTO_BOX[2] - PHOTO_BOX[0], PHOTO_BOX[3] - PHOTO_BOX[1]
-    if fit == "crop":
-        scale = max(bw / img.width, bh / img.height)
-        img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
-        l, t = (img.width - bw) // 2, (img.height - bh) // 2
-        return img.crop((l, t, l + bw, t + bh))
-    scale = min(bw / img.width, bh / img.height)
+def cover_crop(img, bw, bh, fx=0.5, fy=0.5):
+    """Scale to fill bw x bh, cropping around the focus point (fractions of width/height)."""
+    scale = max(bw / img.width, bh / img.height)
     img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
-    box = Image.new("RGB", (bw, bh), BG)
-    box.paste(img, ((bw - img.width) // 2, (bh - img.height) // 2))
-    return box
+    l = min(max(round(img.width * fx - bw / 2), 0), img.width - bw)
+    t = min(max(round(img.height * fy - bh / 2), 0), img.height - bh)
+    return img.crop((l, t, l + bw, t + bh))
+
+
+def blurred_fill(img):
+    """The photo itself, enlarged to cover the whole frame, blurred and slightly dimmed."""
+    bg = cover_crop(img, W // 4, H // 4).filter(ImageFilter.GaussianBlur(10)).resize((W, H), Image.BILINEAR)
+    return ImageEnhance.Brightness(bg).enhance(0.9)
+
+
+def load_photo(path, fit, fx=0.5, fy=0.5):
+    """Full-frame picture. "full" (default) shows the WHOLE photo as large as it fits, with the
+    rest of the frame filled by a blurred copy of the same photo (nothing cut off, no empty
+    space). "crop" fills the frame by cropping to 9:16 (only for tall/portrait photos).
+    "pad" puts a white-background cut-out on a white frame."""
+    img = Image.open(path).convert("RGB")
+    if fit == "crop":
+        return cover_crop(img, W, H, fx, fy)
+    if fit == "pad":
+        frame = Image.new("RGB", (W, H), BG)
+    else:
+        frame = blurred_fill(img)
+    scale = min(W / img.width, (H * 0.62) / img.height)
+    img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
+    frame.paste(img, ((W - img.width) // 2, (H - img.height) // 2 - 60))
+    return frame
 
 
 def load_grid(paths, fit):
-    """Collage of 2-6 photos (e.g. every finish) filling the photo box."""
-    bw, bh = PHOTO_BOX[2] - PHOTO_BOX[0], PHOTO_BOX[3] - PHOTO_BOX[1]
+    """Collage of 2-6 whole photos (e.g. every finish) over a blurred fill of the first one."""
+    frame = blurred_fill(Image.open(paths[0]).convert("RGB"))
     cols = 2 if len(paths) <= 4 else 3
     rows = -(-len(paths) // cols)
-    gap = 12
-    cw, ch = (bw - gap * (cols - 1)) // cols, (bh - gap * (rows - 1)) // rows
-    box = Image.new("RGB", (bw, bh), BG)
+    gap, margin = 10, 30
+    cw = (W - 2 * margin - gap * (cols - 1)) // cols
+    top = (H - (rows * cw + gap * (rows - 1))) // 2 - 60
     for k, path in enumerate(paths):
-        img = Image.open(path).convert("RGB")
-        scale = max(cw / img.width, ch / img.height) if fit == "crop" else min(cw / img.width, ch / img.height)
-        img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
-        cell = Image.new("RGB", (cw, ch), BG)
-        cell.paste(img, ((cw - img.width) // 2, (ch - img.height) // 2))
-        box.paste(cell, ((k % cols) * (cw + gap), (k // cols) * (ch + gap)))
-    return box
+        cell = cover_crop(Image.open(path).convert("RGB"), cw, cw)
+        frame.paste(cell, (margin + (k % cols) * (cw + gap), top + (k // cols) * (cw + gap)))
+    return frame
 
 
 def scene_frames(scene, base_dir, logo=None):
     n = int(round(scene.get("seconds", 2.5) * FPS))
     overlay = text_layer(scene, logo)
     if scene.get("images"):
-        photo = load_grid([os.path.join(base_dir, p) for p in scene["images"]], scene.get("fit", "pad"))
+        photo = load_grid([os.path.join(base_dir, p) for p in scene["images"]], scene.get("fit", "full"))
     elif scene.get("image"):
-        photo = load_photo(os.path.join(base_dir, scene["image"]), scene.get("fit", "pad"))
+        photo = load_photo(os.path.join(base_dir, scene["image"]), scene.get("fit", "full"),
+                           scene.get("focus_x", 0.5), scene.get("focus_y", 0.5))
     else:
         photo = None
     for i in range(n):
         frame = Image.new("RGB", (W, H), BG)
         if photo is not None:
-            z = 1.0 + 0.06 * (i / max(n - 1, 1))  # slow push-in
+            z = 1.0 + 0.04 * (i / max(n - 1, 1))  # slow push-in
             bw, bh = photo.size
             zw, zh = round(bw * z), round(bh * z)
             big = photo.resize((zw, zh), Image.BILINEAR)
             l, t = (zw - bw) // 2, (zh - bh) // 2
-            frame.paste(big.crop((l, t, l + bw, t + bh)), PHOTO_BOX[:2])
+            frame.paste(big.crop((l, t, l + bw, t + bh)), (0, 0))
         frame.paste(overlay, (0, 0), overlay)
         yield frame
 
