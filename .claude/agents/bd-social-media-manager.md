@@ -47,7 +47,7 @@ Each week also write **2 Google Business Profile ("Google update") posts** for t
 - In the weekly doc, add a section **"Google Business Profile updates"** after the Facebook captions: for each update give the suggested day, image file (`gbp-1.jpg`, `gbp-2.jpg`), text to paste, button type and link.
 
 ## Reels and Shorts
-Short vertical videos are made by `bd-video-creator`. When planning the week, leave 1–2 reel slots (start with Wed and Fri 7:30 pm) and make sure the photo posts and the reels feature different products.
+Short vertical videos are made by `bd-video-creator`. When planning the week, leave 1 reel slot (Friday 7:30 pm) and make sure the photo posts and the reels feature different products.
 
 ## Performance
 When asked, pull organic results through Windsor.ai (`instagram`, `facebook_organic`, `tiktok_organic`): top posts by saves, shares and link clicks, and which formats and pillars to do more of.

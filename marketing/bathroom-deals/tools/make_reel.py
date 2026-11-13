@@ -50,6 +50,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageEnhance
 
 W, H, FPS = 1080, 1920, 30
 FADE = 0.4  # seconds of crossfade between scenes
+MAX_BYTES = 2_900_000  # keep under ~3 MB so the file can be uploaded to Google Drive by the connector
 NAVY = (52, 73, 94)      # logo navy
 TEAL = (137, 188, 190)   # logo teal
 GREY = (90, 98, 110)
@@ -250,8 +251,27 @@ def main(sb_path):
     if silent != out:
         add_audio(silent, out, vo, music, delay, float(sb.get("music_volume", 0.22)))
         os.remove(silent)
-    print(f"wrote {out} ({probe(out):.1f}s){' + cover' if cover_saved else ''}"
+    shrink_to_limit(out)
+    print(f"wrote {out} ({probe(out):.1f}s, {os.path.getsize(out) / 1e6:.2f} MB){' + cover' if cover_saved else ''}"
           f"{' + voiceover' if vo else ''}{' + music' if music else ''}")
+
+
+def shrink_to_limit(path):
+    """Re-encode the video track at a calculated bitrate if the file is over MAX_BYTES."""
+    for attempt in range(3):
+        size = os.path.getsize(path)
+        if size <= MAX_BYTES:
+            return
+        dur = probe(path)
+        target = MAX_BYTES * (0.93 - 0.05 * attempt)
+        kbps = max(int(target * 8 / dur / 1000) - 140, 300)  # leave ~140 kbps for audio
+        tmp = path + ".small.mp4"
+        cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-c:v", "libx264", "-preset", "slow",
+               "-b:v", f"{kbps}k", "-maxrate", f"{int(kbps * 1.3)}k", "-bufsize", f"{kbps * 2}k",
+               "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", tmp]
+        if subprocess.run(cmd).returncode != 0:
+            sys.exit("re-encode failed")
+        os.replace(tmp, path)
 
 
 def probe(path):
