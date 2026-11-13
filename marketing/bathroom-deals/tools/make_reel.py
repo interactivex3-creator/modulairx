@@ -18,7 +18,8 @@ Storyboard format (paths are relative to the storyboard file):
      "seconds": 2.5}
   ],
   # any scene can use "images": [up to 6 paths] instead of "image" for a collage
-  "end": {"top": "6 finishes, one shelf", "bottom": "bathroomdeals.au", "small": "Pick up from Acacia Ridge, Brisbane", "seconds": 3},
+  "end": {"top": "6 finishes, one shelf", "bottom": "bathroomdeals.au", "seconds": 3},
+  "logo": "logo.png",                     # optional; defaults to ../brand-assets/bathroom-deals-logo.png
 
   # Audio (optional, but every published reel should have both):
   "voiceover": "vo.mp3",                  # ElevenLabs voiceover file
@@ -32,6 +33,8 @@ time in seconds on the final timeline (voice time + voice_delay). Find the cue p
 with:  ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -
 The end card then runs until the voice finishes plus 1.2 s.
 
+Every frame carries the Bathroom Deals logo at the top. Never put the store location
+(suburb/city) on screen or in the voiceover (owner rule).
 Layout keeps all text inside the Reels/Shorts safe area (clear of the top 220 px and
 the bottom 420 px, where the app's buttons and caption sit).
 """
@@ -44,10 +47,13 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H, FPS = 1080, 1920, 30
 FADE = 0.4  # seconds of crossfade between scenes
-NAVY = (20, 40, 64)
+NAVY = (52, 73, 94)      # logo navy
+TEAL = (137, 188, 190)   # logo teal
 GREY = (90, 98, 110)
 BG = (255, 255, 255)
-PHOTO_BOX = (60, 560, 1020, 1380)  # x0, y0, x1, y1
+PHOTO_BOX = (60, 600, 1020, 1360)  # x0, y0, x1, y1
+LOGO_BOX = (200, 225, 880, 365)    # logo sits here on every scene, inside the safe area
+DEFAULT_LOGO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "brand-assets", "bathroom-deals-logo.png")
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
@@ -83,15 +89,25 @@ def draw_block(draw, text, fnt, colour, y, max_w=960, gap=12):
     return y
 
 
-def text_layer(scene):
-    """Transparent overlay with the scene's text (top block ends above the photo box)."""
+def text_layer(scene, logo=None):
+    """Transparent overlay: the Bathroom Deals logo at the top, then the scene's text."""
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    if logo is not None:
+        lw, lh = LOGO_BOX[2] - LOGO_BOX[0], LOGO_BOX[3] - LOGO_BOX[1]
+        scale = min(lw / logo.width, lh / logo.height)
+        lg = logo.resize((round(logo.width * scale), round(logo.height * scale)), Image.LANCZOS)
+        layer.alpha_composite(lg, ((W - lg.width) // 2, LOGO_BOX[1] + (lh - lg.height) // 2))
     d = ImageDraw.Draw(layer)
     big, mid, small = font(FONT_BOLD, 76), font(FONT_BOLD, 60), font(FONT_REG, 40)
     if scene.get("top"):
-        lines = wrap(d, scene["top"], big, 960)
-        block_h = len(lines) * (big.size + 12)
-        draw_block(d, scene["top"], big, NAVY, max(240, PHOTO_BOX[1] - 40 - block_h))
+        size = 76  # shrink long headlines until they fit in the gap between logo and photo
+        while True:
+            big = font(FONT_BOLD, size)
+            block_h = len(wrap(d, scene["top"], big, 960)) * (size + 12)
+            if block_h <= PHOTO_BOX[1] - 25 - (LOGO_BOX[3] + 20) or size <= 44:
+                break
+            size -= 4
+        draw_block(d, scene["top"], big, NAVY, max(LOGO_BOX[3] + 20, PHOTO_BOX[1] - 25 - block_h))
     y = PHOTO_BOX[3] + 40
     if scene.get("bottom"):
         y = draw_block(d, scene["bottom"], mid, NAVY, y)
@@ -133,9 +149,9 @@ def load_grid(paths, fit):
     return box
 
 
-def scene_frames(scene, base_dir):
+def scene_frames(scene, base_dir, logo=None):
     n = int(round(scene.get("seconds", 2.5) * FPS))
-    overlay = text_layer(scene)
+    overlay = text_layer(scene, logo)
     if scene.get("images"):
         photo = load_grid([os.path.join(base_dir, p) for p in scene["images"]], scene.get("fit", "pad"))
     elif scene.get("image"):
@@ -170,6 +186,10 @@ def main(sb_path):
         cues = [sc["at"] for sc in scenes] + [total]
         for k, sc in enumerate(scenes):
             sc["seconds"] = cues[k + 1] - cues[k] + (FADE if k < len(scenes) - 1 else 0)
+    logo_path = os.path.join(base, sb["logo"]) if sb.get("logo") else DEFAULT_LOGO
+    logo = Image.open(logo_path).convert("RGBA") if os.path.exists(logo_path) else None
+    if logo is None:
+        print("WARNING: logo not found, video has no logo:", logo_path)
     silent = out if not (vo or music) else out + ".silent.mp4"
     ff = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
@@ -180,7 +200,7 @@ def main(sb_path):
     prev_tail = []
     cover_saved = False
     for s_idx, scene in enumerate(scenes):
-        frames = list(scene_frames(scene, base))
+        frames = list(scene_frames(scene, base, logo))
         if s_idx == 0 and sb.get("cover"):
             frames[min(len(frames) - 1, FPS)].save(os.path.join(base, sb["cover"]), quality=90)
             cover_saved = True
