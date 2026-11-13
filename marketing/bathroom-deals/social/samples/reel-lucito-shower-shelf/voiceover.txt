@@ -1,0 +1,6 @@
+Voice: "Matt - Warm, Friendly Australian" (ElevenLabs, voice_id 9kLAV1RH1v1bwP2ZOQSa, model eleven_v4)
+
+One shower shelf. Six finishes. Which one's yours? Chrome... brushed stainless... and black, ninety-five dollars. Gun metal... brushed brass... and brushed bronze, a hundred and six. Which number would you pick? Tell us in the comments. Bathroom Deals, Acacia Ridge, Brisbane.
+
+Music: Runway generate_music, model eleven-music-v2.5, 20 s, instrumental:
+"Light, modern, upbeat background bed for a short home-renovation product video: clean electric piano and soft plucked guitar, gentle house-style beat, warm and positive, around 110 BPM. Even energy throughout so a voiceover sits clearly on top; simple ending."

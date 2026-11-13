@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Build a vertical 1080x1920 reel/short (MP4, H.264, 30 fps, silent) from our own
-product photos and a JSON storyboard. Free: needs only Python 3 + Pillow + ffmpeg.
+"""Build a vertical 1080x1920 reel/short (MP4, H.264, 30 fps) with optional voiceover + music from our own
+product photos and a JSON storyboard. The build itself is free: Python 3 + Pillow + ffmpeg.
+(Voiceover and music files come from ElevenLabs / Runway, which use paid credits.)
 
 Usage:  python3 make_reel.py storyboard.json
 
@@ -17,8 +18,19 @@ Storyboard format (paths are relative to the storyboard file):
      "seconds": 2.5}
   ],
   # any scene can use "images": [up to 6 paths] instead of "image" for a collage
-  "end": {"top": "6 finishes, one shelf", "bottom": "bathroomdeals.au", "small": "Pick up from Acacia Ridge, Brisbane", "seconds": 3}
+  "end": {"top": "6 finishes, one shelf", "bottom": "bathroomdeals.au", "small": "Pick up from Acacia Ridge, Brisbane", "seconds": 3},
+
+  # Audio (optional, but every published reel should have both):
+  "voiceover": "vo.mp3",                  # ElevenLabs voiceover file
+  "voice_delay": 0.3,                     # seconds of silence before the voice starts
+  "music": "music.mp3",                   # licensed background track (looped if short)
+  "music_volume": 0.22                    # music level under the voice (ducks further while talking)
 }
+
+Timing to the voice: instead of "seconds", give every scene (and the end card) an "at"
+time in seconds on the final timeline (voice time + voice_delay). Find the cue points
+with:  ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -
+The end card then runs until the voice finishes plus 1.2 s.
 
 Layout keeps all text inside the Reels/Shorts safe area (clear of the top 220 px and
 the bottom 420 px, where the app's buttons and caption sit).
@@ -150,10 +162,19 @@ def main(sb_path):
     if sb.get("end"):
         scenes.append(dict(sb["end"]))
     out = os.path.join(base, sb.get("out", "reel.mp4"))
+    vo = os.path.join(base, sb["voiceover"]) if sb.get("voiceover") else None
+    music = os.path.join(base, sb["music"]) if sb.get("music") else None
+    delay = float(sb.get("voice_delay", 0.3))
+    if vo and all("at" in sc for sc in scenes):  # cue scenes to the voiceover
+        total = max(delay + probe(vo) + 1.2, scenes[-1]["at"] + 2.0)
+        cues = [sc["at"] for sc in scenes] + [total]
+        for k, sc in enumerate(scenes):
+            sc["seconds"] = cues[k + 1] - cues[k] + (FADE if k < len(scenes) - 1 else 0)
+    silent = out if not (vo or music) else out + ".silent.mp4"
     ff = subprocess.Popen(
         ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
          "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium",
-         "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out],
+         "-crf", "20", "-pix_fmt", "yuv420p", "-movflags", "+faststart", silent],
         stdin=subprocess.PIPE)
     fade_n = int(FADE * FPS)
     prev_tail = []
@@ -175,9 +196,50 @@ def main(sb_path):
     ff.stdin.close()
     if ff.wait() != 0:
         sys.exit("ffmpeg failed")
-    dur = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
-                          "-of", "csv=p=0", out], capture_output=True, text=True).stdout.strip()
-    print(f"wrote {out} ({float(dur):.1f}s){' + cover' if cover_saved else ''}")
+    if silent != out:
+        add_audio(silent, out, vo, music, delay, float(sb.get("music_volume", 0.22)))
+        os.remove(silent)
+    print(f"wrote {out} ({probe(out):.1f}s){' + cover' if cover_saved else ''}"
+          f"{' + voiceover' if vo else ''}{' + music' if music else ''}")
+
+
+def probe(path):
+    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                 "-of", "csv=p=0", path], capture_output=True, text=True).stdout.strip())
+
+
+def add_audio(video, out, vo, music, delay, music_vol):
+    """Mix voice + music under the video: music fades in/out and ducks under the voice,
+    then the mix is normalised to about -14 LUFS (Instagram/YouTube loudness)."""
+    dur = probe(video)
+    inputs, chains, mix = ["-i", video], [], []
+    idx = 1
+    if vo:
+        inputs += ["-i", vo]
+        ms = int(delay * 1000)
+        chains.append(f"[{idx}:a]aresample=48000,adelay={ms}|{ms},apad,atrim=0:{dur:.3f},asplit=2[v][vkey]")
+        idx += 1
+    if music:
+        inputs += ["-stream_loop", "-1", "-i", music]
+        fade_out = max(dur - 1.5, 0)
+        chains.append(f"[{idx}:a]aresample=48000,atrim=0:{dur:.3f},volume={music_vol},"
+                      f"afade=t=in:d=0.5,afade=t=out:st={fade_out:.3f}:d=1.5[m0]")
+        if vo:
+            chains.append("[m0][vkey]sidechaincompress=threshold=0.03:ratio=4:attack=20:release=400[m]")
+        else:
+            chains.append("[m0]anull[m]")
+        mix.append("[m]")
+    if vo:
+        mix.insert(0, "[v]")
+    if vo and not music:
+        chains.append("[vkey]anullsink")
+    chains.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0:duration=first,"
+                  "loudnorm=I=-14:TP=-1.5:LRA=11[a]")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", *inputs, "-filter_complex", ";".join(chains),
+           "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+           "-ar", "48000", "-shortest", "-movflags", "+faststart", out]
+    if subprocess.run(cmd).returncode != 0:
+        sys.exit("audio mix failed")
 
 
 if __name__ == "__main__":
