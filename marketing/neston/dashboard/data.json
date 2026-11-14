@@ -11,8 +11,8 @@
         "neston-chat-optimiser"
       ],
       "next": "2026-11-16",
-      "connectors_ok": true,
-      "connector_note": "Connectors added: WordPress, Drive, Gmail, Two Minute Reports, Netlify"
+      "connectors_ok": false,
+      "connector_note": "Connectors not added yet"
     },
     {
       "day": "Wednesday",
@@ -25,11 +25,18 @@
         "neston-compliance-reviewer"
       ],
       "next": "2026-11-18",
-      "connectors_ok": true,
-      "connector_note": "Connectors added: WordPress, Drive, Two Minute Reports, Canva, Netlify"
+      "connectors_ok": false,
+      "connector_note": "Connectors not added yet"
     }
   ],
   "waiting": [
+    {
+      "priority": "high",
+      "text": "Add connectors to the 2 Neston scheduled tasks",
+      "why": "They were created without connectors, so they can't reach WordPress, Drive, Gmail, Two Minute Reports or Netlify yet. The first run is Mon 16 Nov, 8:13 am.",
+      "how": "claude.ai → Code → Routines → \"Neston: weekly report & plan\" and \"Neston: weekly content drafts\" → Connectors: add Easy MCP Wordpress, Google Drive, Gmail (Monday only), Two Minute Reports, Canva (Wednesday) and Netlify → Save.",
+      "due": "2026-11-16"
+    },
     {
       "priority": "high",
       "text": "Approve the 4 indexing fixes on neston.com.au",
