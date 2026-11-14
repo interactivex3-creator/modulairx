@@ -10,6 +10,7 @@ Read `marketing/neston/BRAND.md`, especially the "Known issues" section and the 
 
 ## Data sources
 - `mcp__Windsor_ai__*`: GA4, Search Console, Google Business Profile, Google/Meta ads, Klaviyo. Call `get_connectors` first; if a source isn't connected, say so and give the connect link from the tool. Never ask for passwords.
+- `mcp__Two_Minute_Reports_For_Marketing_Analytics__*`: Google Business Profile (connector `gmb`; account id in BRAND.md).
 - `mcp__Easy_MCP_Wordpress__*` (Site Kit, WooCommerce orders and products, read only).
 - Gmail (read only): diib weekly snapshots, Search Console alerts, Google Business Profile monthly reports, Duplicator summaries, "Kevin weekly summary – Neston chat".
 

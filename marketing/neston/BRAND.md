@@ -90,14 +90,15 @@ Key pages: /shop/, /linear-drains/, /square-tile-insert-grates/, /outdoor-drains
 
 ## Known issues to work on (Nov 2026)
 - Search Console reports pages that aren't indexed because they're duplicates without a user-selected canonical. Category pages exist both as WordPress pages (/linear-drains/) and as WooCommerce categories (/product-category/linear-drains/).
-- The Google Business Profile had 0 views in October 2026 (it was then named "Neston Architectural Grates"; renamed to "Neston Architectural Drains" in Nov 2026). Older listings elsewhere may still carry the old name.
+- Google Business Profile (renamed to "Neston Architectural Drains" in Nov 2026): ~50–70 views a month but only 1 website click and 0 calls (Aug–Nov 2026), 0 reviews, one category (Manufacturer). The description over-claims WaterMark compliance and is aimed at homeowners. See drafts/2026-11-15-gbp-improvement-pack.md.
 - Traffic is low (diib: ~34 visitors a week in early Nov 2026).
 - The footer newsletter link only goes to /contact/. There's no real sign-up form yet.
 
 ## Tools the team has connected
 - **Easy_MCP_Wordpress** (`mcp__Easy_MCP_Wordpress__*`): the **neston.com.au** WordPress/WooCommerce site, for posts, pages, media, products and the All in One SEO fields. (Don't confuse it with `Easy_MCP_Bathroom_Deals`, which is a reseller's site.)
 - **WP_Vibe** (`mcp__WP_Vibe__*`): another connector to the site. Load its skill before touching any Elementor page.
-- **Windsor_ai** (`mcp__Windsor_ai__*`): GA4, Search Console, Google Business Profile, Google/Meta ads, Klaviyo, Instagram/Facebook. It reads data, and it can also make changes on those platforms.
+- **Two Minute Reports** (`mcp__Two_Minute_Reports_For_Marketing_Analytics__*`): **Google Business Profile data for Neston** (connector `gmb`, account id `106805015223242956211-11675972058862555623`). Read-only reporting. Windsor's Business Profile slot is used by another business.
+- **Windsor_ai** (`mcp__Windsor_ai__*`): GA4, Search Console, ads, Google/Meta ads, Klaviyo, Instagram/Facebook. It reads data, and it can also make changes on those platforms.
 - **Google Drive / Gmail / Calendar:** the price list (folder "Neston"), technical documents, drafts, Kevin chat summaries, diib and Search Console emails.
 - **Canva / Moda:** spec sheets, brochures, social graphics. **Unsplash:** fallback imagery only; prefer Neston's own photos.
 - **Runway / HyperFrames / ElevenLabs:** short install and product videos.

@@ -1,21 +1,44 @@
 # Google Business Profile — improvement pack (15 Nov 2026)
 
-Profile: **Neston Architectural Drains** (renamed from "Neston Architectural Grates" in Nov 2026). Views: 1 in September, 0 in October.
+Profile: **Neston Architectural Drains** (renamed from "Neston Architectural Grates" in Nov 2026).
 
-Draft for approval. Business Profile isn't connected to any tool here (Windsor has only Google Merchant for Bathroom Deals), so **you apply these changes in business.google.com**, or connect `google_my_business` in Windsor and the team can prepare them there for your approval.
+Draft for approval. **Live data** now comes from **Two Minute Reports** (connector `gmb`, account 11675972058862555623), pulled on 15 Nov 2026. That connector is read-only, so **you make the edits in business.google.com**.
 
-## Why views are near zero (most likely causes)
-1. **New profile with no reviews or photos.** Google rarely shows these.
-2. **Service-area business with a hidden address.** It only ranks for searches close to Scarborough and for the business name.
-3. **Generic or missing categories.** This is the biggest ranking factor you control.
-4. **Possible re-verification after the name change.** Check the profile for a "verification required" notice.
+## Current state (Two Minute Reports, 1 Aug – 13 Nov 2026)
+| | Aug | Sep | Oct | Nov (to 13th) | Total |
+|---|---|---|---|---|---|
+| Views | 63 | 71 | 52 | 15 | **201** |
+| – on Search | 26 | 36 | 30 | 7 | 99 |
+| – on Maps | 37 | 35 | 22 | 8 | 102 |
+| Website clicks | 0 | 1 | 0 | 0 | **1** |
+| Calls | 0 | 0 | 0 | 0 | **0** |
+
+*(Google's monthly email said "0 people viewed" for October. That counts unique people, so it reads lower than the views total above.)*
+
+- **Name:** Neston Architectural Drains ✔ (the change has gone through)
+- **Primary category:** Manufacturer. **Additional categories: none.**
+- **Business type:** service-area only (address hidden)
+- **Website:** https://neston.com.au/ (no tracking tag)
+- **Phone:** 0481 080 060 ✔ · **Status:** open ✔
+- **Reviews:** none
+- **Search terms:** no data yet (too few impressions)
+
+**What this means:** people do see the profile (~50–70 views a month) but almost nobody clicks or calls. The fixes that matter most are: add categories, fix the description, add reviews, photos and posts, and get a click-worthy website link.
+
+### Problems with the current description
+The current text says: "...Every product is backed by WaterMark-certified compliance... Based in Brisbane, we ship Australia-wide... fast turnaround... Whether you're a homeowner, builder or renovator..."
+1. **"Every product is backed by WaterMark-certified compliance"** is a broad compliance claim that isn't documented per product. It needs evidence or softer wording (BRAND.md rule).
+2. **"Fast turnaround" and "ship Australia-wide" to homeowners** implies direct consumer sales. In Phase 1 Neston sells through resellers.
+3. **It doesn't mention 316 stainless, the five finishes, wedge wire, cut-to-size kits or specification support**, which are the real proof points.
+4. **It says "Based in Brisbane"**, while the site says Scarborough, QLD. Pick one (Scarborough is the accurate one).
+5. **There's a stray `"` at the end.**
 
 ## 1. Core details (check and set)
 | Field | Set to |
 |---|---|
-| Name | Neston Architectural Drains *(done)* |
-| Primary category | **Building materials supplier** (matches "supplies projects across Australia") |
-| Secondary categories | Plumbing supply store · Bathroom supply store · Manufacturer *(use whichever of these GBP offers)* |
+| Name | Neston Architectural Drains ✔ |
+| Primary category | Keep **Manufacturer**, or switch to **Building materials supplier** (gets more discovery searches; Manufacturer is accurate but searched less) |
+| Additional categories (currently none, add them) | Building materials supplier (if not primary) · Plumbing supply store · Bathroom supply store · Wholesaler *(use whichever GBP offers)* |
 | Business type | Service-area business, address hidden; service areas: Brisbane, Gold Coast, Sunshine Coast, Moreton Bay, Ipswich, Toowoomba, Queensland |
 | Phone | 0481 080 060 |
 | Website | `https://neston.com.au/?utm_source=google&utm_medium=organic&utm_campaign=gbp` |
@@ -67,4 +90,4 @@ Each one: a photo from the site, a 1–2 line description and a "Learn more" but
 Use "Neston Architectural Drains" + 0481 080 060 + Scarborough QLD on: the website (done), Facebook, Instagram, LinkedIn, Bing Places, Apple Business Connect, and any supplier or directory listing. Check for any listing that still says "Grates".
 
 ## What to check in 4 weeks
-Views, searches (direct vs discovery), website clicks and calls. Compare against Oct (0 views).
+From Two Minute Reports: views, website clicks, calls and review count. Baseline: ~60 views a month, 1 website click and 0 calls in 3.5 months, 0 reviews.
