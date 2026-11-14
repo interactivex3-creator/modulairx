@@ -3,19 +3,30 @@
   "schedule": [
     {
       "day": "Monday",
-      "time": "morning",
+      "time": "8:13 am",
       "what": "Weekly report and plan: Search Console, Google Business Profile, Kevin chat summary, then the week's 3 priorities",
-      "agents": ["neston-analytics-reporter", "neston-marketing-lead", "neston-chat-optimiser"],
-      "next": null,
-      "setup_note": "Not scheduled yet. Ask Claude to set it up."
+      "agents": [
+        "neston-analytics-reporter",
+        "neston-marketing-lead",
+        "neston-chat-optimiser"
+      ],
+      "next": "2026-11-16",
+      "connectors_ok": true,
+      "connector_note": "Connectors added: WordPress, Drive, Gmail, Two Minute Reports, Netlify"
     },
     {
       "day": "Wednesday",
-      "time": "midday",
+      "time": "2:37 pm",
       "what": "Weekly content: a Journal article, a Google Business Profile post, LinkedIn and Instagram posts, compliance check",
-      "agents": ["neston-seo-content-writer", "neston-local-seo-gbp-manager", "neston-social-media-manager", "neston-compliance-reviewer"],
-      "next": null,
-      "setup_note": "Not scheduled yet. Ask Claude to set it up."
+      "agents": [
+        "neston-seo-content-writer",
+        "neston-local-seo-gbp-manager",
+        "neston-social-media-manager",
+        "neston-compliance-reviewer"
+      ],
+      "next": "2026-11-18",
+      "connectors_ok": true,
+      "connector_note": "Connectors added: WordPress, Drive, Two Minute Reports, Canva, Netlify"
     }
   ],
   "waiting": [
@@ -75,11 +86,49 @@
     "week_of": "2026-11-16",
     "note": "Planned for this week. The owner posts and approves everything; nothing goes out automatically.",
     "items": [
-      { "date": "2026-11-16", "time": "Any time", "kind": "run", "what": "New chat: pull Search Console indexing data and confirm the fix list" },
-      { "date": "2026-11-17", "time": "Morning", "kind": "google", "what": "Google post 1: Why every Neston drain is 316 stainless", "link": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/" },
-      { "date": "2026-11-18", "time": "Midday", "kind": "site", "what": "Approved indexing fixes go live (after the backup)" },
-      { "date": "2026-11-18", "time": "Afternoon", "kind": "run", "what": "Check the Google Business Profile changes have gone live (categories, description, link)" },
-      { "date": "2026-11-20", "time": "Morning", "kind": "site", "what": "Search Console: resubmit the sitemap and request indexing for the 3 range pages" }
+      {
+        "date": "2026-11-16",
+        "time": "8:13 am",
+        "kind": "run",
+        "what": "Monday run: weekly report and plan"
+      },
+      {
+        "date": "2026-11-16",
+        "time": "Any time",
+        "kind": "run",
+        "what": "New chat: pull Search Console indexing data and confirm the fix list"
+      },
+      {
+        "date": "2026-11-17",
+        "time": "Morning",
+        "kind": "google",
+        "what": "Google post 1: Why every Neston drain is 316 stainless",
+        "link": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/"
+      },
+      {
+        "date": "2026-11-18",
+        "time": "Midday",
+        "kind": "site",
+        "what": "Approved indexing fixes go live (after the backup)"
+      },
+      {
+        "date": "2026-11-18",
+        "time": "Afternoon",
+        "kind": "run",
+        "what": "Check the Google Business Profile changes have gone live (categories, description, link)"
+      },
+      {
+        "date": "2026-11-18",
+        "time": "2:37 pm",
+        "kind": "run",
+        "what": "Wednesday run: Journal article draft, Google posts, LinkedIn posts, compliance check"
+      },
+      {
+        "date": "2026-11-20",
+        "time": "Morning",
+        "kind": "site",
+        "what": "Search Console: resubmit the sitemap and request indexing for the 3 range pages"
+      }
     ]
   },
   "agents": [
@@ -90,12 +139,32 @@
       "role": "Plans campaigns and the calendar, coordinates the team, and runs the 2027 direct-launch plan. Reseller-first until then.",
       "status": "active",
       "last_update": "2026-11-15",
-      "next_run": null,
-      "face": { "skin": "#F1C7A3", "hair": "#2B1E16", "style": "side", "shirt": "#1E1D1B", "extra": "tie", "glasses": false },
+      "next_run": "2026-11-16",
+      "face": {
+        "skin": "#F1C7A3",
+        "hair": "#2B1E16",
+        "style": "side",
+        "shirt": "#1E1D1B",
+        "extra": "tie",
+        "glasses": false
+      },
       "done": [
-        { "date": "2026-11-15", "text": "Set up the 13-agent marketing department and the shared brand brief" },
-        { "date": "2026-11-15", "text": "Recorded the channel plan: resellers now, direct sales from 2027" },
-        { "date": "2026-11-15", "text": "Saved the brief, team overview, audit and profile pack to Google Drive" }
+        {
+          "date": "2026-11-15",
+          "text": "Scheduled the weekly runs: Monday 8:13 am report and plan, Wednesday 2:37 pm content"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Set up the 13-agent marketing department and the shared brand brief"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Recorded the channel plan: resellers now, direct sales from 2027"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Saved the brief, team overview, audit and profile pack to Google Drive"
+        }
       ]
     },
     {
@@ -105,11 +174,24 @@
       "role": "Technical Journal guides (zero-threshold, NCC 2022, 316 vs 304, falls and outlets) and on-page and technical SEO. Saves drafts only.",
       "status": "active",
       "last_update": "2026-11-15",
-      "next_run": null,
-      "face": { "skin": "#E8B894", "hair": "#6B4226", "style": "short", "shirt": "#B08D57", "extra": "pencil", "glasses": true },
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#E8B894",
+        "hair": "#6B4226",
+        "style": "short",
+        "shirt": "#B08D57",
+        "extra": "pencil",
+        "glasses": true
+      },
       "done": [
-        { "date": "2026-11-15", "text": "Indexing audit: found duplicate range pages, a second header, the empty tagline and the en_US locale" },
-        { "date": "2026-11-15", "text": "Wrote the redirect fix and the approval checklist" }
+        {
+          "date": "2026-11-15",
+          "text": "Indexing audit: found duplicate range pages, a second header, the empty tagline and the en_US locale"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Wrote the redirect fix and the approval checklist"
+        }
       ]
     },
     {
@@ -119,12 +201,28 @@
       "role": "Google Business Profile, reviews, directories and consistent business details. Drafts only; the owner posts.",
       "status": "active",
       "last_update": "2026-11-15",
-      "next_run": null,
-      "face": { "skin": "#C68E6A", "hair": "#1E1E1E", "style": "long", "shirt": "#4A4B4D", "extra": "phone", "glasses": false },
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#C68E6A",
+        "hair": "#1E1E1E",
+        "style": "long",
+        "shirt": "#4A4B4D",
+        "extra": "phone",
+        "glasses": false
+      },
       "done": [
-        { "date": "2026-11-15", "text": "Profile improvement pack: categories, new description, services, products and 4 posts" },
-        { "date": "2026-11-15", "text": "Photo list of 14 site images, plus a square logo brief" },
-        { "date": "2026-11-15", "text": "Owner applied the new name, categories, description and tracked website link" }
+        {
+          "date": "2026-11-15",
+          "text": "Profile improvement pack: categories, new description, services, products and 4 posts"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Photo list of 14 site images, plus a square logo brief"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Owner applied the new name, categories, description and tracked website link"
+        }
       ]
     },
     {
@@ -134,11 +232,24 @@
       "role": "Reports from Search Console, GA4, Google Business Profile, diib and Kevin chat summaries. Read only.",
       "status": "active",
       "last_update": "2026-11-15",
-      "next_run": null,
-      "face": { "skin": "#8D5A3B", "hair": "#141414", "style": "curly", "shirt": "#7B5A43", "extra": "none", "glasses": true },
+      "next_run": "2026-11-16",
+      "face": {
+        "skin": "#8D5A3B",
+        "hair": "#141414",
+        "style": "curly",
+        "shirt": "#7B5A43",
+        "extra": "none",
+        "glasses": true
+      },
       "done": [
-        { "date": "2026-11-15", "text": "Google Profile baseline: 201 views, 1 website click, 0 calls (Aug – 13 Nov)" },
-        { "date": "2026-11-15", "text": "Connected Search Console through Easy MCP (service account)" }
+        {
+          "date": "2026-11-15",
+          "text": "Google Profile baseline: 201 views, 1 website click, 0 calls (Aug – 13 Nov)"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Connected Search Console through Easy MCP (service account)"
+        }
       ]
     },
     {
@@ -148,10 +259,20 @@
       "role": "Last check on everything external: Australian Consumer Law, NCC/AS and WaterMark claims, pricing, Spam Act, channel rules.",
       "status": "standby",
       "last_update": "2026-11-15",
-      "next_run": null,
-      "face": { "skin": "#B07A55", "hair": "#141414", "style": "bun", "shirt": "#1E1D1B", "extra": "badge", "glasses": true },
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#B07A55",
+        "hair": "#141414",
+        "style": "bun",
+        "shirt": "#1E1D1B",
+        "extra": "badge",
+        "glasses": true
+      },
       "done": [
-        { "date": "2026-11-15", "text": "Flagged the old Google description's \"every product WaterMark-certified\" claim" }
+        {
+          "date": "2026-11-15",
+          "text": "Flagged the old Google description's \"every product WaterMark-certified\" claim"
+        }
       ]
     },
     {
@@ -161,8 +282,15 @@
       "role": "WooCommerce product and category copy, spec tables by model, finish and outlet, alt text. Never changes prices.",
       "status": "standby",
       "last_update": null,
-      "next_run": null,
-      "face": { "skin": "#F6D2B8", "hair": "#C9A15B", "style": "side", "shirt": "#B08D57", "extra": "none", "glasses": false },
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#F6D2B8",
+        "hair": "#C9A15B",
+        "style": "side",
+        "shirt": "#B08D57",
+        "extra": "none",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -173,7 +301,14 @@
       "status": "standby",
       "last_update": null,
       "next_run": null,
-      "face": { "skin": "#F1C7A3", "hair": "#8A4B2A", "style": "long", "shirt": "#4A4B4D", "extra": "envelope", "glasses": false },
+      "face": {
+        "skin": "#F1C7A3",
+        "hair": "#8A4B2A",
+        "style": "long",
+        "shirt": "#4A4B4D",
+        "extra": "envelope",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -184,7 +319,14 @@
       "status": "standby",
       "last_update": null,
       "next_run": null,
-      "face": { "skin": "#E0AC84", "hair": "#3B2A20", "style": "cap", "shirt": "#7B5A43", "extra": "none", "glasses": false },
+      "face": {
+        "skin": "#E0AC84",
+        "hair": "#3B2A20",
+        "style": "cap",
+        "shirt": "#7B5A43",
+        "extra": "none",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -195,7 +337,14 @@
       "status": "standby",
       "last_update": null,
       "next_run": null,
-      "face": { "skin": "#F6D2B8", "hair": "#141414", "style": "bun", "shirt": "#C9CACC", "extra": "pencil", "glasses": true },
+      "face": {
+        "skin": "#F6D2B8",
+        "hair": "#141414",
+        "style": "bun",
+        "shirt": "#C9CACC",
+        "extra": "pencil",
+        "glasses": true
+      },
       "done": []
     },
     {
@@ -205,8 +354,15 @@
       "role": "LinkedIn for specifiers and trade, Instagram and Pinterest for design. Posts, carousels, reel scripts. Never posts itself.",
       "status": "standby",
       "last_update": null,
-      "next_run": null,
-      "face": { "skin": "#C68E6A", "hair": "#2B1E16", "style": "curly", "shirt": "#B08D57", "extra": "headphones", "glasses": false },
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#C68E6A",
+        "hair": "#2B1E16",
+        "style": "curly",
+        "shirt": "#B08D57",
+        "extra": "headphones",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -217,7 +373,14 @@
       "status": "standby",
       "last_update": null,
       "next_run": null,
-      "face": { "skin": "#F1C7A3", "hair": "#B5651D", "style": "long", "shirt": "#7B5A43", "extra": "envelope", "glasses": false },
+      "face": {
+        "skin": "#F1C7A3",
+        "hair": "#B5651D",
+        "style": "long",
+        "shirt": "#7B5A43",
+        "extra": "envelope",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -228,7 +391,14 @@
       "status": "paused",
       "last_update": null,
       "next_run": null,
-      "face": { "skin": "#8D5A3B", "hair": "#141414", "style": "short", "shirt": "#4A4B4D", "extra": "none", "glasses": false },
+      "face": {
+        "skin": "#8D5A3B",
+        "hair": "#141414",
+        "style": "short",
+        "shirt": "#4A4B4D",
+        "extra": "none",
+        "glasses": false
+      },
       "done": []
     },
     {
@@ -238,18 +408,65 @@
       "role": "Reviews Kevin's chats, finds missed answers and lost leads, and proposes knowledge-base updates. Never edits Kevin itself.",
       "status": "standby",
       "last_update": null,
-      "next_run": null,
-      "face": { "skin": "#E8B894", "hair": "#C9A15B", "style": "short", "shirt": "#1E1D1B", "extra": "headphones", "glasses": true },
+      "next_run": "2026-11-16",
+      "face": {
+        "skin": "#E8B894",
+        "hair": "#C9A15B",
+        "style": "short",
+        "shirt": "#1E1D1B",
+        "extra": "headphones",
+        "glasses": true
+      },
       "done": []
     }
   ],
   "latest": [
-    { "date": "2026-11-15", "type": "Google Doc", "title": "Google Business Profile Photo List", "url": "https://docs.google.com/document/d/1bHNs-TGpkbpqhxJgiYeQfMcObqVeRTlglJMhEvoyGVE/edit", "by": "neston-local-seo-gbp-manager" },
-    { "date": "2026-11-15", "type": "Google Doc", "title": "Google Business Profile Improvement Pack", "url": "https://docs.google.com/document/d/1uyz0B2ClXLCdR4eCONaeUy_xu_PX5hRqu9-tXssnSUU/edit", "by": "neston-local-seo-gbp-manager" },
-    { "date": "2026-11-15", "type": "Audit", "title": "Indexing Audit and Fix Plan", "url": "https://docs.google.com/document/d/1hwYF72of8TsQ6RIQCtGZ07Fh1SZXQJDrHnqNnK4a5nA/edit", "by": "neston-seo-content-writer" },
-    { "date": "2026-11-15", "type": "Brief", "title": "Neston Marketing Brief (Brand)", "url": "https://docs.google.com/document/d/16mzkXOMwcX0ZGfRfo-utX6oagRiZ_b0lJMA2NE83D68/edit", "by": "neston-marketing-lead" },
-    { "date": "2026-11-15", "type": "Overview", "title": "Neston Marketing Agent Team", "url": "https://docs.google.com/document/d/1aGsH3l5VX2qSG8DCAK8ecghsoKexFOLK0rDEX_6vhTE/edit", "by": "neston-marketing-lead" },
-    { "date": "2026-11-14", "type": "Journal post", "title": "Zero Threshold Drains for Building Entries", "url": "https://neston.com.au/zero-threshold-drain-building-entries/" },
-    { "date": "2026-11-07", "type": "Journal post", "title": "Why Every Neston Drain Is 316 Stainless Steel", "url": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/" }
+    {
+      "date": "2026-11-15",
+      "type": "Google Doc",
+      "title": "Google Business Profile Photo List",
+      "url": "https://docs.google.com/document/d/1bHNs-TGpkbpqhxJgiYeQfMcObqVeRTlglJMhEvoyGVE/edit",
+      "by": "neston-local-seo-gbp-manager"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "Google Doc",
+      "title": "Google Business Profile Improvement Pack",
+      "url": "https://docs.google.com/document/d/1uyz0B2ClXLCdR4eCONaeUy_xu_PX5hRqu9-tXssnSUU/edit",
+      "by": "neston-local-seo-gbp-manager"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "Audit",
+      "title": "Indexing Audit and Fix Plan",
+      "url": "https://docs.google.com/document/d/1hwYF72of8TsQ6RIQCtGZ07Fh1SZXQJDrHnqNnK4a5nA/edit",
+      "by": "neston-seo-content-writer"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "Brief",
+      "title": "Neston Marketing Brief (Brand)",
+      "url": "https://docs.google.com/document/d/16mzkXOMwcX0ZGfRfo-utX6oagRiZ_b0lJMA2NE83D68/edit",
+      "by": "neston-marketing-lead"
+    },
+    {
+      "date": "2026-11-15",
+      "type": "Overview",
+      "title": "Neston Marketing Agent Team",
+      "url": "https://docs.google.com/document/d/1aGsH3l5VX2qSG8DCAK8ecghsoKexFOLK0rDEX_6vhTE/edit",
+      "by": "neston-marketing-lead"
+    },
+    {
+      "date": "2026-11-14",
+      "type": "Journal post",
+      "title": "Zero Threshold Drains for Building Entries",
+      "url": "https://neston.com.au/zero-threshold-drain-building-entries/"
+    },
+    {
+      "date": "2026-11-07",
+      "type": "Journal post",
+      "title": "Why Every Neston Drain Is 316 Stainless Steel",
+      "url": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/"
+    }
   ]
 }
