@@ -12,8 +12,8 @@
       "next": "2026-11-16",
       "last_run": "2026-11-10",
       "last_status": "ok",
-      "connectors_ok": false,
-      "connector_note": "Google Drive missing"
+      "connectors_ok": true,
+      "connector_note": "All 4 connectors added"
     },
     {
       "day": "Wednesday",
@@ -30,7 +30,7 @@
       "last_run": "2026-11-11",
       "last_status": "ok",
       "connectors_ok": true,
-      "connector_note": "All 5 connectors added"
+      "connector_note": "All 6 connectors added"
     }
   ],
   "agents": [
@@ -308,13 +308,6 @@
   ],
   "waiting": [
     {
-      "text": "Add the Google Drive connector to the Monday task “Bathroom Deals: weekly report & plan”",
-      "why": "Without it Monday’s report and plan can’t be saved, and Wednesday’s run reads that plan.",
-      "due": "2026-11-16",
-      "priority": "high",
-      "how": "claude.ai › Routines › weekly report & plan › Connectors › add Google Drive"
-    },
-    {
       "text": "Schedule the 16–22 Nov Facebook and Instagram posts",
       "why": "4 posts, first one goes out Tue 17 Nov 7:30 pm.",
       "due": "2026-11-17",
@@ -334,13 +327,6 @@
       "why": "They still say “delivered Australia-wide” but Forio sinks are collection only. Say yes and the team will fix the wording.",
       "due": null,
       "priority": "medium"
-    },
-    {
-      "text": "Add the Netlify connector to both weekly tasks",
-      "why": "So this dashboard updates itself after every run.",
-      "due": null,
-      "priority": "low",
-      "how": "claude.ai › Routines › each task › Connectors › add Netlify"
     },
     {
       "text": "Delete the 2 older sample reels in Drive (optional)",
