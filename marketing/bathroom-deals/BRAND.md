@@ -100,3 +100,18 @@ The social media agent writes 2 Google Business Profile updates a week, which th
 
 ## Reels and Shorts (added 13 Nov 2026)
 `bd-video-creator` makes 1 short vertical video a week (suggested Friday 7:30 pm) (1080×1920 MP4, 15–20 s) from our own product photos, using `marketing/bathroom-deals/tools/make_reel.py`. **Every reel has a voiceover, music, full-frame pictures and the Bathroom Deals logo at the bottom, and never shows or says the location** (owner rules, 13 Nov 2026; logo file `marketing/bathroom-deals/brand-assets/bathroom-deals-logo.png`): house voice "Matt - Warm, Friendly Australian" from ElevenLabs, and an instrumental background track generated in Runway (no commercial songs). The owner schedules them by hand in Business Suite (Create reel). On-screen text **and the voiceover** follow every compliance rule above: real current prices, warranty per finish, collection-only items labelled, no was/now. No AI-generated product footage.
+
+## Team names (owner, 14 Nov 2026)
+Use these names in reports, plans, weekly docs and the dashboard (https://bathroom-deals-team.netlify.app). The working names (`bd-…`) stay the same behind the scenes.
+
+| Agent | Name |
+|---|---|
+| bd-marketing-lead | Morgan |
+| bd-analytics-reporter | Ash |
+| bd-seo-content-writer | Sienna |
+| bd-product-copywriter | Archie |
+| bd-social-media-manager | Bree |
+| bd-video-creator | Jordie |
+| bd-email-marketer | Ellie |
+| bd-paid-ads-specialist | Max |
+| bd-compliance-reviewer | Grace |
