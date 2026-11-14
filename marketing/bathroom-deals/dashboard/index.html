@@ -64,6 +64,31 @@
   .done li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 14px; }
   .done li:last-child { border-bottom: 0; }
   .done time { flex: none; width: 52px; color: var(--muted); font-size: 12px; padding-top: 2px; }
+  .two { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; }
+  @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 6px 16px; }
+  .todo, .cal, .latest { list-style: none; margin: 0; padding: 0; }
+  .todo li, .cal li, .latest li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); }
+  .todo li:last-child, .cal li:last-child, .latest li:last-child { border-bottom: 0; }
+  .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; }
+  .dot.high { background: var(--stop); } .dot.medium { background: var(--wait); } .dot.low { background: var(--teal); }
+  .todo b { display: block; font-size: 14px; }
+  .todo .why, .todo .how { color: var(--muted); font-size: 13px; }
+  .todo .how { font-style: italic; }
+  .due { flex: none; margin-left: auto; font-size: 12px; font-weight: 600; white-space: nowrap; color: var(--stop); }
+  .cal .day { flex: none; width: 74px; font-size: 13px; }
+  .cal .day b { display: block; font-size: 14px; }
+  .cal li.past { opacity: .5; }
+  .cal li.today { background: var(--teal-soft); border-radius: 10px; padding-left: 8px; padding-right: 8px; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; border-radius: 6px; padding: 1px 7px; margin-right: 6px; color: #fff; }
+  .tag.facebook { background: #3B5998; } .tag.reel { background: #C13584; } .tag.run { background: var(--navy); } .tag.google { background: #34A853; }
+  .note { color: var(--muted); font-size: 13px; padding: 10px 0; border-top: 1px solid var(--line); }
+  a { color: var(--navy); } @media (prefers-color-scheme: dark) { a { color: var(--teal); } }
+  .latest .type { flex: none; width: 104px; font-size: 12px; color: var(--muted); padding-top: 2px; }
+  .latest .by { color: var(--muted); font-size: 12px; }
+  .health { display: flex; gap: 8px; flex-wrap: wrap; margin: 4px 0 6px; font-size: 13px; }
+  .health span { border-radius: 8px; padding: 2px 8px; }
+  .ok { background: var(--ok-bg); color: var(--ok); } .bad { background: var(--stop-bg); color: var(--stop); }
   footer { color: var(--muted); font-size: 12px; padding: 0 0 30px; }
   @media (max-width: 420px) { .grid { grid-template-columns: 1fr; } .avatar { width: 68px; height: 68px; } }
 </style>
@@ -74,7 +99,7 @@
     <img src="logo.png" alt="Bathroom Deals">
     <div>
       <h1>Bathroom Deals Marketing Team</h1>
-      <div class="sub">What each agent does, what it has done, and when it last worked</div>
+      <div class="sub">Who does what, what needs your attention, and what's going out this week</div>
     </div>
     <div class="spacer"></div>
     <div class="updated" id="updated"></div>
@@ -84,11 +109,25 @@
 <main class="wrap">
   <section class="summary" id="summary"></section>
 
-  <h2>Weekly schedule (Brisbane time)</h2>
+  <div class="two">
+    <div>
+      <h2>Waiting on you</h2>
+      <section class="panel"><ul class="todo" id="todo"></ul></section>
+    </div>
+    <div>
+      <h2 id="calTitle">This week</h2>
+      <section class="panel"><ul class="cal" id="cal"></ul><div class="note" id="calNote"></div></section>
+    </div>
+  </div>
+
+  <h2>Weekly runs and health (Brisbane time)</h2>
   <section class="schedule" id="schedule"></section>
 
   <h2>The team</h2>
   <section class="grid" id="grid"></section>
+
+  <h2>Latest content</h2>
+  <section class="panel" style="margin-bottom:30px"><ul class="latest" id="latest"></ul></section>
 </main>
 <footer class="wrap">The agents draft and prepare; the owner approves and posts. Nothing is published or sent automatically.</footer>
 
@@ -163,9 +202,36 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
     <div class="run">
       <div class="when">${esc(s.day)}, ${esc(s.time)}</div>
       <div class="what">${esc(s.what)}</div>
+      <div class="health">
+        ${s.last_run ? `<span class="${s.last_status === "ok" ? "ok" : "bad"}">Last run ${esc(short(s.last_run))}: ${s.last_status === "ok" ? "worked" : "failed"}</span>` : ""}
+        ${s.connector_note ? `<span class="${s.connectors_ok ? "ok" : "bad"}">${esc(s.connector_note)}</span>` : ""}
+      </div>
       <div class="next">Next: <b>${esc(long(s.next))}</b></div>
       <div class="faces">${s.agents.map(id => byId[id] ? `<span title="${esc(byId[id].name)}, ${esc(byId[id].title)}">${face(byId[id].face, "#E6F1F1")}</span>` : "").join("")}</div>
     </div>`).join("");
+
+
+  const todayStr = (() => { const t = new Date(); return t.getFullYear() + "-" + String(t.getMonth() + 1).padStart(2, "0") + "-" + String(t.getDate()).padStart(2, "0"); })();
+  const link = (u, t) => u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : t;
+  const w = d.waiting || [];
+  document.getElementById("todo").innerHTML = w.length ? w.map(x => `
+    <li><span class="dot ${esc(x.priority)}"></span>
+      <div><b>${link(x.link, esc(x.text))}</b><div class="why">${esc(x.why || "")}</div>${x.how ? `<div class="how">${esc(x.how)}</div>` : ""}</div>
+      ${x.due ? `<span class="due">by ${esc(short(x.due))}</span>` : ""}</li>`).join("") : "<li>Nothing waiting. 🎉</li>";
+  if (d.calendar) {
+    const end = parse(d.calendar.week_of); end.setDate(end.getDate() + 6);
+    document.getElementById("calTitle").textContent = "This week: " + short(d.calendar.week_of) + " – " + end.getDate() + " " + MONTHS[end.getMonth()];
+    const label = { facebook: "FB + IG", reel: "Reel", run: "Team", google: "Google" };
+    document.getElementById("cal").innerHTML = d.calendar.items.map(x => {
+      const dt = parse(x.date), cls = x.date < todayStr ? "past" : x.date === todayStr ? "today" : "";
+      return `<li class="${cls}"><span class="day"><b>${DAYS[dt.getDay()]} ${dt.getDate()}</b>${esc(x.time)}</span>
+        <span><span class="tag ${esc(x.kind)}">${label[x.kind] || esc(x.kind)}</span>${link(x.link, esc(x.what))}</span></li>`;
+    }).join("");
+    document.getElementById("calNote").textContent = d.calendar.note || "";
+  }
+  document.getElementById("latest").innerHTML = (d.latest || []).map(x => `
+    <li><span class="type">${esc(short(x.date))} · ${esc(x.type)}</span>
+      <span>${link(x.url, esc(x.title))}${byId[x.by] ? `<div class="by">by ${esc(byId[x.by].name)}, ${esc(byId[x.by].title)}</div>` : ""}</span></li>`).join("");
 
   const order = { active: 0, standby: 1, paused: 2 };
   const agents = [...d.agents].sort((a, b) => order[a.status] - order[b.status] || b.last_update.localeCompare(a.last_update));
