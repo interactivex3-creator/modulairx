@@ -38,3 +38,6 @@ Warranty terms, WaterMark licence details, the 2027 direct-launch date, CPD accr
 ## Folders
 - `drafts/`: briefs, posts, emails, outreach, ad copy and collateral notes waiting for approval
 - `reports/`: analytics reports, audits and Kevin reviews
+
+## Google Drive copies
+The brand brief, this team overview, the indexing audit and the Google Business Profile pack and photo list are also saved as Google Docs in Drive under **Neston › Neston Marketing**. The copies in this repository are the master versions the agents read. If you edit a Drive copy, tell an agent so the change can be copied back here.
