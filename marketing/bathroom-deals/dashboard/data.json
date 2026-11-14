@@ -1,0 +1,292 @@
+{
+  "updated": "2026-11-14",
+  "schedule": [
+    {
+      "day": "Monday",
+      "time": "6:47 am",
+      "what": "Weekly report and plan",
+      "agents": [
+        "bd-analytics-reporter",
+        "bd-marketing-lead"
+      ],
+      "next": "2026-11-16"
+    },
+    {
+      "day": "Wednesday",
+      "time": "12:41 pm",
+      "what": "Weekly content: social posts, reel, Google posts, product copy, new blog article, compliance check",
+      "agents": [
+        "bd-social-media-manager",
+        "bd-video-creator",
+        "bd-product-copywriter",
+        "bd-seo-content-writer",
+        "bd-compliance-reviewer"
+      ],
+      "next": "2026-11-18"
+    }
+  ],
+  "agents": [
+    {
+      "id": "bd-marketing-lead",
+      "title": "Marketing Lead",
+      "role": "Plans each week, sets the 3 priorities and briefs the rest of the team.",
+      "status": "active",
+      "last_update": "2026-11-10",
+      "next_run": "2026-11-16",
+      "face": {
+        "skin": "#F1C7A3",
+        "hair": "#3B2A20",
+        "style": "side",
+        "shirt": "#34495E",
+        "extra": "tie",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-10",
+          "text": "Weekly plan for 16–22 Nov: 3 priorities and briefs for the content run"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Set up the marketing team and the weekly schedule"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Recorded owner decisions in the brand brief: no Black Friday campaign, warranty rules, collection-only items"
+        }
+      ]
+    },
+    {
+      "id": "bd-analytics-reporter",
+      "title": "Analytics Reporter",
+      "role": "Weekly numbers from Google Analytics, Search Console, WooCommerce and Merchant Center, with bot traffic separated out.",
+      "status": "active",
+      "last_update": "2026-11-10",
+      "next_run": "2026-11-16",
+      "face": {
+        "skin": "#C68E6A",
+        "hair": "#1E1E1E",
+        "style": "short",
+        "shirt": "#89BCBE",
+        "extra": "none",
+        "glasses": true
+      },
+      "done": [
+        {
+          "date": "2026-11-10",
+          "text": "Weekly report: real Australian visitors vs overseas bot traffic"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Baseline report: traffic, search, Merchant Center and sales"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Found the add-to-cart spikes were bots, not real shoppers"
+        }
+      ]
+    },
+    {
+      "id": "bd-seo-content-writer",
+      "title": "SEO Content Writer",
+      "role": "Writes a brand-new blog article every week and handles on-page SEO.",
+      "status": "active",
+      "last_update": "2026-11-12",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#F6D2B8",
+        "hair": "#B5651D",
+        "style": "long",
+        "shirt": "#5B8C85",
+        "extra": "pencil",
+        "glasses": true
+      },
+      "done": [
+        {
+          "date": "2026-11-12",
+          "text": "Published “Small bathroom storage ideas” on the website"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "Drafted a tapware colours blog refresh"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "Removed the discontinued Tarnos 900 from 3 blog posts"
+        }
+      ]
+    },
+    {
+      "id": "bd-product-copywriter",
+      "title": "Product Copywriter",
+      "role": "Rewrites product and category pages: descriptions, specs, warranties and FAQs.",
+      "status": "active",
+      "last_update": "2026-11-12",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#8D5A3B",
+        "hair": "#141414",
+        "style": "curly",
+        "shirt": "#D98E73",
+        "extra": "none",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-12",
+          "text": "Fixed the Nimis 900 (drawers) and Tarnos Tall Boy (doors) pages"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "New copy for sinks, drains and the Lucito range"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Corrected Lucito warranties on 125 products (7-year finish; black 10-year body + 5-year finish)"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "New copy for vanities and top tapware, collection-only wording added"
+        }
+      ]
+    },
+    {
+      "id": "bd-social-media-manager",
+      "title": "Social Media Manager",
+      "role": "Weekly Facebook and Instagram posts, plus 2 Google Business Profile updates, ready to schedule.",
+      "status": "active",
+      "last_update": "2026-11-12",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#F3C9A8",
+        "hair": "#E0B44C",
+        "style": "bun",
+        "shirt": "#E07A5F",
+        "extra": "phone",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-12",
+          "text": "Added 2 Google Business Profile posts to every weekly pack"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "4 posts for 16–22 Nov, rewritten so nothing repeats earlier posts"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "First weekly pack (9–15 Nov) set up for Business Suite bulk scheduling"
+        }
+      ]
+    },
+    {
+      "id": "bd-video-creator",
+      "title": "Video Creator",
+      "role": "One reel a week with an Australian voiceover, music and the Bathroom Deals logo.",
+      "status": "active",
+      "last_update": "2026-11-13",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#E8B48F",
+        "hair": "#2F2F2F",
+        "style": "cap",
+        "shirt": "#2E3A46",
+        "extra": "headphones",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-13",
+          "text": "Joined the team; first reel made: Lucito Shower Shelf in 6 finishes"
+        },
+        {
+          "date": "2026-11-13",
+          "text": "Added voiceover, music, full-frame photos and the logo to every reel"
+        },
+        {
+          "date": "2026-11-13",
+          "text": "Weekly reel added to the Wednesday run (posting Fridays 7:30 pm)"
+        }
+      ]
+    },
+    {
+      "id": "bd-compliance-reviewer",
+      "title": "Compliance Reviewer",
+      "role": "Checks every post, page and video for prices, warranties, delivery claims and Australian Consumer Law.",
+      "status": "active",
+      "last_update": "2026-11-11",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#D9A07A",
+        "hair": "#8A8A8A",
+        "style": "short",
+        "shirt": "#34495E",
+        "extra": "badge",
+        "glasses": true
+      },
+      "done": [
+        {
+          "date": "2026-11-11",
+          "text": "Reviewed the 16–22 Nov posts and the new blog article"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Flagged unverified was/now prices; removed from 17 products"
+        },
+        {
+          "date": "2026-11-08",
+          "text": "Flagged wrong warranty and delivery wording on vanity pages"
+        }
+      ]
+    },
+    {
+      "id": "bd-paid-ads-specialist",
+      "title": "Paid Ads Specialist",
+      "role": "Google Ads and Meta Ads copy, structure and budgets. Recommends only; never changes spend.",
+      "status": "standby",
+      "last_update": "2026-11-08",
+      "next_run": null,
+      "face": {
+        "skin": "#FAD7BE",
+        "hair": "#6B3E26",
+        "style": "side",
+        "shirt": "#7A9E7E",
+        "extra": "none",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-08",
+          "text": "Ready on call. No ad work requested yet"
+        }
+      ]
+    },
+    {
+      "id": "bd-email-marketer",
+      "title": "Email Marketer",
+      "role": "Newsletters and email flows. Drafts only, never sends.",
+      "status": "paused",
+      "last_update": "2026-11-11",
+      "next_run": null,
+      "face": {
+        "skin": "#C99372",
+        "hair": "#4A2C1A",
+        "style": "long",
+        "shirt": "#A3A8B0",
+        "extra": "envelope",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-11",
+          "text": "Paused by the owner: no email marketing for now"
+        },
+        {
+          "date": "2026-11-11",
+          "text": "Package quote email drafted (on hold)"
+        }
+      ]
+    }
+  ]
+}

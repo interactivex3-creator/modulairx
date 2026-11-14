@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bathroom Deals Marketing Team</title>
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    --navy: #34495E; --teal: #89BCBE; --teal-soft: #E6F1F1;
+    --bg: #F4F6F8; --card: #FFFFFF; --text: #1F2A36; --muted: #5F6B78; --line: #E3E7EB;
+    --ok: #2E8B57; --ok-bg: #E4F4EA; --wait: #9A6B00; --wait-bg: #FFF3D6; --stop: #A33A3A; --stop-bg: #FBE6E6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11171D; --card: #1A222B; --text: #E6EBF0; --muted: #9AA7B4; --line: #2A3540;
+      --teal-soft: #1F3335; --ok-bg: #173226; --ok: #6FD39B; --wait-bg: #3A2F12; --wait: #F1C35A; --stop-bg: #3A1C1C; --stop: #F08A8A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  .top { display: flex; align-items: center; gap: 16px; padding: 14px 0; flex-wrap: wrap; }
+  .top img { height: 46px; background: #fff; border-radius: 8px; padding: 4px 8px; }
+  .top h1 { font-size: 20px; margin: 0; color: var(--text); }
+  .top .sub { color: var(--muted); font-size: 13px; }
+  .top .spacer { flex: 1; }
+  .updated { font-size: 13px; color: var(--muted); }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 20px 0 8px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+  .stat b { display: block; font-size: 24px; color: var(--navy); }
+  @media (prefers-color-scheme: dark) { .stat b { color: var(--teal); } }
+  .stat span { color: var(--muted); font-size: 13px; }
+  h2 { font-size: 16px; margin: 26px 0 10px; }
+  .schedule { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .run { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--teal); border-radius: 12px; padding: 12px 14px; }
+  .run .when { font-weight: 600; }
+  .run .what { color: var(--muted); font-size: 14px; margin: 2px 0 6px; }
+  .run .next { font-size: 13px; }
+  .faces { display: flex; gap: 4px; margin-top: 8px; }
+  .faces svg { width: 30px; height: 30px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; }
+  .card.paused { opacity: .78; }
+  .head { display: flex; gap: 14px; align-items: center; }
+  .avatar { width: 84px; height: 84px; flex: none; }
+  .head h3 { margin: 0; font-size: 17px; }
+  .head code { font-size: 12px; color: var(--muted); }
+  .chip { display: inline-block; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 10px; margin-top: 4px; }
+  .chip.active { background: var(--ok-bg); color: var(--ok); }
+  .chip.standby { background: var(--wait-bg); color: var(--wait); }
+  .chip.paused { background: var(--stop-bg); color: var(--stop); }
+  .role { color: var(--muted); margin: 12px 0 10px; font-size: 14px; }
+  .meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: 13px; margin-bottom: 10px; }
+  .meta span { background: var(--teal-soft); border-radius: 8px; padding: 3px 8px; }
+  .done { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+  .done li { display: flex; gap: 10px; padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 14px; }
+  .done li:last-child { border-bottom: 0; }
+  .done time { flex: none; width: 52px; color: var(--muted); font-size: 12px; padding-top: 2px; }
+  footer { color: var(--muted); font-size: 12px; padding: 0 0 30px; }
+  @media (max-width: 420px) { .grid { grid-template-columns: 1fr; } .avatar { width: 68px; height: 68px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <img src="logo.png" alt="Bathroom Deals">
+    <div>
+      <h1>Marketing Team</h1>
+      <div class="sub">What each agent does, what it has done, and when it last worked</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="updated" id="updated"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="summary" id="summary"></section>
+
+  <h2>Weekly schedule (Brisbane time)</h2>
+  <section class="schedule" id="schedule"></section>
+
+  <h2>The team</h2>
+  <section class="grid" id="grid"></section>
+</main>
+<footer class="wrap">The agents draft and prepare; the owner approves and posts. Nothing is published or sent automatically.</footer>
+
+<script>
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const parse = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const short = s => { const d = parse(s); return d.getDate() + " " + MONTHS[d.getMonth()]; };
+const long = s => { const d = parse(s); return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear(); };
+function ago(s) {
+  const t = new Date(); t.setHours(0, 0, 0, 0);
+  const n = Math.round((t - parse(s)) / 86400000);
+  return n <= 0 ? "today" : n === 1 ? "yesterday" : n + " days ago";
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* Original cartoon faces, drawn in SVG from a few traits per agent. */
+function face(f, bg) {
+  const s = f.skin, h = f.hair, sh = f.shirt;
+  const hair = {
+    short: `<path d="M30 46 Q32 22 60 21 Q88 22 90 46 Q84 33 60 32 Q37 33 30 46Z" fill="${h}"/>`,
+    side:  `<path d="M29 50 Q28 20 62 20 Q92 22 91 48 Q80 30 50 34 Q38 38 29 50Z" fill="${h}"/>`,
+    long:  `<path d="M26 82 Q20 22 60 20 Q100 22 94 82 L86 82 Q90 40 60 33 Q32 40 34 82Z" fill="${h}"/>`,
+    curly: `<g fill="${h}">${[[34,38],[42,28],[54,23],[66,23],[78,28],[86,38],[30,50],[90,50]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="10"/>`).join("")}</g>`,
+    bun:   `<g fill="${h}"><circle cx="60" cy="14" r="10"/><path d="M30 48 Q30 22 60 22 Q90 22 90 48 Q82 32 60 32 Q38 32 30 48Z"/></g>`,
+    cap:   `<g><path d="M30 44 Q30 18 60 18 Q90 18 90 44Z" fill="${h}"/><rect x="58" y="38" width="40" height="7" rx="3.5" fill="${h}"/></g>`
+  }[f.style] || "";
+  const glasses = f.glasses ? `<g fill="none" stroke="#2B2B2B" stroke-width="2.4"><circle cx="48" cy="55" r="8"/><circle cx="72" cy="55" r="8"/><path d="M56 55h8"/></g>` : "";
+  const extra = {
+    tie: `<path d="M60 98 l-5 6 5 16 5-16z" fill="#C0392B"/>`,
+    pencil: `<g transform="rotate(-30 92 40)"><rect x="88" y="22" width="6" height="26" fill="#F2C94C"/><path d="M88 48 l3 7 3-7z" fill="#5A4636"/></g>`,
+    phone: `<rect x="86" y="88" width="14" height="24" rx="3" fill="#2D3436"/><rect x="88" y="91" width="10" height="16" rx="1.5" fill="#81ECEC"/>`,
+    headphones: `<g fill="none" stroke="#1E272E" stroke-width="5"><path d="M30 56 Q30 22 60 22 Q90 22 90 56"/></g><rect x="24" y="50" width="11" height="18" rx="5" fill="#1E272E"/><rect x="85" y="50" width="11" height="18" rx="5" fill="#1E272E"/>`,
+    badge: `<g><circle cx="78" cy="106" r="7" fill="#F1C40F"/><path d="M75 106l2.2 2.2 4-4.4" stroke="#fff" stroke-width="2" fill="none"/></g>`,
+    envelope: `<g><rect x="82" y="92" width="22" height="15" rx="2" fill="#fff" stroke="#7F8C8D" stroke-width="1.5"/><path d="M82 93 l11 8 11-8" fill="none" stroke="#7F8C8D" stroke-width="1.5"/></g>`
+  }[f.extra] || "";
+  return `<svg viewBox="0 0 120 120" role="img" aria-hidden="true">
+    <circle cx="60" cy="60" r="58" fill="${bg}"/>
+    <path d="M22 120 Q24 92 60 90 Q96 92 98 120Z" fill="${sh}"/>
+    <rect x="53" y="76" width="14" height="16" rx="6" fill="${s}"/>
+    ${f.style === "long" ? hair : ""}
+    <ellipse cx="60" cy="54" rx="29" ry="31" fill="${s}"/>
+    <circle cx="31" cy="57" r="5" fill="${s}"/><circle cx="89" cy="57" r="5" fill="${s}"/>
+    ${f.style === "long" ? "" : hair}
+    <circle cx="48" cy="55" r="3.4" fill="#222"/><circle cx="72" cy="55" r="3.4" fill="#222"/>
+    <circle cx="49.2" cy="53.8" r="1" fill="#fff"/><circle cx="73.2" cy="53.8" r="1" fill="#fff"/>
+    <path d="M42 46 q6 -4 12 0 M66 46 q6 -4 12 0" stroke="${h}" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    <circle cx="41" cy="66" r="4.5" fill="#F28B82" opacity=".45"/><circle cx="79" cy="66" r="4.5" fill="#F28B82" opacity=".45"/>
+    <path d="M51 69 Q60 77 69 69" stroke="#7A3E2E" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    ${glasses}${extra}
+  </svg>`;
+}
+
+const STATUS = { active: "Active", standby: "On standby", paused: "Paused" };
+
+fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
+  const byId = Object.fromEntries(d.agents.map(a => [a.id, a]));
+  document.getElementById("updated").textContent = "Dashboard updated " + long(d.updated);
+
+  const tasks = d.agents.reduce((n, a) => n + a.done.length, 0);
+  const latest = d.agents.map(a => a.last_update).sort().pop();
+  const nextRun = d.schedule.map(s => s.next).sort()[0];
+  document.getElementById("summary").innerHTML = [
+    [d.agents.length, "agents in the team"],
+    [d.agents.filter(a => a.status === "active").length, "active this week"],
+    [tasks, "pieces of work logged"],
+    [short(latest), "most recent update"],
+    [short(nextRun), "next scheduled run"]
+  ].map(([v, l]) => `<div class="stat"><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("");
+
+  document.getElementById("schedule").innerHTML = d.schedule.map(s => `
+    <div class="run">
+      <div class="when">${esc(s.day)}, ${esc(s.time)}</div>
+      <div class="what">${esc(s.what)}</div>
+      <div class="next">Next: <b>${esc(long(s.next))}</b></div>
+      <div class="faces">${s.agents.map(id => byId[id] ? `<span title="${esc(byId[id].title)}">${face(byId[id].face, "#E6F1F1")}</span>` : "").join("")}</div>
+    </div>`).join("");
+
+  const order = { active: 0, standby: 1, paused: 2 };
+  const agents = [...d.agents].sort((a, b) => order[a.status] - order[b.status] || b.last_update.localeCompare(a.last_update));
+  document.getElementById("grid").innerHTML = agents.map(a => `
+    <article class="card ${a.status}">
+      <div class="head">
+        <div class="avatar">${face(a.face, a.status === "paused" ? "#E4E6E9" : "#E6F1F1")}</div>
+        <div>
+          <h3>${esc(a.title)}</h3>
+          <code>${esc(a.id)}</code><br>
+          <span class="chip ${a.status}">${STATUS[a.status] || esc(a.status)}</span>
+        </div>
+      </div>
+      <p class="role">${esc(a.role)}</p>
+      <div class="meta">
+        <span>Last update: <b>${esc(short(a.last_update))}</b> (${ago(a.last_update)})</span>
+        ${a.next_run ? `<span>Next run: <b>${esc(short(a.next_run))}</b></span>` : ""}
+      </div>
+      <ul class="done">${a.done.map(x => `<li><time>${esc(short(x.date))}</time><span>${esc(x.text)}</span></li>`).join("")}</ul>
+    </article>`).join("");
+}).catch(() => {
+  document.getElementById("grid").textContent = "Couldn't load the team data.";
+});
+</script>
+</body>
+</html>
