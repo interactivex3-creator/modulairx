@@ -91,3 +91,7 @@ Use "Neston Architectural Drains" + 0481 080 060 + Scarborough QLD on: the websi
 
 ## What to check in 4 weeks
 From Two Minute Reports: views, website clicks, calls and review count. Baseline: ~60 views a month, 1 website click and 0 calls in 3.5 months, 0 reviews.
+
+## Progress log
+- **15 Nov 2026:** owner added extra categories (the ones Google accepted; "Plumbing supply store" was refused, probably because the address is hidden), replaced the description with section 2, and set the website link with UTM tags. Two Minute Reports still showed the old data at 23:15 UTC, which is expected while Google reviews the changes. **Re-check in 2–3 days** with the Two Minute Reports `gmb` query.
+- **Still to do:** photos (section 5), services (section 3), products (section 4), the first weekly post (section 6), review requests (section 7), consistent listings (section 8).
