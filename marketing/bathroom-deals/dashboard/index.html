@@ -48,6 +48,8 @@
   .head { display: flex; gap: 14px; align-items: center; }
   .avatar { width: 84px; height: 84px; flex: none; }
   .head h3 { margin: 0; font-size: 17px; }
+  .head h3 .name { color: var(--navy); font-weight: 700; }
+  @media (prefers-color-scheme: dark) { .head h3 .name { color: var(--teal); } }
   .head code { font-size: 12px; color: var(--muted); }
   .chip { display: inline-block; font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 10px; margin-top: 4px; }
   .chip.active { background: var(--ok-bg); color: var(--ok); }
@@ -160,7 +162,7 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
       <div class="when">${esc(s.day)}, ${esc(s.time)}</div>
       <div class="what">${esc(s.what)}</div>
       <div class="next">Next: <b>${esc(long(s.next))}</b></div>
-      <div class="faces">${s.agents.map(id => byId[id] ? `<span title="${esc(byId[id].title)}">${face(byId[id].face, "#E6F1F1")}</span>` : "").join("")}</div>
+      <div class="faces">${s.agents.map(id => byId[id] ? `<span title="${esc(byId[id].name)}, ${esc(byId[id].title)}">${face(byId[id].face, "#E6F1F1")}</span>` : "").join("")}</div>
     </div>`).join("");
 
   const order = { active: 0, standby: 1, paused: 2 };
@@ -170,7 +172,7 @@ fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
       <div class="head">
         <div class="avatar">${face(a.face, a.status === "paused" ? "#E4E6E9" : "#E6F1F1")}</div>
         <div>
-          <h3>${esc(a.title)}</h3>
+          <h3>${esc(a.title)} – <span class="name">${esc(a.name)}</span></h3>
           <code>${esc(a.id)}</code><br>
           <span class="chip ${a.status}">${STATUS[a.status] || esc(a.status)}</span>
         </div>

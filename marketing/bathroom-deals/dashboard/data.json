@@ -28,6 +28,7 @@
   "agents": [
     {
       "id": "bd-marketing-lead",
+      "name": "Morgan",
       "title": "Marketing Lead",
       "role": "Plans each week, sets the 3 priorities and briefs the rest of the team.",
       "status": "active",
@@ -58,6 +59,7 @@
     },
     {
       "id": "bd-analytics-reporter",
+      "name": "Ash",
       "title": "Analytics Reporter",
       "role": "Weekly numbers from Google Analytics, Search Console, WooCommerce and Merchant Center, with bot traffic separated out.",
       "status": "active",
@@ -88,6 +90,7 @@
     },
     {
       "id": "bd-seo-content-writer",
+      "name": "Sienna",
       "title": "SEO Content Writer",
       "role": "Writes a brand-new blog article every week and handles on-page SEO.",
       "status": "active",
@@ -118,6 +121,7 @@
     },
     {
       "id": "bd-product-copywriter",
+      "name": "Archie",
       "title": "Product Copywriter",
       "role": "Rewrites product and category pages: descriptions, specs, warranties and FAQs.",
       "status": "active",
@@ -152,6 +156,7 @@
     },
     {
       "id": "bd-social-media-manager",
+      "name": "Bree",
       "title": "Social Media Manager",
       "role": "Weekly Facebook and Instagram posts, plus 2 Google Business Profile updates, ready to schedule.",
       "status": "active",
@@ -182,6 +187,7 @@
     },
     {
       "id": "bd-video-creator",
+      "name": "Vince",
       "title": "Video Creator",
       "role": "One reel a week with an Australian voiceover, music and the Bathroom Deals logo.",
       "status": "active",
@@ -212,6 +218,7 @@
     },
     {
       "id": "bd-compliance-reviewer",
+      "name": "Grace",
       "title": "Compliance Reviewer",
       "role": "Checks every post, page and video for prices, warranties, delivery claims and Australian Consumer Law.",
       "status": "active",
@@ -219,8 +226,8 @@
       "next_run": "2026-11-18",
       "face": {
         "skin": "#D9A07A",
-        "hair": "#8A8A8A",
-        "style": "short",
+        "hair": "#9C9C9C",
+        "style": "long",
         "shirt": "#34495E",
         "extra": "badge",
         "glasses": true
@@ -242,6 +249,7 @@
     },
     {
       "id": "bd-paid-ads-specialist",
+      "name": "Max",
       "title": "Paid Ads Specialist",
       "role": "Google Ads and Meta Ads copy, structure and budgets. Recommends only; never changes spend.",
       "status": "standby",
@@ -264,6 +272,7 @@
     },
     {
       "id": "bd-email-marketer",
+      "name": "Ellie",
       "title": "Email Marketer",
       "role": "Newsletters and email flows. Drafts only, never sends.",
       "status": "paused",
