@@ -5,7 +5,7 @@ Every Neston marketing agent reads this file before it starts. If something here
 > **Status:** first draft, built on 14 Nov 2026 from what is published on neston.com.au and the Neston price list in Google Drive. Items marked **TBC** have not been confirmed by the Neston team. Agents must not state a TBC item as fact in customer-facing copy.
 
 ## The business
-- **Name:** Neston Architectural Drains (also "Neston Architectural Grates" on Google Business Profile) — https://neston.com.au
+- **Name:** Neston Architectural Drains — https://neston.com.au. This is the canonical business name everywhere: the site, Google Business Profile (renamed Nov 2026), social profiles and directories. Don't use "Neston Architectural Grates".
 - **Tagline in use:** "Premium stainless steel drainage · Australia". About page headline: "Crafting drainage with care."
 - **What we make:** 316 stainless steel linear drains (tile insert and grate), square tile insert grates/wastes, outdoor wedge wire linear drains and square wedge wire grates. Five matched PVD finishes: brushed stainless, brushed brass, brushed bronze, gun metal, matte black.
 - **Range size:** 28 products (per the reseller page, Nov 2026).
@@ -90,7 +90,7 @@ Key pages: /shop/, /linear-drains/, /square-tile-insert-grates/, /outdoor-drains
 
 ## Known issues to work on (Nov 2026)
 - Search Console reports pages that aren't indexed because they're duplicates without a user-selected canonical. Category pages exist both as WordPress pages (/linear-drains/) and as WooCommerce categories (/product-category/linear-drains/).
-- The Google Business Profile ("Neston Architectural Grates") had 0 views in October 2026.
+- The Google Business Profile had 0 views in October 2026 (it was then named "Neston Architectural Grates"; renamed to "Neston Architectural Drains" in Nov 2026). Older listings elsewhere may still carry the old name.
 - Traffic is low (diib: ~34 visitors a week in early Nov 2026).
 - The footer newsletter link only goes to /contact/. There's no real sign-up form yet.
 

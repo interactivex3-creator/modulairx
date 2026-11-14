@@ -33,7 +33,7 @@ In Claude Code, from this repository, just ask. Claude picks the right agent, or
 Agents **draft**. People **approve**. No agent publishes to the site, sends email, posts to social or Google Business Profile, contacts resellers or specifiers, edits Kevin, or changes ads, budgets, prices or products without a person's explicit go-ahead. All external material goes through `neston-compliance-reviewer` first.
 
 ## To fill in later (BRAND.md TBCs)
-Warranty terms, WaterMark licence details, the 2027 direct-launch date, the canonical business name (Drains vs Grates), CPD accreditation, and trade events.
+Warranty terms, WaterMark licence details, the 2027 direct-launch date, CPD accreditation, and trade events.
 
 ## Folders
 - `drafts/`: briefs, posts, emails, outreach, ad copy and collateral notes waiting for approval
