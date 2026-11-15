@@ -71,12 +71,6 @@
       "how": "Reply in Claude with the 3 page URLs or @handles."
     },
     {
-      "priority": "low",
-      "text": "Listen to the reel voice and say if you'd like a different one",
-      "why": "The house voice is \"Michael - Australian Corporate Male\" (calm, B2B). The first reel is made in the Wednesday 18 Nov run.",
-      "link": "https://storage.googleapis.com/eleven-public-prod/database/workspace/a2911a67732d4ed0a57575ddfa5e9652/voices/9TTaZrP6m0Cc554HW1PP/OX9HBnPXTUro7QlR61xY.mp3"
-    },
-    {
       "priority": "medium",
       "text": "Ask 3–5 resellers or builders for a Google review",
       "why": "The profile has no reviews yet. Real customers only, and nothing offered in return.",
@@ -391,7 +385,7 @@
       "done": [
         {
           "date": "2026-11-15",
-          "text": "Set up the Neston reel builder (ink and brass branding, logo on every frame) and chose the house voice"
+          "text": "Set up the Neston reel builder (ink and brass branding, logo on every frame); house voice \"James - Australian\""
         }
       ]
     },
