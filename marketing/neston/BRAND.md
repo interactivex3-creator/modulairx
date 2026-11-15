@@ -64,6 +64,13 @@ Technical, precise, calm, architectural. Like an experienced hydraulic or plumbi
 - **Email/SMS:** Spam Act 2003, so consent is required, the sender must be identified, and there must be a working unsubscribe. Applies to B2B email too.
 - **Channel rule:** in Phase 1, no consumer-facing discounts or direct-buy pushes.
 
+## Social media platforms
+Neston uses **LinkedIn, Facebook and Instagram** only.
+- **LinkedIn:** architects, builders, hydraulic consultants and resellers. Technical posts, compliance explainers, new releases, reseller news.
+- **Instagram:** designers and the trade. Detail shots, finishes, installs, short reels.
+- **Facebook:** plumbers, tilers, builders and local QLD. It's usually the same post as Instagram, scheduled together in Meta Business Suite.
+The owner posts everything; agents only draft. Account handles: **TBC**.
+
 ## Content pillars
 1. **Compliance and specification:** zero-threshold showers (NCC 2022), building entries, social housing (QBuild), livable housing design.
 2. **Material and engineering:** 316 vs 304, V-bottom channels, wedge wire, PVD finishes and care.

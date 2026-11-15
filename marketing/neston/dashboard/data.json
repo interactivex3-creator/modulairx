@@ -17,7 +17,7 @@
     {
       "day": "Wednesday",
       "time": "2:37 pm",
-      "what": "Weekly content: a Journal article, a Google Business Profile post, LinkedIn and Instagram posts, compliance check",
+      "what": "Weekly content: a Journal article draft, Google Business Profile posts, LinkedIn, Facebook and Instagram posts, compliance check",
       "agents": [
         "neston-seo-content-writer",
         "neston-local-seo-gbp-manager",
@@ -128,7 +128,7 @@
         "date": "2026-11-18",
         "time": "2:37 pm",
         "kind": "run",
-        "what": "Wednesday run: Journal article draft, Google posts, LinkedIn posts, compliance check"
+        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, compliance check"
       },
       {
         "date": "2026-11-20",
@@ -358,7 +358,7 @@
       "id": "neston-social-media-manager",
       "name": "Luca",
       "title": "Social Media Manager",
-      "role": "LinkedIn for specifiers and trade, Instagram and Pinterest for design. Posts, carousels, reel scripts. Never posts itself.",
+      "role": "LinkedIn for specifiers and trade, plus Facebook and Instagram for design and local trades. Posts, carousels, reel scripts. Never posts itself.",
       "status": "standby",
       "last_update": null,
       "next_run": "2026-11-18",
