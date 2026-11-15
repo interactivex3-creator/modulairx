@@ -1,12 +1,12 @@
 # Updating the Neston dashboard (every scheduled run)
 
 Live site: https://neston-marketing-team.netlify.app (Netlify site id `b9453abc-4b3a-4670-ab5a-db4a9a47a3fd`).
-The page reads everything from `data.json`. Each run updates `data.json` and redeploys. Never change `index.html`, `favicon.svg` or `netlify.toml` in a run.
+The page reads everything from `data.json`. Each run updates `data.json` and redeploys. Never change `index.html`, `logo.png`, `favicon.svg` or `netlify.toml` in a run.
 
 ## 1. Start from the LIVE data, not the repo copy
 Scheduled runs can't push to git, so the repo copy goes stale. The sandbox network may block `*.netlify.app`, so fetch the live data through the WebFetch tool (or the `web-fetch` agent), not curl:
 ```bash
-mkdir -p /tmp/ndash && cp marketing/neston/dashboard/{index.html,favicon.svg,netlify.toml} /tmp/ndash/
+mkdir -p /tmp/ndash && cp marketing/neston/dashboard/{index.html,logo.png,favicon.svg,netlify.toml} /tmp/ndash/
 ```
 Then fetch https://neston-marketing-team.netlify.app/data.json and save it, unchanged, as `/tmp/ndash/data.json`. If that fails, copy `marketing/neston/dashboard/data.json` instead, and say "started from the repo copy" in the run summary.
 
