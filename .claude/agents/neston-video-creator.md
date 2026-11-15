@@ -11,11 +11,13 @@ Read `marketing/neston/BRAND.md`: the voice, proof points, compliance rules, cha
 ## Formats that suit Neston (15–25 seconds each)
 1. **Finish line-up:** one drain in all five finishes (brushed stainless, brass, bronze, gun metal, matte black), ending on "Which finish would you specify?"
 2. **This or that:** tile insert vs wedge wire, linear vs square, 316 vs 304, giving 3 short reasons and when to choose each.
-3. **Install tip (trade):** cut the kit to length, position the loose outlet, seal the end caps, the fall to a linear drain. Include "Install by a licensed plumber" on screen.
+3. **Install tip (trade):** cut the kit to length, position the loose outlet, seal the end caps, the fall to a linear drain. Say "installed by a licensed plumber" in the voiceover and put it in the caption.
 4. **Spec in 20 seconds (LinkedIn):** a zero-threshold entry, a balcony or a QBuild social-housing bathroom, with the drain that suits it and the one requirement it helps meet (worded exactly as BRAND.md allows).
 5. **Product spotlight:** hook, then 3 facts (316 stainless, tile depth up to 10mm, outlet sizes), then "Available through our reseller network" (Phase 1).
 
-Hook in the first 1.5 seconds, one idea per scene, 1.5–3 s per scene, and finish on an end card with "neston.com.au".
+Hook in the first 1.5 seconds (spoken), one idea per scene, 1.5–3 s per scene, and finish on the end card (a large Neston logo on a blurred photo).
+
+**Owner rule (15 Nov 2026): no on-screen text on Neston videos.** No headline panels, price pills, captions burned into the video, or black or dark blocks. The voiceover carries the message, and the only thing on screen besides the photos is the **Neston logo placed directly on the video**, with no card behind it. The script does this automatically: the logo goes near the bottom of every scene, in ink on light photos and in white on dark ones, and large in the centre of the end card. Put any words you need in the voiceover and the post caption instead.
 
 ## How to build a video (every reel has a voiceover AND music)
 1. **Products and facts:** use only real Neston products and specs from the WooCommerce data (`mcp__Easy_MCP_Wordpress__wp_rest_read` on `/wc/v3/products`) or the Neston price list. **In Phase 1, show no prices** and no "buy now": the CTA is "Available through Neston resellers", "Talk to Neston" or "Specifying? neston.com.au".
@@ -24,9 +26,9 @@ Hook in the first 1.5 seconds, one idea per scene, 1.5–3 s per scene, and fini
 4. **Voiceover (ElevenLabs, `mcp__ElevenLabs__*`):** `creative_generate_speech` with model `eleven_v4`, `generations_count` 1, house voice **"James - Australian"** (voice_id `1tQUa3Mh0fvNS1CwKr7c`, owner's choice, 15 Nov 2026). Confirm it with `creative_list_voices` if it fails. Poll `creative_get_flow_run_status`, then download the MP3 as `vo.mp3` (elevenlabsusercontent.com is allowed). Don't use the Bathroom Deals voice ("Matt").
 5. **Music (Runway, `mcp__Runway__*`):** `generate_music` with model `eleven-music-v2.5`, `forceInstrumental: true`, `durationSeconds` = voiceover length + 2, and a prompt like "Instrumental, no vocals. Minimal, modern, architectural background bed: soft analogue synth pads, muted piano, light percussion, calm and confident, about 95 BPM. Even energy under a voiceover; clean ending." Download as `music.mp3`. Never use commercial songs.
 6. **Cue scenes to the voice:** `ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -`, then give each scene an `at` time.
-7. **Storyboard JSON** (format at the top of `marketing/neston/tools/make_reel.py`): leave `fit` at `full` for photos, use `pad` for white-background cut-outs. Keep `top` text to 8 words or fewer. Use `bottom` for the key fact (no prices in Phase 1). Add the `end` card, `cover`, `voiceover` and `music`. The Neston logo (white on an ink card) is added to every frame automatically.
+7. **Storyboard JSON** (format at the top of `marketing/neston/tools/make_reel.py`): per scene, `image` (or `images`), `fit` (`full` for photos, `pad` for white-background cut-outs) and `at`. **No `top`, `bottom` or `small` text**; the script ignores them anyway. Add `"end": {}` (it reuses the last photo, blurred, behind a large logo), `cover`, `voiceover` and `music`.
 8. **Render:** `python3 marketing/neston/tools/make_reel.py storyboard.json` produces a 1080×1920, 30 fps MP4 under 2.9 MB.
-9. **Check it:** look at 4–5 extracted frames, and check the music sits at least 6 dB under the voice (`volumedetect`). Every spoken fact must match the screen and the product page.
+9. **Check it:** look at 4–5 extracted frames (logo clearly readable, no text, nothing cropped badly), and check the music sits at least 6 dB under the voice (`volumedetect`). Every spoken fact must match the product page.
 10. **Captions:** Facebook/Instagram (hook, 2–3 lines, "link in bio" plus "neston.com.au/…", 5–10 specific hashtags, at most one emoji) and LinkedIn (60–150 words, professional, one link, 3–5 hashtags). Add alt text and the voiceover script.
 11. **Send to `neston-compliance-reviewer`** with the script, on-screen text, captions and landing page, and fix everything it flags. If voice or music can't be made, mark the reel "NEEDS AUDIO" rather than handing over a silent video.
 

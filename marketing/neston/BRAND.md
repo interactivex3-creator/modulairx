@@ -71,7 +71,7 @@ Neston uses **LinkedIn, Facebook and Instagram** only.
 - **Facebook:** plumbers, tilers, builders and local QLD. It's usually the same post as Instagram, scheduled together in Meta Business Suite.
 The owner posts everything; agents only draft. Account handles: **TBC**.
 
-**Video:** 1 reel a week (15–25 s, 1080×1920) from real Neston product photos, with an Australian voiceover (ElevenLabs house voice "James - Australian", voice_id `1tQUa3Mh0fvNS1CwKr7c`, chosen by the owner) and instrumental music (Runway). It goes to Facebook and Instagram as a Reel and to LinkedIn as a video. Built with `marketing/neston/tools/make_reel.py`, which puts the Neston logo on every frame. No prices in Phase 1. No renders, AI-generated product footage or people without permission.
+**Video:** 1 reel a week (15–25 s, 1080×1920) from real Neston product photos, with an Australian voiceover (ElevenLabs house voice "James - Australian", voice_id `1tQUa3Mh0fvNS1CwKr7c`, chosen by the owner) and instrumental music (Runway). It goes to Facebook and Instagram as a Reel and to LinkedIn as a video. Built with `marketing/neston/tools/make_reel.py`. **No on-screen text and no black or dark blocks** (owner, 15 Nov 2026): the only overlay is the Neston logo, placed directly on the video, and the voiceover and caption carry the message. No prices in Phase 1. No renders, AI-generated product footage or people without permission.
 
 ## Content pillars
 1. **Compliance and specification:** zero-threshold showers (NCC 2022), building entries, social housing (QBuild), livable housing design.

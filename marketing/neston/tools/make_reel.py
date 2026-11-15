@@ -14,13 +14,12 @@ Storyboard format (paths are relative to the storyboard file):
      "fit": "full",                        # "full" (default): whole photo, frame filled with a blurred copy;
                                            # "crop": crop to 9:16 (tall photos only); "pad": cut-out on white
      "focus_x": 0.5, "focus_y": 0.5,       # what to keep centred with "crop" (0-1)
-     "top": "Pick a finish",               # headline, white on an ink panel near the top
-     "bottom": "Chrome  $95",              # price/fact pill in the lower third
-     "small": "Lucito Shower Shelf",       # optional smaller line under "bottom"
+     "top": "(ignored)",                   # no on-screen text on Neston videos (owner rule)
+     "bottom": "(ignored)",
      "seconds": 2.5}
   ],
   # any scene can use "images": [up to 6 paths] instead of "image" for a full-frame collage
-  "end": {"top": "6 finishes, one shelf", "bottom": "neston.com.au", "seconds": 3},
+  "end": {"seconds": 3},                  # end card: large Neston logo on a blurred, dimmed photo
   "logo": "logo.png",                     # optional; defaults to ../brand-assets/neston-logo-white.png
 
   # Audio (optional, but every published reel should have both):
@@ -35,8 +34,8 @@ time in seconds on the final timeline (voice time + voice_delay). Find the cue p
 with:  ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -
 The end card then runs until the voice finishes plus 1.2 s.
 
-Owner rules: every scene fills the whole frame and shows the whole photo, the Neston logo sits on a dark
-card at the bottom of every frame, and every product shown is a real Neston product photo.
+Owner rules: every scene fills the whole frame and shows the whole photo, there is NO on-screen text,
+the white Neston logo sits directly on the video (no card), and every product shown is a real Neston photo.
 Text and logo stay inside the Reels/Shorts safe area (clear of the top 220 px and the
 bottom ~360 px, where the app's buttons and caption sit).
 """
@@ -95,41 +94,43 @@ def rounded_panel(layer, box, fill, radius=28):
     ImageDraw.Draw(layer).rounded_rectangle(box, radius=radius, fill=fill)
 
 
-def text_layer(scene, logo=None):
-    """Transparent overlay drawn over the full-frame photo: headline panel near the top,
-    price/fact pill lower down, and the Neston logo card at the bottom."""
+def logo_layer(logo, width, centre_y, bg=None):
+    """The white Neston logo placed straight on the video (no card or panel), with a soft
+    shadow so it stays readable on light photos."""
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    if scene.get("top"):
-        size = 72
-        while True:  # shrink long headlines to at most 3 lines
-            big = font(FONT_BOLD, size)
-            lines = wrap(d, scene["top"], big, 900)
-            if len(lines) <= 3 or size <= 44:
-                break
-            size -= 4
-        block_h = len(lines) * (size + 12) - 12
-        y0 = 250
-        rounded_panel(layer, (40, y0 - 32, W - 40, y0 + block_h + 36), (*NAVY, 225))
-        draw_block(d, scene["top"], big, (255, 255, 255), y0, max_w=900)
-    y = 1180
-    for key, fnt_ in (("bottom", font(FONT_BOLD, 64)), ("small", font(FONT_BOLD, 40))):
-        if scene.get(key):
-            lines = wrap(d, scene[key], fnt_, 880)
-            for line in lines:
-                tw = d.textlength(line, font=fnt_)
-                pad = 34 if key == "bottom" else 26
-                h = fnt_.size + 2 * (pad - 10)
-                rounded_panel(layer, ((W - tw) / 2 - pad, y, (W + tw) / 2 + pad, y + h), (255, 255, 255, 235), radius=h // 2)
-                d.text(((W - tw) / 2, y + pad - 14), line, font=fnt_, fill=NAVY)
-                y += h + 12
-    if logo is not None:
-        rounded_panel(layer, LOGO_CARD, (*NAVY, 235), radius=30)
-        lw, lh = LOGO_CARD[2] - LOGO_CARD[0] - 60, LOGO_CARD[3] - LOGO_CARD[1] - 36
-        scale = min(lw / logo.width, lh / logo.height)
-        lg = logo.resize((round(logo.width * scale), round(logo.height * scale)), Image.LANCZOS)
-        layer.alpha_composite(lg, ((W - lg.width) // 2, LOGO_CARD[1] + (LOGO_CARD[3] - LOGO_CARD[1] - lg.height) // 2))
+    if logo is None:
+        return layer
+    scale = width / logo.width
+    lg = logo.resize((round(logo.width * scale), round(logo.height * scale)), Image.LANCZOS)
+    x, y = (W - lg.width) // 2, round(centre_y - lg.height / 2)
+    alpha = lg.split()[3]
+    dark_bg = True
+    if bg is not None:  # pick the logo colour from how light the photo is behind it
+        patch = bg.convert("L").crop((x, y, x + lg.width, y + lg.height))
+        dark_bg = (sum(patch.getdata()) / max(1, patch.width * patch.height)) < 150
+    if not dark_bg:  # light photo: ink-coloured logo, light glow instead of a dark shadow
+        ink = Image.new("RGBA", lg.size, (*NAVY, 255))
+        ink.putalpha(alpha)
+        lg = ink
+    shadow = Image.new("RGBA", lg.size, (0, 0, 0, 0) if dark_bg else (255, 255, 255, 0))
+    shadow.putalpha(alpha.point(lambda a: int(a * (0.55 if dark_bg else 0.7))))
+    pad = 40
+    sh = Image.new("RGBA", (lg.width + 2 * pad, lg.height + 2 * pad), (0, 0, 0, 0))
+    sh.alpha_composite(shadow, (pad, pad))
+    sh = sh.filter(ImageFilter.GaussianBlur(14))
+    layer.alpha_composite(sh, (x - pad + 2, y - pad + 4))
+    layer.alpha_composite(lg, (x, y))
     return layer
+
+
+def text_layer(scene, logo=None, bg=None):
+    """Overlay for a scene. Owner rule (15 Nov 2026): NO text blocks or panels on Neston
+    videos. The voiceover carries the message; the only overlay is the Neston logo, placed
+    directly on the video near the bottom (small), or large and centred on the end card.
+    Any "top"/"bottom"/"small" keys in the storyboard are ignored."""
+    if scene.get("_end"):
+        return logo_layer(logo, 640, H / 2, None)  # end card photo is dimmed, so white logo
+    return logo_layer(logo, 440, LOGO_CARD[1] + (LOGO_CARD[3] - LOGO_CARD[1]) / 2, bg)
 
 
 def cover_crop(img, bw, bh, fx=0.5, fy=0.5):
@@ -181,7 +182,6 @@ def load_grid(paths, fit):
 
 def scene_frames(scene, base_dir, logo=None):
     n = int(round(scene.get("seconds", 2.5) * FPS))
-    overlay = text_layer(scene, logo)
     if scene.get("images"):
         photo = load_grid([os.path.join(base_dir, p) for p in scene["images"]], scene.get("fit", "full"))
     elif scene.get("image"):
@@ -189,6 +189,11 @@ def scene_frames(scene, base_dir, logo=None):
                            scene.get("focus_x", 0.5), scene.get("focus_y", 0.5))
     else:
         photo = None
+    if photo is not None and scene.get("_end"):  # end card: blurred, dimmed photo behind a large logo
+        photo = ImageEnhance.Brightness(photo.filter(ImageFilter.GaussianBlur(18))).enhance(0.6)
+    elif photo is None and scene.get("_end"):
+        photo = Image.new("RGB", (W, H), (60, 58, 54))
+    overlay = text_layer(scene, logo, photo)
     for i in range(n):
         frame = Image.new("RGB", (W, H), BG)
         if photo is not None:
@@ -207,7 +212,13 @@ def main(sb_path):
     sb = json.load(open(sb_path))
     scenes = list(sb["scenes"])
     if sb.get("end"):
-        scenes.append(dict(sb["end"]))
+        endc = dict(sb["end"])
+        endc["_end"] = True
+        if not endc.get("image") and not endc.get("images"):
+            last = next((sc for sc in reversed(scenes) if sc.get("image")), None)
+            if last:
+                endc["image"], endc["fit"] = last["image"], last.get("fit", "full")
+        scenes.append(endc)
     out = os.path.join(base, sb.get("out", "reel.mp4"))
     vo = os.path.join(base, sb["voiceover"]) if sb.get("voiceover") else None
     music = os.path.join(base, sb["music"]) if sb.get("music") else None
