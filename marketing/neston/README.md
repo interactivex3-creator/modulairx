@@ -16,6 +16,7 @@ A set of Claude Code subagents for marketing **Neston Architectural Drains** (ne
 | `neston-spec-sheet-designer` | Spec sheets, install guides, brochures, price-list PDFs (Canva or Moda) |
 | `neston-social-media-manager` | LinkedIn, Facebook and Instagram content |
 | `neston-paid-ads-specialist` | Google, Meta and LinkedIn ads: lead-gen now, Shopping from 2027 |
+| `neston-video-creator` | Weekly reel for Facebook, Instagram and LinkedIn, with voiceover and music |
 | `neston-email-marketer` | Trade and reseller newsletters, Klaviyo flows, sign-up form |
 | `neston-chat-optimiser` | Kevin chat reviews and knowledge-base improvement proposals |
 | `neston-stockist-channel-agent` | Reseller recruitment, reseller content kits, listing audits, 2027 channel plan |

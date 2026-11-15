@@ -18,6 +18,7 @@ Read `marketing/neston/BRAND.md`. It holds the facts, the channel phase (reselle
 | `neston-stockist-channel-agent` | Reseller recruitment, reseller content kits, product feeds, channel consistency |
 | `neston-local-seo-gbp-manager` | Google Business Profile, reviews, directories, consistent business details |
 | `neston-social-media-manager` | LinkedIn, Facebook and Instagram content |
+| `neston-video-creator` | Weekly reel for Facebook, Instagram and LinkedIn (voiceover and music) |
 | `neston-email-marketer` | Trade and reseller newsletters, Klaviyo flows (2027: consumer flows) |
 | `neston-paid-ads-specialist` | Google and Meta ads: trade and lead-gen now, Shopping from 2027 |
 | `neston-analytics-reporter` | Baselines and performance reports (read only) |

@@ -17,11 +17,12 @@
     {
       "day": "Wednesday",
       "time": "2:37 pm",
-      "what": "Weekly content: a Journal article draft, Google Business Profile posts, LinkedIn, Facebook and Instagram posts, compliance check",
+      "what": "Weekly content: a Journal article draft, Google Business Profile posts, LinkedIn, Facebook and Instagram posts, 1 reel, compliance check",
       "agents": [
         "neston-seo-content-writer",
         "neston-local-seo-gbp-manager",
         "neston-social-media-manager",
+        "neston-video-creator",
         "neston-compliance-reviewer"
       ],
       "next": "2026-11-18",
@@ -52,16 +53,28 @@
     },
     {
       "priority": "medium",
-      "text": "Upload 10–15 photos to Google Business Profile",
+      "text": "Upload the square logo and 10–15 photos to Google Business Profile",
       "why": "The profile gets ~60 views a month but almost no clicks. Photos help people trust it.",
-      "how": "Use real photos only. The square logo is ready in Drive: Neston Marketing › neston-gbp-logo-1080.png. Set it under Photos › Logo.",
-      "link": "https://docs.google.com/document/d/1bHNs-TGpkbpqhxJgiYeQfMcObqVeRTlglJMhEvoyGVE/edit"
+      "how": "Logo: download neston-gbp-logo-1080.png, then Photos › Logo. Photos: use the list in the photo doc (real photos only).",
+      "link": "https://drive.google.com/file/d/1feZf2CXAw3GAIOA1VP2RrIdy9IBnq77U/view"
     },
     {
       "priority": "medium",
       "text": "Add 3 services and publish the first Google post",
       "why": "Services: specification support, custom stainless drains, reseller supply. Post 1: why every Neston drain is 316 stainless.",
       "link": "https://docs.google.com/document/d/1uyz0B2ClXLCdR4eCONaeUy_xu_PX5hRqu9-tXssnSUU/edit"
+    },
+    {
+      "priority": "medium",
+      "text": "Send your LinkedIn, Facebook and Instagram page links",
+      "why": "So posts and reels can tag and link the right accounts. The brand brief still has them as TBC.",
+      "how": "Reply in Claude with the 3 page URLs or @handles."
+    },
+    {
+      "priority": "low",
+      "text": "Listen to the reel voice and say if you'd like a different one",
+      "why": "The house voice is \"Michael - Australian Corporate Male\" (calm, B2B). The first reel is made in the Wednesday 18 Nov run.",
+      "link": "https://storage.googleapis.com/eleven-public-prod/database/workspace/a2911a67732d4ed0a57575ddfa5e9652/voices/9TTaZrP6m0Cc554HW1PP/OX9HBnPXTUro7QlR61xY.mp3"
     },
     {
       "priority": "medium",
@@ -121,7 +134,7 @@
         "date": "2026-11-18",
         "time": "2:37 pm",
         "kind": "run",
-        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, compliance check"
+        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, compliance check"
       },
       {
         "date": "2026-11-20",
@@ -149,6 +162,14 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-15",
+          "text": "Added a Video Creator: one reel a week for Facebook, Instagram and LinkedIn"
+        },
+        {
+          "date": "2026-11-15",
+          "text": "Set social platforms to LinkedIn, Facebook and Instagram; both weekly runs have their connectors"
+        },
         {
           "date": "2026-11-15",
           "text": "Scheduled the weekly runs: Monday 8:13 am report and plan, Wednesday 2:37 pm content"
@@ -211,6 +232,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-15",
+          "text": "Made the square Google profile logo (white Neston logo on ink, 1080×1080)"
+        },
         {
           "date": "2026-11-15",
           "text": "Profile improvement pack: categories, new description, services, products and 4 posts"
@@ -346,6 +371,29 @@
         "glasses": true
       },
       "done": []
+    },
+    {
+      "id": "neston-video-creator",
+      "name": "Zane",
+      "title": "Video Creator",
+      "role": "One reel a week for Facebook, Instagram and LinkedIn: real product photos, an Australian voiceover and music, with the Neston logo on every frame. Never posts.",
+      "status": "standby",
+      "last_update": "2026-11-15",
+      "next_run": "2026-11-18",
+      "face": {
+        "skin": "#E0AC84",
+        "hair": "#2B1E16",
+        "style": "cap",
+        "shirt": "#B08D57",
+        "extra": "headphones",
+        "glasses": false
+      },
+      "done": [
+        {
+          "date": "2026-11-15",
+          "text": "Set up the Neston reel builder (ink and brass branding, logo on every frame) and chose the house voice"
+        }
+      ]
     },
     {
       "id": "neston-social-media-manager",
