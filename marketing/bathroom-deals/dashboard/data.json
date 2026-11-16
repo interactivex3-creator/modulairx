@@ -145,7 +145,7 @@
       "title": "Product Copywriter",
       "role": "Rewrites product and category pages: descriptions, specs, warranties and FAQs.",
       "status": "active",
-      "last_update": "2026-11-12",
+      "last_update": "2026-11-16",
       "next_run": "2026-11-18",
       "face": {
         "skin": "#8D5A3B",
@@ -156,6 +156,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Forio quartz sinks: all 12 pages now say collection only (removed “delivered Australia-wide”)"
+        },
         {
           "date": "2026-11-12",
           "text": "Fixed the Nimis 900 (drawers) and Tarnos Tall Boy (doors) pages"
@@ -325,12 +329,6 @@
       "due": null,
       "priority": "medium",
       "how": "WordPress › Plugins › Abandoned Cart Lite › deactivate (or turn off its emails)"
-    },
-    {
-      "text": "Decide on the Forio quartz sink pages",
-      "why": "They still say “delivered Australia-wide” but Forio sinks are collection only. Say yes and the team will fix the wording.",
-      "due": null,
-      "priority": "medium"
     },
     {
       "text": "Delete the 2 older sample reels in Drive (optional)",
