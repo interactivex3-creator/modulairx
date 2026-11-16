@@ -88,6 +88,10 @@
       "done": [
         {
           "date": "2026-11-16",
+          "text": "Merchant Center check: WooCommerce feed matches the shop; found an old Squarespace feed with out-of-date prices"
+        },
+        {
+          "date": "2026-11-16",
           "text": "Weekly report: real Australian visitors up for a second week, bot traffic halved, Google showing far more of our pages"
         },
         {
@@ -349,11 +353,18 @@
       "priority": "medium"
     },
     {
-      "text": "Sync the Merchant Center feed with the shop",
-      "why": "Google shows 226 listings; the shop has 190 products.",
+      "text": "Delete the old Squarespace feed in Merchant Center",
+      "why": "104 old listings with no links and old prices (e.g. Murcia Basin Mixer Black $175 vs $55 on the site). Your WooCommerce feed is already in sync: 226 listings = 190 products plus sizes.",
       "due": null,
-      "priority": "low",
-      "how": "Merchant Center › Products › check for listings no longer on the site"
+      "priority": "high",
+      "how": "merchants.google.com › Settings (cog) › Data sources › “Squarespace-3d64b156” › ⋮ › Delete. Also check Settings › Apps and disconnect Squarespace if it’s listed."
+    },
+    {
+      "text": "Turn off the old website autofeed in Merchant Center",
+      "why": "Google’s “bathroomdeals.au” autofeed still lists the discontinued Tarnos 900 at $0.",
+      "due": null,
+      "priority": "medium",
+      "how": "merchants.google.com › Settings › Data sources › “bathroomdeals.au” (Autofeed) › turn off"
     },
     {
       "text": "Read the weekly plan before Wednesday’s content run",
