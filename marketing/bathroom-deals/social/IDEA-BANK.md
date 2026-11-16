@@ -24,6 +24,7 @@ These post ideas were written and approved but **never posted**. The 9–15 Nov 
 - **Angle:** what a tile-insert drain is, plus 3 things to sort before ordering (outlet size, falls, tile thickness).
 - **Products at 9 Nov:** Square Tile Insert Floor Waste $49 (DN80), Square Max 120×120 $109 (DN100), Linear Tile Insert Drain Kit 800mm $229 (DN40). Neston stock is patchy: **check the variation stock** and only mention sizes in stock.
 - **Note:** drainage must be installed by a licensed plumber.
+- **Timing:** more Neston stock arrives in December 2026 (owner, 16 Nov). This idea works better once the full size range is back, so hold it until then unless it's needed sooner, and only mention sizes in stock on the day.
 
 ### 3. "Send us your schedule": package quote with collect-and-fit vanities
 - **Source:** 9–15 Nov pack post 4, merged with the 10 Nov brief post 4 (swapped out).
