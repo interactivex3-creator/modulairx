@@ -121,4 +121,5 @@ Use these names in reports, plans, weekly docs and the dashboard (https://bathro
 More Neston drainage stock is coming **next month (December 2026)**. Exact sizes and arrival date are not confirmed yet.
 - Until it arrives, only feature Neston sizes that show **in stock** on the site. Don't say "back in stock", "coming soon" or give a date in customer-facing copy unless the owner confirms one.
 - Don't spend product-copy effort on out-of-stock Neston pages until the stock lands; the drains are on hold, not discontinued.
+- The owner is happy for the out-of-stock Neston products to **stay visible on the website** as they are (16 Nov). Don't hide them, and don't flag them as an owner to-do. No backorders or pre-orders unless the owner asks.
 - When the owner confirms the stock has arrived: plan a "Neston range is back" post and reel (check every size's live stock first), refresh the Neston product pages, and use idea 2 from the social idea bank with the full size range.
