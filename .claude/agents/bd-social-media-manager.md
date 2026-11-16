@@ -46,6 +46,9 @@ Each week also write **2 Google Business Profile ("Google update") posts** for t
 - Compliance rules from BRAND.md apply in full (prices, warranties per finish, collection-only items, no was/now).
 - In the weekly doc, add a section **"Google Business Profile updates"** after the Facebook captions: for each update give the suggested day, image file (`gbp-1.jpg`, `gbp-2.jpg`), text to paste, button type and link.
 
+## Idea bank (owner, 16 Nov 2026)
+Before planning the week, read `marketing/bathroom-deals/social/IDEA-BANK.md`. Use the idea(s) Morgan's plan names, or if none are named, at least one unused idea that passes its checks. Write a fresh caption with current stock, prices and warranty.
+
 ## Reels and Shorts
 Short vertical videos are made by `bd-video-creator`. When planning the week, leave 1 reel slot (Friday 7:30 pm) and make sure the photo posts and the reels feature different products.
 

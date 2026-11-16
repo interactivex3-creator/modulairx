@@ -91,6 +91,7 @@ The owner approved removing unverified was/now prices. On 8 Nov the sale price b
 **These still show was/now prices and need the same decision:** Brighton laundry package (985), Brighton overhead cabinet (983), Brighton laundry cabinet (684), Catral shower (741), Akala 1500 (686), Vattaro bath (727), Balun basins (661, 663, 664, 723), Muccia basin (665), KODI ionizer (675). **Owner decision (8 Nov 2026): leave these prices as they are.** Agents must not change them, and must not feature, link or make savings claims about these products in any marketing (social, email, ads, blog) unless the owner asks.
 
 ## Social post rules (owner feedback, 11 Nov 2026)
+- **Idea bank (owner, 16 Nov 2026):** `marketing/bathroom-deals/social/IDEA-BANK.md` holds approved post ideas that were never posted. Every week's posts or reel must use at least one unused idea from it until it's empty (re-check stock, prices and warranty first).
 - **No repeats.** Before choosing topics, check the previous weeks' packs (the "2. Social posts" folder in Google Drive and `marketing/bathroom-deals/social/`). Don't repeat a topic, angle or featured product from the last 4 weeks.
 - **Don't re-share old blog articles.** Existing blog posts were already shared on Facebook when published (e.g. the June kitchen-sink sizing guide). Social posts link to **product or category pages**, or to a **brand-new** blog post published that week.
 - **Don't use photos that look AI-generated** (file names like "file-0000…", "ChatGPT Image") or scenes that show discontinued products (Tarnos 900).

@@ -39,3 +39,6 @@ Turn a business goal ("move more vanities", "grow Brisbane quote requests", "lau
 - Never publish, send, post or spend. Your output is a plan plus drafts plus an approval checklist.
 - Never invent discounts, stock levels, warranty terms or reference prices. If a fact is missing, list it as a question for the team.
 - Save the campaign brief to `marketing/bathroom-deals/drafts/YYYY-MM-DD-<campaign>-brief.md`.
+
+## Idea bank (owner, 16 Nov 2026)
+In every weekly plan, brief **at least one** unused idea from `marketing/bathroom-deals/social/IDEA-BANK.md` into the week's posts or reel (name the idea number), until the bank is empty. An idea is used once it appears in a pack in Drive. Check the last 4 weeks of packs.

@@ -32,6 +32,9 @@ Hook in the first 1.5 seconds, one idea per scene, 1.5–3 s per scene, finish o
 10. **Caption** (same rules as bd-social-media-manager: hook line, short body, "bathroomdeals.au/…" text link, 5–10 hashtags, at most one emoji), alt text, and the voiceover script.
 11. **Send to `bd-compliance-reviewer`** with the voiceover script, on-screen text, caption and landing page, and fix everything it flags. If either connector is unavailable, still build the video, say clearly which audio is missing, and mark the reel "NEEDS AUDIO" rather than shipping it silent.
 
+## Idea bank
+Check `marketing/bathroom-deals/social/IDEA-BANK.md` first: ideas marked "Best as: a reel" (e.g. idea 1, the Lucito curved spout mixer finish line-up) should be used for the weekly reel when the plan doesn't name another topic.
+
 ## Hand-over
 - Weekly: **1 reel** (owner decision, 13 Nov 2026), on a different product and angle from that week's photo posts and from the last 4 weeks of posts (BRAND.md "Social post rules").
 - Save into the week's social folder as `reel-N.mp4`, `reel-N-cover.jpg` (and the voiceover script in the doc), and add a **"Reels"** section to the weekly "Posts to schedule" doc: suggested day/time (Friday 7:30 pm Brisbane time), video file, cover file, caption to paste, link.
