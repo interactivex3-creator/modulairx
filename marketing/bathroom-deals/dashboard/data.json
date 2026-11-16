@@ -353,20 +353,6 @@
       "priority": "medium"
     },
     {
-      "text": "Delete the old Squarespace feed in Merchant Center",
-      "why": "104 old listings with no links and old prices (e.g. Murcia Basin Mixer Black $175 vs $55 on the site). Your WooCommerce feed is already in sync: 226 listings = 190 products plus sizes.",
-      "due": null,
-      "priority": "high",
-      "how": "merchants.google.com › Settings (cog) › Data sources › “Squarespace-3d64b156” › ⋮ › Delete. Also check Settings › Apps and disconnect Squarespace if it’s listed."
-    },
-    {
-      "text": "Turn off the old website autofeed in Merchant Center",
-      "why": "Google’s “bathroomdeals.au” autofeed still lists the discontinued Tarnos 900 at $0.",
-      "due": null,
-      "priority": "medium",
-      "how": "merchants.google.com › Settings › Data sources › “bathroomdeals.au” (Autofeed) › turn off"
-    },
-    {
       "text": "Read the weekly plan before Wednesday’s content run",
       "why": "Priorities: vanity searches, near-miss pages, only promote stock we can sell.",
       "due": "2026-11-18",
