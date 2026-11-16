@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-16",
   "schedule": [
     {
       "day": "Monday",
@@ -9,11 +9,11 @@
         "bd-analytics-reporter",
         "bd-marketing-lead"
       ],
-      "next": "2026-11-16",
-      "last_run": "2026-11-10",
+      "next": "2026-11-23",
+      "last_run": "2026-11-16",
       "last_status": "ok",
       "connectors_ok": true,
-      "connector_note": "All 4 connectors added"
+      "connector_note": "All 4 connectors worked (WordPress, Windsor.ai, Google Drive, Netlify)"
     },
     {
       "day": "Wednesday",
@@ -40,8 +40,8 @@
       "title": "Marketing Lead",
       "role": "Plans each week, sets the 3 priorities and briefs the rest of the team.",
       "status": "active",
-      "last_update": "2026-11-10",
-      "next_run": "2026-11-16",
+      "last_update": "2026-11-16",
+      "next_run": "2026-11-23",
       "face": {
         "skin": "#F1C7A3",
         "hair": "#3B2A20",
@@ -51,6 +51,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Weekly plan for 23–29 Nov: 3 priorities and briefs (4 posts, 1 reel, 9 product pages, new vanity size article)"
+        },
         {
           "date": "2026-11-10",
           "text": "Weekly plan for 16–22 Nov: 3 priorities and briefs for the content run"
@@ -71,8 +75,8 @@
       "title": "Analytics Reporter",
       "role": "Weekly numbers from Google Analytics, Search Console, WooCommerce and Merchant Center, with bot traffic separated out.",
       "status": "active",
-      "last_update": "2026-11-10",
-      "next_run": "2026-11-16",
+      "last_update": "2026-11-16",
+      "next_run": "2026-11-23",
       "face": {
         "skin": "#C68E6A",
         "hair": "#1E1E1E",
@@ -82,6 +86,10 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Weekly report: real Australian visitors up for a second week, bot traffic halved, Google showing far more of our pages"
+        },
         {
           "date": "2026-11-10",
           "text": "Weekly report: real Australian visitors vs overseas bot traffic"
@@ -308,14 +316,6 @@
   ],
   "waiting": [
     {
-      "text": "Schedule the 16–22 Nov Facebook and Instagram posts",
-      "why": "4 posts, first one goes out Tue 17 Nov 7:30 pm.",
-      "due": "2026-11-17",
-      "priority": "high",
-      "how": "Drive › 2. Social posts › Week of 16 Nov 2026 › follow the doc",
-      "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
-    },
-    {
       "text": "Pause the abandoned-cart emails",
       "why": "Email marketing is paused, but the Abandoned Cart Lite plugin still sends.",
       "due": null,
@@ -334,6 +334,40 @@
       "due": null,
       "priority": "low",
       "link": "https://drive.google.com/drive/folders/1-ITz6GpxmtIcoETPpt3gVzjlPXPYCSch"
+    },
+    {
+      "text": "Un-feature the Neston 200×200 floor waste",
+      "why": "Out of stock for 2 weeks but still featured on the site.",
+      "due": null,
+      "priority": "high",
+      "how": "WordPress › Products › Neston 200mm x 200mm › click the star to un-feature"
+    },
+    {
+      "text": "Restock or hide the Iluka toilet suite",
+      "why": "Out of stock but Australians are still viewing it.",
+      "due": null,
+      "priority": "medium",
+      "how": "WordPress › Products › Iluka Close Coupled Toilet Suite › set a lead time or change Catalogue visibility to Hidden"
+    },
+    {
+      "text": "Check restock dates for the Shaker 1200 and Forio 864 sinks",
+      "why": "1 left of each, and they are our best-performing pages in search and Shopping.",
+      "due": null,
+      "priority": "medium"
+    },
+    {
+      "text": "Sync the Merchant Center feed with the shop",
+      "why": "Google shows 226 listings; the shop has 190 products.",
+      "due": null,
+      "priority": "low",
+      "how": "Merchant Center › Products › check for listings no longer on the site"
+    },
+    {
+      "text": "Read the weekly plan before Wednesday’s content run",
+      "why": "Priorities: vanity searches, near-miss pages, only promote stock we can sell.",
+      "due": "2026-11-18",
+      "priority": "low",
+      "link": "https://docs.google.com/document/d/1rwFvfpquBIfga3VAioulI3oBS6qiyy0Xyh9hhOC_QsM/edit"
     }
   ],
   "calendar": {
@@ -349,7 +383,7 @@
         "date": "2026-11-17",
         "time": "7:30 pm",
         "kind": "facebook",
-        "what": "Post 1: Lucito Shower On Rail, brushed bronze ($229)",
+        "what": "Post 1: Lucito Shower On Rail, brushed bronze ($229) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
       },
       {
@@ -362,7 +396,7 @@
         "date": "2026-11-19",
         "time": "7:30 pm",
         "kind": "facebook",
-        "what": "Post 2: Lucito gooseneck sink mixer, 4 finishes",
+        "what": "Post 2: Lucito gooseneck sink mixer, 4 finishes (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
       },
       {
@@ -376,20 +410,34 @@
         "date": "2026-11-21",
         "time": "9:00 am",
         "kind": "facebook",
-        "what": "Post 3: budget bathroom, Murcia chrome taps",
+        "what": "Post 3: budget bathroom, Murcia chrome taps (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
       },
       {
         "date": "2026-11-22",
         "time": "10:00 am",
         "kind": "facebook",
-        "what": "Post 4: Tarnos Wall Hung Tall Boy, oak ($399)",
+        "what": "Post 4: Tarnos Wall Hung Tall Boy, oak ($399) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
       }
     ],
     "note": "Google Business Profile updates and the weekly reel start with the 23–29 Nov pack (made Wed 18 Nov)."
   },
   "latest": [
+    {
+      "date": "2026-11-16",
+      "type": "Plan",
+      "title": "Weekly plan, 16 Nov (for 23–29 Nov)",
+      "by": "bd-marketing-lead",
+      "url": "https://docs.google.com/document/d/1rwFvfpquBIfga3VAioulI3oBS6qiyy0Xyh9hhOC_QsM/edit"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "Report",
+      "title": "Weekly report, 9–15 Nov",
+      "by": "bd-analytics-reporter",
+      "url": "https://docs.google.com/document/d/1QMAz5SP0LIEpbsAVoudcXuL0LcyQToC9zhdCDmzZja0/edit"
+    },
     {
       "date": "2026-11-13",
       "type": "Reel",
