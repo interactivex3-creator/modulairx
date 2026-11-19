@@ -77,6 +77,7 @@ Plain, direct, practical. We talk like someone who knows the range, not like an 
 - **Runway / HyperFrames / ElevenLabs:** short video and voiceover for reels and ads.
 
 ## Approval rules (all agents)
+- **Compliance status in drafts (owner, 19 Nov 2026):** once Grace has reviewed a draft, its top line must give her result, and every older "needs compliance review", "Grace to confirm" or "recommend bd-compliance-reviewer review" note further down must be replaced with that same result. A draft must never show both "passed" and "needs review".
 Agents **draft**. People **approve**. Without a named human's explicit go-ahead in the conversation, no agent may:
 - publish or schedule anything on the website (create WordPress content as `draft` only),
 - send an email, or schedule a campaign or flow,
