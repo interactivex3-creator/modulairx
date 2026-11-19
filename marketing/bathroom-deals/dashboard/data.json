@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-19",
   "schedule": [
     {
       "day": "Monday",
@@ -26,11 +26,11 @@
         "bd-seo-content-writer",
         "bd-compliance-reviewer"
       ],
-      "next": "2026-11-18",
-      "last_run": "2026-11-11",
+      "next": "2026-11-25",
+      "last_run": "2026-11-18",
       "last_status": "ok",
       "connectors_ok": true,
-      "connector_note": "All 6 connectors added"
+      "connector_note": "All connectors worked (WordPress, Google Drive, ElevenLabs, Runway, Netlify; Windsor.ai available). Runway credits are low (147 left)."
     }
   ],
   "agents": [
@@ -114,8 +114,8 @@
       "title": "SEO Content Writer",
       "role": "Writes a brand-new blog article every week and handles on-page SEO.",
       "status": "active",
-      "last_update": "2026-11-12",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-19",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#F6D2B8",
         "hair": "#B5651D",
@@ -125,6 +125,14 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-19",
+          "text": "Published “What Size Vanity Do You Need?” on the website"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "New blog article drafted in WordPress: “What Size Vanity Do You Need?” (750, 900 or 1200mm)"
+        },
         {
           "date": "2026-11-12",
           "text": "Published “Small bathroom storage ideas” on the website"
@@ -145,8 +153,8 @@
       "title": "Product Copywriter",
       "role": "Rewrites product and category pages: descriptions, specs, warranties and FAQs.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#8D5A3B",
         "hair": "#141414",
@@ -156,6 +164,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "New copy for 9 pages: Lucito and Arraso sink mixers, Lucito basin mixer and shower rail, Forio 813 and 1160 sinks"
+        },
         {
           "date": "2026-11-16",
           "text": "Forio quartz sinks: all 12 pages now say collection only (removed “delivered Australia-wide”)"
@@ -184,8 +196,8 @@
       "title": "Social Media Manager",
       "role": "Weekly Facebook and Instagram posts, plus 2 Google Business Profile updates, ready to schedule.",
       "status": "active",
-      "last_update": "2026-11-12",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#F3C9A8",
         "hair": "#E0B44C",
@@ -195,6 +207,14 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "4 posts for 23–29 Nov: Forio double-bowl sinks, Lucito bath filler, twin shower on rail, toilet roll holder"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "2 Google Business Profile updates: Forio sinks (Mon) and Lucito bath filler (Thu)"
+        },
         {
           "date": "2026-11-12",
           "text": "Added 2 Google Business Profile posts to every weekly pack"
@@ -215,8 +235,8 @@
       "title": "Video Creator",
       "role": "One reel a week with an Australian voiceover, music and the Bathroom Deals logo.",
       "status": "active",
-      "last_update": "2026-11-13",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#E8B48F",
         "hair": "#2F2F2F",
@@ -226,6 +246,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Reel for Fri 27 Nov: Lucito wall mixer and spout in 4 finishes, with voiceover and music"
+        },
         {
           "date": "2026-11-13",
           "text": "Joined the team; first reel made: Lucito Shower Shelf in 6 finishes"
@@ -246,8 +270,8 @@
       "title": "Compliance Reviewer",
       "role": "Checks every post, page and video for prices, warranties, delivery claims and Australian Consumer Law.",
       "status": "active",
-      "last_update": "2026-11-11",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#D9A07A",
         "hair": "#9C9C9C",
@@ -257,6 +281,14 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Reviewed the 23–29 Nov posts, reel, Google updates, vanity article and product copy; fixes applied, nothing on hold"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Found wrong warranty and delivery wording on 3 category pages the posts link to"
+        },
         {
           "date": "2026-11-11",
           "text": "Reviewed the 16–22 Nov posts and the new blog article"
@@ -324,6 +356,42 @@
   ],
   "waiting": [
     {
+      "text": "Schedule the 23–29 Nov posts and reel",
+      "why": "4 Facebook/Instagram posts (Tue–Sun) and the Friday reel are ready in Drive.",
+      "due": "2026-11-23",
+      "priority": "high",
+      "how": "business.facebook.com › Planner › Schedule › Bulk schedule posts (reel: Create reel). Steps are in the doc in the folder.",
+      "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+    },
+    {
+      "text": "Post the 2 Google updates",
+      "why": "Forio sinks on Mon 23 Nov and the Lucito bath filler on Thu 26 Nov.",
+      "due": "2026-11-23",
+      "priority": "medium",
+      "how": "Search “Bathroom Deals” on Google while signed in › Add update › photo, text, Learn more link › Post",
+      "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+    },
+    {
+      "text": "Fix the warranty and delivery wording on 3 category pages",
+      "why": "Kitchen sinks FAQ says “we deliver Australia-wide” (Forio sinks are collection only); tapware FAQ says 10-year finish warranty and the twin-shower description says finish warranties to 10 years (Lucito is 7 years, black 5). This week’s posts link to these pages.",
+      "due": "2026-11-23",
+      "priority": "high",
+      "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+    },
+    {
+      "text": "Review the 9 product-copy rewrites",
+      "why": "Lucito and Arraso mixers, Lucito shower rail, Forio 813 and 1160 sinks. Approve before any site edits.",
+      "due": null,
+      "priority": "low",
+      "link": "https://docs.google.com/document/d/1ugz7jjhXgnGMdlwJk_2VITISHkVKtFPNizXHjAUL3Ck/edit"
+    },
+    {
+      "text": "Top up Runway credits",
+      "why": "147 credits left; each weekly reel’s music uses about 10.",
+      "due": null,
+      "priority": "low"
+    },
+    {
       "text": "Pause the abandoned-cart emails",
       "why": "Email marketing is paused, but the Abandoned Cart Lite plugin still sends.",
       "due": null,
@@ -349,69 +417,111 @@
       "why": "1 left of each, and they are our best-performing pages in search and Shopping.",
       "due": null,
       "priority": "medium"
-    },
-    {
-      "text": "Read the weekly plan before Wednesday’s content run",
-      "why": "Priorities: vanity searches, near-miss pages, only promote stock we can sell.",
-      "due": "2026-11-18",
-      "priority": "low",
-      "link": "https://docs.google.com/document/d/1rwFvfpquBIfga3VAioulI3oBS6qiyy0Xyh9hhOC_QsM/edit"
     }
   ],
   "calendar": {
-    "week_of": "2026-11-16",
+    "week_of": "2026-11-23",
     "items": [
       {
-        "date": "2026-11-16",
+        "date": "2026-11-23",
         "time": "6:47 am",
         "kind": "run",
         "what": "Weekly report and plan (Ash and Morgan)"
       },
       {
-        "date": "2026-11-17",
-        "time": "7:30 pm",
-        "kind": "facebook",
-        "what": "Post 1: Lucito Shower On Rail, brushed bronze ($229) (scheduled ✓)",
-        "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
+        "date": "2026-11-23",
+        "time": "any time",
+        "kind": "google",
+        "what": "Google update 1: Forio quartz sinks, collect from Acacia Ridge",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
-        "date": "2026-11-18",
+        "date": "2026-11-24",
+        "time": "7:30 pm",
+        "kind": "facebook",
+        "what": "Post 1: Forio double-bowl quartz sinks ($785 / $1,049)",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+      },
+      {
+        "date": "2026-11-25",
         "time": "12:41 pm",
         "kind": "run",
         "what": "Content run: next week’s posts, reel, Google updates, product copy, new blog article"
       },
       {
-        "date": "2026-11-19",
+        "date": "2026-11-26",
         "time": "7:30 pm",
         "kind": "facebook",
-        "what": "Post 2: Lucito gooseneck sink mixer, 4 finishes (scheduled ✓)",
-        "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
+        "what": "Post 2: Lucito floor-mounted bath filler, 5 finishes ($749 / $799)",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
-        "date": "2026-11-20",
+        "date": "2026-11-26",
+        "time": "any time",
+        "kind": "google",
+        "what": "Google update 2: Lucito floor-mounted bath filler",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+      },
+      {
+        "date": "2026-11-27",
         "time": "7:30 pm",
         "kind": "reel",
-        "what": "Optional: sample reel, Lucito Shower Shelf (check prices first)",
-        "link": "https://drive.google.com/file/d/13aXX8GkwPJugzkSOjkO1P3sjcDPVmxz5/view"
+        "what": "Reel: Lucito wall mixer and spout, 4 finishes ($219 / $249)",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "9:00 am",
         "kind": "facebook",
-        "what": "Post 3: budget bathroom, Murcia chrome taps (scheduled ✓)",
-        "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
+        "what": "Post 3: Lucito twin shower on rail ($489 / $529)",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
-        "date": "2026-11-22",
+        "date": "2026-11-29",
         "time": "10:00 am",
         "kind": "facebook",
-        "what": "Post 4: Tarnos Wall Hung Tall Boy, oak ($399) (scheduled ✓)",
-        "link": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
+        "what": "Post 4: Lucito toilet roll holder, 6 finishes ($33 / $37), or the vanity article if published",
+        "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       }
     ],
-    "note": "Google Business Profile updates and the weekly reel start with the 23–29 Nov pack (made Wed 18 Nov)."
+    "note": "Posts, reel and Google updates are in the Week of 23 Nov 2026 folder in Drive."
   },
   "latest": [
+    {
+      "date": "2026-11-19",
+      "type": "Blog article",
+      "title": "What Size Vanity Do You Need? (published)",
+      "by": "bd-seo-content-writer",
+      "url": "https://bathroomdeals.au/bathroom-vanity-sizes-measuring-guide/"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "Social pack",
+      "title": "Posts to schedule, 23–29 Nov (4 posts, reel, 2 Google updates)",
+      "by": "bd-social-media-manager",
+      "url": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "Reel",
+      "title": "Reel: Lucito wall mixer and spout, 4 finishes",
+      "by": "bd-video-creator",
+      "url": "https://drive.google.com/file/d/1Po4axvEUg-UkQLprzkNJXX20iF5CN-xW/view"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "Blog article",
+      "title": "New blog draft: What Size Vanity Do You Need?",
+      "by": "bd-seo-content-writer",
+      "url": "https://docs.google.com/document/d/1fuuHl-Y9aOmQLrrJhE3qosCO2BNb6zP8F4plLZ6Ukjk/edit"
+    },
+    {
+      "date": "2026-11-18",
+      "type": "Website drafts",
+      "title": "Product copy: Lucito and Arraso mixers, Forio double-bowl sinks",
+      "by": "bd-product-copywriter",
+      "url": "https://docs.google.com/document/d/1ugz7jjhXgnGMdlwJk_2VITISHkVKtFPNizXHjAUL3Ck/edit"
+    },
     {
       "date": "2026-11-16",
       "type": "Plan",
@@ -432,34 +542,6 @@
       "title": "Sample reel: Lucito Shower Shelf, 6 finishes",
       "by": "bd-video-creator",
       "url": "https://drive.google.com/file/d/13aXX8GkwPJugzkSOjkO1P3sjcDPVmxz5/view"
-    },
-    {
-      "date": "2026-11-12",
-      "type": "Blog article",
-      "title": "Small bathroom storage ideas",
-      "by": "bd-seo-content-writer",
-      "url": "https://bathroomdeals.au/small-bathroom-storage-ideas/"
-    },
-    {
-      "date": "2026-11-11",
-      "type": "Social pack",
-      "title": "Posts to schedule, 16–22 Nov",
-      "by": "bd-social-media-manager",
-      "url": "https://drive.google.com/drive/folders/1ibHgUx-4lXR08nLOuIPJoEmaYMkutQtC"
-    },
-    {
-      "date": "2026-11-11",
-      "type": "Website drafts",
-      "title": "Product copy: sinks, drains and Lucito",
-      "by": "bd-product-copywriter",
-      "url": "https://drive.google.com/drive/folders/1BhyQlH0w2Fr6gKTZwC1_jfav8nYfSJ61"
-    },
-    {
-      "date": "2026-11-10",
-      "type": "Report",
-      "title": "Weekly report and plan, 10 Nov",
-      "by": "bd-analytics-reporter",
-      "url": "https://drive.google.com/drive/folders/1vh18jPiPTbIKZ6VYuOKQwrrBOs6l3VUr"
     }
   ]
 }
