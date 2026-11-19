@@ -19,7 +19,10 @@ Storyboard format (paths are relative to the storyboard file):
      "seconds": 2.5}
   ],
   # any scene can use "images": [up to 6 paths] instead of "image" for a full-frame collage
-  "end": {"seconds": 3},                  # end card: large Neston logo on a blurred, dimmed photo
+  "end": {"image": "img/installed.jpg", "seconds": 3},  # end card: a SHARP installed photo (ideally the
+                                          # product from the reel, in a real floor) with a large logo in the
+                                          # lower third, ink or white to suit the photo. Without "image" it
+                                          # falls back to the last scene, blurred and dimmed (avoid).
   "logo": "logo.png",                     # optional; defaults to ../brand-assets/neston-logo-white.png
 
   # Audio (optional, but every published reel should have both):
@@ -44,7 +47,7 @@ import os
 import subprocess
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageEnhance
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageEnhance, ImageStat
 
 W, H, FPS = 1080, 1920, 30
 FADE = 0.4  # seconds of crossfade between scenes
@@ -107,7 +110,7 @@ def logo_layer(logo, width, centre_y, bg=None):
     dark_bg = True
     if bg is not None:  # pick the logo colour from how light the photo is behind it
         patch = bg.convert("L").crop((x, y, x + lg.width, y + lg.height))
-        dark_bg = (sum(patch.getdata()) / max(1, patch.width * patch.height)) < 150
+        dark_bg = ImageStat.Stat(patch).mean[0] < 150
     if not dark_bg:  # light photo: ink-coloured logo, light glow instead of a dark shadow
         ink = Image.new("RGBA", lg.size, (*NAVY, 255))
         ink.putalpha(alpha)
@@ -129,7 +132,9 @@ def text_layer(scene, logo=None, bg=None):
     directly on the video near the bottom (small), or large and centred on the end card.
     Any "top"/"bottom"/"small" keys in the storyboard are ignored."""
     if scene.get("_end"):
-        return logo_layer(logo, 640, H / 2, None)  # end card photo is dimmed, so white logo
+        if scene.get("_end_own_photo"):  # sharp installed photo, large logo in the lower third
+            return logo_layer(logo, 600, 1420, bg)
+        return logo_layer(logo, 640, H / 2, None)  # blurred, dimmed fallback: white logo
     return logo_layer(logo, 440, LOGO_CARD[1] + (LOGO_CARD[3] - LOGO_CARD[1]) / 2, bg)
 
 
@@ -189,7 +194,7 @@ def scene_frames(scene, base_dir, logo=None):
                            scene.get("focus_x", 0.5), scene.get("focus_y", 0.5))
     else:
         photo = None
-    if photo is not None and scene.get("_end"):  # end card: blurred, dimmed photo behind a large logo
+    if photo is not None and scene.get("_end") and not scene.get("_end_own_photo"):  # fallback: blurred, dimmed last photo
         photo = ImageEnhance.Brightness(photo.filter(ImageFilter.GaussianBlur(18))).enhance(0.6)
     elif photo is None and scene.get("_end"):
         photo = Image.new("RGB", (W, H), (60, 58, 54))
@@ -214,6 +219,9 @@ def main(sb_path):
     if sb.get("end"):
         endc = dict(sb["end"])
         endc["_end"] = True
+        endc["_end_own_photo"] = bool(endc.get("image") or endc.get("images"))
+        if endc["_end_own_photo"]:
+            endc.setdefault("fit", "crop")  # fill the whole frame with the installed photo
         if not endc.get("image") and not endc.get("images"):
             last = next((sc for sc in reversed(scenes) if sc.get("image")), None)
             if last:
