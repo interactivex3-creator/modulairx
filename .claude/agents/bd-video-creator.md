@@ -19,6 +19,9 @@ Hook in the first 1.5 seconds, one idea per scene, 1.5–3 s per scene, finish o
 
 **Owner rules (13 Nov 2026):** every video shows the **Bathroom Deals logo** on a white card **at the bottom of every frame** (the script adds `marketing/bathroom-deals/brand-assets/bathroom-deals-logo.png` automatically; never remove it), and **every scene uses the full frame** with the whole product photo visible. **Never put the location on a video**: no suburb, city or "Acacia Ridge"/"Brisbane"/"Queensland" in the on-screen text or the voiceover. For collection-only products say "Collection only" without the place.
 
+## Look (owner rule, 19 Nov 2026)
+**No on-screen text and no block backgrounds or text panels**: they "don't look upmarket". Let the photos and the voiceover do the work: product names, finishes and prices are spoken, not written. The only overlay is the small Bathroom Deals logo card low on the frame. `make_reel.py` now ignores `top`/`bottom`/`small` text unless a storyboard sets `"show_text": true`, which you must not do. Prefer calm pacing, clean product photos and smooth crossfades.
+
 ## How to build a video (owner rule, 13 Nov 2026: every reel has a voiceover AND music)
 1. **Pick products:** in stock only (check `stock_status` / `is_in_stock` live, e.g. `https://bathroomdeals.au/wp-json/wc/store/v1/products?search=...`), real current prices (Store API prices are in cents), nothing BRAND.md lists as still showing was/now prices, nothing discontinued (Tarnos 900). Vanities, tall boys and Forio quartz sinks are **collection only**: say so on screen and in the voiceover if featured.
 2. **Get images:** download our own product photos from bathroomdeals.au with curl into a fresh folder. Look at every image (build a contact sheet and view it). Never use images that look AI-generated or have names like "file-0000…" or "ChatGPT Image", and never generate product footage with AI: it misrepresents the product.

@@ -35,7 +35,9 @@ time in seconds on the final timeline (voice time + voice_delay). Find the cue p
 with:  ffmpeg -i vo.mp3 -af silencedetect=noise=-35dB:d=0.2 -f null -
 The end card then runs until the voice finishes plus 1.2 s.
 
-Owner rules: every scene fills the whole frame and shows the whole photo, the Bathroom Deals logo sits on a white
+Owner rules: NO on-screen text and NO block backgrounds (19 Nov 2026: "doesn't look upmarket"),
+the voiceover carries the message; "top"/"bottom"/"small" are ignored unless "show_text": true.
+Every scene fills the whole frame and shows the whole photo, the Bathroom Deals logo sits on a white
 card at the bottom of every frame, and the store location (suburb/city) never appears
 on screen or in the voiceover.
 Text and logo stay inside the Reels/Shorts safe area (clear of the top 220 px and the
@@ -55,7 +57,7 @@ NAVY = (52, 73, 94)      # logo navy
 TEAL = (137, 188, 190)   # logo teal
 GREY = (90, 98, 110)
 BG = (255, 255, 255)
-LOGO_CARD = (250, 1395, 830, 1555)  # white card with the logo, at the bottom of every frame
+LOGO_CARD = (350, 1640, 730, 1760)  # small white card with the logo, low on every frame (owner, 19 Nov 2026)
 DEFAULT_LOGO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "brand-assets", "bathroom-deals-logo.png")
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
@@ -101,6 +103,10 @@ def text_layer(scene, logo=None):
     price/fact pill lower down, and the Bathroom Deals logo card at the bottom."""
     layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(layer)
+    # Owner rule (19 Nov 2026): no text and no block backgrounds on reels, for an upmarket look.
+    # Text only appears if the storyboard explicitly sets "show_text": true.
+    if not scene.get("_show_text"):
+        scene = {k: v for k, v in scene.items() if k not in ("top", "bottom", "small")}
     if scene.get("top"):
         size = 72
         while True:  # shrink long headlines to at most 3 lines
@@ -232,6 +238,7 @@ def main(sb_path):
     prev_tail = []
     cover_saved = False
     for s_idx, scene in enumerate(scenes):
+        scene = dict(scene, _show_text=bool(sb.get("show_text", False)))
         frames = list(scene_frames(scene, base, logo))
         if s_idx == 0 and sb.get("cover"):
             frames[min(len(frames) - 1, FPS)].save(os.path.join(base, sb["cover"]), quality=90)
