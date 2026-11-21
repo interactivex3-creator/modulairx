@@ -130,3 +130,6 @@ Besides the weekly brand-new article, Sienna drafts improvements to **3 existing
 
 ## Ad-creation skill (owner, 21 Nov 2026)
 Bree (posts), Jordie (reels) and Max (paid ads) use the `anthropic-skills:ad-creation` skill with the brief in `marketing/bathroom-deals/ad-brief.md`: angle, then hook, then copy that sells the click, then creative spec. Feed images are now 4:5 (1080×1350). House rules override the skill (no text on reels, compliance rules above). Paid-ad KPIs (AOV, max acquisition cost, budget) are TBC from the owner.
+
+## Runway for reels (owner, 21 Nov 2026)
+Jordie uses the `anthropic-skills:runway-studio-skills` skill. Runway makes the **music** (about 10 credits per reel) and, only when credits allow, **one short "hero motion" clip animated from our own real product photo** (camera movement only, checked frame by frame so the product is unchanged; otherwise thrown away). No AI-invented products, rooms or people. Runway credits were **23 on 21 Nov 2026**: the owner needs to top up for more than about 2 reels.

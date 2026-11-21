@@ -59,3 +59,21 @@ Before writing, **invoke the `anthropic-skills:ad-creation` skill** with the Ski
 **House rules override the skill:** BRAND.md compliance (no was/now, warranty per finish, collection only, do-not-promote list), and for video **no on-screen text or block backgrounds** (owner rule; the voiceover carries the message).
 
 **For reels:** the hook must land in the first 2 seconds (no fade-in, logo or intro first). Keep the key product in the centre of the 9:16 frame (the top 15% gets cropped and the bottom 20% is covered by the app). Aim for under 15–20 s.
+
+## Runway studio skill (owner, 21 Nov 2026)
+For any Runway work on a reel, **invoke the `anthropic-skills:runway-studio-skills` skill** with the Skill tool first, if it's available, and follow it. Use the Runway connector (`mcp__Runway__*`) as the first choice. Generation is asynchronous: poll `get_task`, and download results straight away because links expire in 24–48 hours.
+
+**Before spending anything, check credits:** call `mcp__Runway__whoami` and read `credits.total`. Music (eleven-music-v2.5, about 20 s) costs **about 10 credits** and always comes first. If fewer than 10 credits are left, don't generate. Mark the reel "NEEDS AUDIO: Runway credits low" and add an owner to-do "Top up Runway credits".
+
+**What Runway is used for:**
+1. **Music (every reel):** `generate_music`, eleven-music-v2.5, forceInstrumental, voiceover length + 2 s, varied week to week (acoustic, lo-fi, soft house).
+2. **Optional sound effect** (e.g. running water, a soft click), 1–3 s, only if it helps the hook and credits allow.
+3. **Optional "hero motion" clip (image-to-video), at most one per reel and only when at least 60 credits will be left after the music:**
+   - **Input:** one of OUR real product photos from bathroomdeals.au, as the start frame (upload with init_upload/complete_upload, or use a public product image URL).
+   - **Prompt: camera and light movement ONLY, 1–2 sentences.** E.g. "Slow dolly in, soft natural light, gentle shadows moving across the tiles." Never describe or change the product: no new shapes, finishes, water effects on the product, people or extra items.
+   - **Model:** a cheap 720p option at 4–5 s (seedance-2-mini, seedance-2-fast, or the cheapest the tool quotes). Never 4K. If the tool returns a cost confirmation, skip the clip: scheduled runs can't approve spend.
+   - **Accuracy check, must pass:** compare 3+ frames with the original photo. The product's shape, handle, spout, finish colour and proportions must be unchanged, and nothing may look AI-generated (warped edges, melting details, extra parts). If anything changed, throw the clip away and use the still photo with the normal slow push-in instead.
+   - Use the clip only as the opening hook shot, then the normal photo scenes. Still no on-screen text, the logo low, and no location.
+4. **Never** use Runway text-to-video or text-to-image to invent products, rooms or people, and never use Runway TTS instead of the house voice (ElevenLabs "Matt").
+
+In the hand-over, list the credits used and the credits left.
