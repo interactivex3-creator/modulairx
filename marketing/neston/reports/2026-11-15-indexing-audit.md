@@ -66,3 +66,13 @@ I can't see which URLs from here. Likely candidates: `/my-account/` sub-pages, `
 - [ ] Hide the duplicate Blocksy header
 - [ ] You: resubmit the sitemap and request indexing in Search Console (Fix 4)
 - [ ] You: send the 4xx example URLs, or connect Search Console
+
+## Progress log
+**21 Nov 2026: owner approved fixes 1–3.**
+- Done: site tagline set to "Premium 316 stainless steel drainage" (was empty).
+- Done: AIOSEO XML sitemap now includes only posts, pages, products and post categories. Product categories, tags and attachment pages are out. /outdoor-drains/ and /technical-documents/ are confirmed in page-sitemap.xml.
+- Waiting on the owner: two WPCode snippets, each needing WPVibe approval and then switching on in WPCode:
+  - "Neston: redirect duplicate product-category pages to range landing pages" (fix 1);
+  - "Neston: one-off - point range links at the landing pages (runs once)" (fix 2). It rewrites /product-category/<range>/ and /shop/#<range> links on Home, About, Contact, Terms, Reseller and Finishes (post_content and _elementor_data), then records the changed IDs in the option `neston_range_links_fixed`. Switch it off once that option exists.
+- Owner to do: Settings › General › Site Language → English (Australia). WPVibe can't install language packs.
+- No Duplicator backup since early Nov. Every change above can be undone (revisions, snippets off, the sitemap toggle).
