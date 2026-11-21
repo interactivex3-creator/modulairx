@@ -19,6 +19,9 @@ Read `marketing/neston/BRAND.md`. Then pull the live product data (`mcp__Easy_MC
 ## Output
 `marketing/neston/drafts/YYYY-MM-DD-product-copy-<range>.md`. For each product: the ID and URL, the current copy quoted, your proposed copy, the data source for each spec, and TBC flags.
 
+## Applying approved copy (lesson from 21 Nov 2026)
+Several product descriptions start with a 3D model viewer (`<iframe … src="/3d/neston-…">` inside a `<!-- wp:html -->` block). Saving a whole description through the WooCommerce REST API **strips the iframe**. When applying copy, either leave the 3D block untouched and edit only the text after it with `wp_replace_in_post`, or put the iframe back with `wp_replace_in_post` straight after the save. Then check the live page still loads `/3d/neston-…`.
+
 ## Rules
 - Never change prices, stock, SKUs or any live product field. You draft; a person approves; someone applies the change.
 - If the price list and the live site disagree, flag the mismatch. Don't pick one.
