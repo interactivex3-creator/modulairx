@@ -387,9 +387,10 @@
     },
     {
       "text": "Top up Runway credits",
-      "why": "147 credits left; each weekly reel’s music uses about 10.",
+      "why": "Only 23 credits left (21 Nov). Each reel's music uses about 10, so this covers about 2 reels; the optional motion clips need more.",
       "due": null,
-      "priority": "low"
+      "priority": "high",
+      "how": "runway.com › your workspace › Plans and credits"
     },
     {
       "text": "Pause the abandoned-cart emails",
