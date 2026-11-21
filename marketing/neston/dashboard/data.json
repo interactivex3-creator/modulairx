@@ -36,12 +36,6 @@
   ],
   "waiting": [
     {
-      "priority": "medium",
-      "text": "Click \"Request indexing\" for Outdoor Linear Drains in Search Console",
-      "why": "Google last crawled it on 1 Oct and picked a duplicate address. That address now redirects, so Google just needs to look again.",
-      "how": "Search Console › URL inspection › https://neston.com.au/outdoor-linear-drains/ › Request indexing. Optional: the same for /linear-drains/ and /square-tile-insert-grates/."
-    },
-    {
       "priority": "high",
       "text": "Schedule the posts and reel for 23–29 Nov",
       "why": "2 LinkedIn, 2 Facebook + Instagram, 2 Google posts and 1 reel are ready and compliance-checked.",
@@ -265,6 +259,10 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "Owner requested re-indexing of Outdoor Linear Drains in Search Console"
+        },
         {
           "date": "2026-11-21",
           "text": "Indexing fixes live: category duplicates redirected, links fixed, sitemap cleaned, duplicate header hidden"

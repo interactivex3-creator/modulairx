@@ -83,3 +83,4 @@ I can't see which URLs from here. Likely candidates: `/my-account/` sub-pages, `
 - Blocksy default header hidden with Additional CSS (revision 387). The Neston header shows on every page that had it.
 - Site language is now en-AU (owner). Tagline and sitemap were done earlier.
 - Search Console: /zero-threshold-drain-building-entries/ is submitted and indexed (crawled 16 Nov). /outdoor-linear-drains/ is still "Google chose different canonical" from a 1 Oct crawl. The no-slash URL now 301s, so the owner should click Request indexing in Search Console (the API can't).
+- 21 Nov 2026: owner clicked Request indexing for /outdoor-linear-drains/ in Search Console. Check its status in the 30 Nov report.
