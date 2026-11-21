@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-21",
   "schedule": [
     {
       "day": "Monday",
@@ -112,7 +112,7 @@
       "id": "bd-seo-content-writer",
       "name": "Sienna",
       "title": "SEO Content Writer",
-      "role": "Writes a brand-new blog article every week and handles on-page SEO.",
+      "role": "Writes a brand-new blog article every week, and drafts Google title and description fixes for 3 existing pages for the owner to approve.",
       "status": "active",
       "last_update": "2026-11-19",
       "next_run": "2026-11-25",
