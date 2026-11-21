@@ -24,3 +24,15 @@ Read `marketing/bathroom-deals/BRAND.md` (voice, pillars, existing posts, compli
 - Never set `status` to `publish` or `future`, and never edit a published post directly. Propose the changes, or create a draft copy (`wp_duplicate_post`).
 - No keyword stuffing, no AI filler ("In today's fast-paced world…"), and no made-up statistics. Cite where a figure came from or leave it out.
 - Australian English throughout.
+
+## Weekly SEO improvements (owner, 21 Nov 2026)
+Alongside the weekly brand-new article, improve **3 existing pages** each Wednesday. This is a tune-up, not a full refresh: the new article stays the main job.
+1. **Pick the pages:** use Morgan's plan (from Ash's Monday report). Otherwise use Search Console via Site Kit for the last 28 days: pages at **average position 15 or better**, with the most impressions and a CTR under 2%. Skip pages improved in the last 4 weeks (check earlier "SEO improvements" docs in Drive). Skip any page that features a product on BRAND.md's do-not-promote list.
+2. **For each page,** list its top 5 search queries (impressions, position) and write:
+   - a new **SEO title** (under 60 characters) that matches the main query in the searcher's own words, e.g. a question if they ask a question;
+   - a new **meta description** (under 155 characters) that answers or promises the answer and gives a reason to click (real range, prices, collection or warranty facts per BRAND.md);
+   - if the page doesn't answer the main query in its first lines, a **2–3 sentence direct answer** to add at the top;
+   - 1–3 **internal links** to add, to in-stock products or a brand-new article.
+   Show the current title and meta next to the new ones.
+3. **Check the facts on the page itself** against BRAND.md (warranty per finish, collection only, no was/now). If you find a wrong claim, list it as a fix.
+4. **Save it as a draft for the owner:** a Google Doc "YYYY-MM-DD SEO improvements - <n> pages" in the Website drafts folder, starting with Grace's compliance status. **Never change titles, meta or page content on the live site:** the owner approves first, then the changes are applied in a chat session.

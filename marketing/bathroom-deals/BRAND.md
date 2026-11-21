@@ -124,3 +124,6 @@ More Neston drainage stock is coming **next month (December 2026)**. Exact sizes
 - Don't spend product-copy effort on out-of-stock Neston pages until the stock lands; the drains are on hold, not discontinued.
 - The owner is happy for the out-of-stock Neston products to **stay visible on the website** as they are (16 Nov). Don't hide them, and don't flag them as an owner to-do. No backorders or pre-orders unless the owner asks.
 - When the owner confirms the stock has arrived: plan a "Neston range is back" post and reel (check every size's live stock first), refresh the Neston product pages, and use idea 2 from the social idea bank with the full size range.
+
+## Weekly SEO improvements (owner, 21 Nov 2026)
+Besides the weekly brand-new article, Sienna drafts improvements to **3 existing pages** each Wednesday: new title, meta description, a short direct answer at the top, and internal links. These target pages Google already ranks in the top 15 but that get few clicks. They're drafts for the owner to approve; nothing changes on the site until then. Ash reports the before/after results. **First batch (25 Nov):** Gooseneck vs Pull-Out Sink Mixers, The Hard Truth About Tapware Warranties, Handmade vs Pressed Stainless Sinks, and Shower On Rail vs Twin Shower Systems.

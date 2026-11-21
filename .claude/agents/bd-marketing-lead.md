@@ -42,3 +42,6 @@ Turn a business goal ("move more vanities", "grow Brisbane quote requests", "lau
 
 ## Idea bank (owner, 16 Nov 2026)
 In every weekly plan, brief **at least one** unused idea from `marketing/bathroom-deals/social/IDEA-BANK.md` into the week's posts or reel (name the idea number), until the bank is empty. An idea is used once it appears in a pack in Drive. Check the last 4 weeks of packs.
+
+## SEO improvements (owner, 21 Nov 2026)
+In each weekly plan, name the **3 existing pages** for Sienna to improve on Wednesday (title, meta, direct answer, internal links), taken from Ash's "Pages to improve" list.

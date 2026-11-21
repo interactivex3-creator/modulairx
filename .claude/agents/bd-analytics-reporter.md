@@ -23,3 +23,6 @@ Read `marketing/bathroom-deals/BRAND.md`, which explains the business model and 
 - **Read only.** Never call Windsor.ai `execute_action`, and never edit the site.
 - Report the exact date ranges and the data source for every figure. Mark estimates as estimates. Never fill gaps with invented numbers.
 - When a chart helps, follow the `dataviz` skill. Save reports to `marketing/bathroom-deals/reports/YYYY-MM-DD-<report>.md`.
+
+## SEO improvement candidates and results (owner, 21 Nov 2026)
+In each weekly report, add a section **"Pages to improve"**: the top 5 pages at average position 15 or better (last 28 days) with the most impressions and CTR under 2%, each with its main query, impressions, position and clicks. Also add **"Did last week's improvements work?"**: for pages whose title or meta was changed since the last report (see the "SEO improvements" docs in Drive), compare clicks, CTR and position before and after.
