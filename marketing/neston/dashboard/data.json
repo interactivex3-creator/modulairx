@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-21",
   "schedule": [
     {
       "day": "Monday",
@@ -10,9 +10,11 @@
         "neston-marketing-lead",
         "neston-chat-optimiser"
       ],
-      "next": "2026-11-16",
+      "next": "2026-11-23",
       "connectors_ok": true,
-      "connector_note": "All 5 connectors added"
+      "connector_note": "All 5 connectors worked (Search Console via Easy MCP, Google Business Profile, Gmail, Drive, Netlify). GA4 not used.",
+      "last_run": "2026-11-16",
+      "last_status": "ok"
     },
     {
       "day": "Wednesday",
@@ -25,31 +27,43 @@
         "neston-video-creator",
         "neston-compliance-reviewer"
       ],
-      "next": "2026-11-18",
+      "next": "2026-11-25",
       "connectors_ok": true,
-      "connector_note": "All 5 connectors added"
+      "connector_note": "All connectors worked (WordPress, Drive, ElevenLabs, Runway, Netlify). Runway credits are low.",
+      "last_run": "2026-11-18",
+      "last_status": "ok"
     }
   ],
   "waiting": [
     {
-      "priority": "high",
-      "text": "Approve the 4 indexing fixes on neston.com.au",
-      "why": "Each range has two near-identical pages (e.g. /linear-drains/ and /product-category/linear-drains/), so Google won't index one of them.",
-      "how": "Read the audit and reply \"go\" for: 1) redirect, 2) link fixes, 3) sitemap, tagline and language, 4) hide the duplicate header.",
-      "link": "https://docs.google.com/document/d/1hwYF72of8TsQ6RIQCtGZ07Fh1SZXQJDrHnqNnK4a5nA/edit",
-      "due": "2026-11-18"
+      "priority": "medium",
+      "text": "Click \"Request indexing\" for Outdoor Linear Drains in Search Console",
+      "why": "Google last crawled it on 1 Oct and picked a duplicate address. That address now redirects, so Google just needs to look again.",
+      "how": "Search Console › URL inspection › https://neston.com.au/outdoor-linear-drains/ › Request indexing. Optional: the same for /linear-drains/ and /square-tile-insert-grates/."
     },
     {
       "priority": "high",
-      "text": "Start a new Claude chat so the Search Console tools load",
-      "why": "Search Console is connected in Easy MCP, but this chat started before the connection.",
-      "how": "Say: \"Continue the Neston indexing fix. Search Console is now connected in Easy MCP.\""
+      "text": "Schedule the posts and reel for 23–29 Nov",
+      "why": "2 LinkedIn, 2 Facebook + Instagram, 2 Google posts and 1 reel are ready and compliance-checked.",
+      "how": "Open the \"Posts to publish\" doc in the folder and follow the steps for each platform.",
+      "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK",
+      "due": "2026-11-22"
     },
     {
       "priority": "high",
-      "text": "Take a Duplicator backup of neston.com.au",
-      "why": "Needed before any site changes go live.",
-      "how": "wp-admin → Duplicator → Backups → Add New."
+      "text": "Review and publish the new Journal draft: Shower Drain Outlet Sizes in Australia: DN40, DN80 or DN100?",
+      "why": "Answers the \"shower drain size australia\" searches that no page covers yet. Saved as a draft only.",
+      "how": "Open the draft in WordPress, add a featured image, check it and publish.",
+      "link": "https://neston.com.au/wp-admin/post.php?post=378&action=edit",
+      "due": "2026-11-25"
+    },
+    {
+      "priority": "medium",
+      "text": "Add the wedge wire installation guide to Kevin's knowledge file",
+      "why": "A visitor on a wedge wire drain page was given the tile insert guide. Kai drafted the answer.",
+      "how": "Copy the Q&A from the Kevin review into Kevin's knowledge file.",
+      "link": "https://docs.google.com/document/d/12zj58eRp2LR0caBeuVuyUumi-4Q68okOl5aQ9w4ZoYo/edit",
+      "due": "2026-11-23"
     },
     {
       "priority": "medium",
@@ -78,6 +92,13 @@
     },
     {
       "priority": "low",
+      "text": "Check Kevin's handoff trigger",
+      "why": "Kevin flagged a handoff on a question he fully answered, which makes the handoff count unreliable.",
+      "how": "See section 3.2 of the Kevin review.",
+      "link": "https://docs.google.com/document/d/12zj58eRp2LR0caBeuVuyUumi-4Q68okOl5aQ9w4ZoYo/edit"
+    },
+    {
+      "priority": "low",
       "text": "Change the WordPress author name from \"Neston Architectural Grates\"",
       "why": "All 11 Journal posts still show the old name as the author.",
       "how": "Users → Profile → Nickname and \"Display name publicly as\", or ask Claude to do it."
@@ -87,54 +108,99 @@
       "text": "Confirm facts still marked TBC in the brand brief",
       "why": "Warranty terms, WaterMark licence number, 2027 direct launch date, CPD accreditation, trade events.",
       "link": "https://docs.google.com/document/d/16mzkXOMwcX0ZGfRfo-utX6oagRiZ_b0lJMA2NE83D68/edit"
+    },
+    {
+      "priority": "low",
+      "text": "Add the wedge wire installation guide to the Technical Documents page",
+      "why": "The PDF is on the wedge wire product pages but not on /technical-documents/.",
+      "how": "Edit the Technical Documents page and add the Linear Wedge Wire Drain PDF link.",
+      "link": "https://neston.com.au/technical-documents/"
+    },
+    {
+      "priority": "low",
+      "text": "Reword the NCC 2022 line on the 52mm wedge wire drain page",
+      "why": "\"Suitable for minimum step down requirements under NCC 2022\" overstates it; the product copy doc has a compliant version.",
+      "how": "Copy the new short description from the product copy doc.",
+      "link": "https://docs.google.com/document/d/1E6dDkz_VmzmgneMI8zOMzjFRe5sTFfWzpWdUlXsdtXc/edit"
+    },
+    {
+      "priority": "low",
+      "text": "Take a Duplicator backup",
+      "why": "There hasn't been one since early November. Good practice after this week's site changes.",
+      "how": "wp-admin › Duplicator › Backups › Add New."
     }
   ],
   "calendar": {
-    "week_of": "2026-11-16",
-    "note": "Planned for this week. The owner posts and approves everything; nothing goes out automatically.",
+    "week_of": "2026-11-23",
+    "note": "Planned for next week. The owner posts and approves everything; nothing goes out automatically.",
     "items": [
       {
-        "date": "2026-11-16",
+        "date": "2026-11-23",
         "time": "8:13 am",
         "kind": "run",
         "what": "Monday run: weekly report and plan"
       },
       {
-        "date": "2026-11-16",
-        "time": "Any time",
-        "kind": "run",
-        "what": "New chat: pull Search Console indexing data and confirm the fix list"
+        "date": "2026-11-23",
+        "time": "7:00 pm",
+        "kind": "facebook",
+        "what": "Facebook + Instagram post 1: wedge wire drain installation guide",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
-        "date": "2026-11-17",
-        "time": "Morning",
+        "date": "2026-11-24",
+        "time": "8:00 am",
+        "kind": "reel",
+        "what": "Reel on LinkedIn: Square Tile Insert or Square Max? 10mm or 20mm tile",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
+      },
+      {
+        "date": "2026-11-24",
+        "time": "10:00 am",
         "kind": "google",
-        "what": "Google post 1: Why every Neston drain is 316 stainless",
-        "link": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/"
+        "what": "Google post: 200mm square wedge wire floor waste",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
-        "date": "2026-11-18",
-        "time": "Midday",
-        "kind": "site",
-        "what": "Approved indexing fixes go live (after the backup)"
+        "date": "2026-11-25",
+        "time": "8:30 am",
+        "kind": "linkedin",
+        "what": "LinkedIn post: linear or square? Let the floor layout decide",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
-        "date": "2026-11-18",
-        "time": "Afternoon",
-        "kind": "run",
-        "what": "Check the Google Business Profile changes have gone live (categories, description, link)"
-      },
-      {
-        "date": "2026-11-18",
+        "date": "2026-11-25",
         "time": "2:37 pm",
         "kind": "run",
         "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, compliance check"
       },
       {
-        "date": "2026-11-20",
-        "time": "Morning",
-        "kind": "site",
-        "what": "Search Console: resubmit the sitemap and request indexing for the 3 range pages"
+        "date": "2026-11-26",
+        "time": "8:30 am",
+        "kind": "linkedin",
+        "what": "LinkedIn post: stocking Neston, for resellers",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
+      },
+      {
+        "date": "2026-11-26",
+        "time": "7:00 pm",
+        "kind": "reel",
+        "what": "Reel on Facebook + Instagram: Square Tile Insert or Square Max?",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
+      },
+      {
+        "date": "2026-11-27",
+        "time": "10:00 am",
+        "kind": "google",
+        "what": "Google post: specification and detailing support",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
+      },
+      {
+        "date": "2026-11-28",
+        "time": "9:00 am",
+        "kind": "facebook",
+        "what": "Facebook + Instagram post 2: brushed brass linear tile insert",
+        "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       }
     ]
   },
@@ -145,8 +211,8 @@
       "title": "Marketing Lead",
       "role": "Plans campaigns and the calendar, coordinates the team, and runs the 2027 direct-launch plan. Reseller-first until then.",
       "status": "active",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-16",
+      "last_update": "2026-11-16",
+      "next_run": "2026-11-18",
       "face": {
         "skin": "#F1C7A3",
         "hair": "#2B1E16",
@@ -156,6 +222,18 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Set this week's 3 priorities: indexing fixes, more clicks from pages that already rank, Google Profile basics"
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Briefed Wednesday: Journal article on shower outlet sizes (DN40–DN100), 2 LinkedIn, 2 Facebook/Instagram and 2 Google posts"
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Picked 5 product pages to rewrite and a reseller sheet and specifier note to draft"
+        },
         {
           "date": "2026-11-15",
           "text": "Added a Video Creator: one reel a week for Facebook, Instagram and LinkedIn"
@@ -167,18 +245,6 @@
         {
           "date": "2026-11-15",
           "text": "Scheduled the weekly runs: Monday 8:13 am report and plan, Wednesday 2:37 pm content"
-        },
-        {
-          "date": "2026-11-15",
-          "text": "Set up the 13-agent marketing department and the shared brand brief"
-        },
-        {
-          "date": "2026-11-15",
-          "text": "Recorded the channel plan: resellers now, direct sales from 2027"
-        },
-        {
-          "date": "2026-11-15",
-          "text": "Saved the brief, team overview, audit and profile pack to Google Drive"
         }
       ]
     },
@@ -188,8 +254,8 @@
       "title": "SEO Content Writer",
       "role": "Technical Journal guides (zero-threshold, NCC 2022, 316 vs 304, falls and outlets) and on-page and technical SEO. Saves drafts only.",
       "status": "active",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-21",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#E8B894",
         "hair": "#6B4226",
@@ -199,6 +265,18 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "Indexing fixes live: category duplicates redirected, links fixed, sitemap cleaned, duplicate header hidden"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Drafted the Journal article \"Shower Drain Outlet Sizes in Australia: DN40, DN80 or DN100?\" (WordPress draft, not published)"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Set its SEO title, meta description and focus phrase \"shower drain size australia\""
+        },
         {
           "date": "2026-11-15",
           "text": "Indexing audit: found duplicate range pages, a second header, the empty tagline and the en_US locale"
@@ -215,8 +293,8 @@
       "title": "Local SEO & Google Profile Manager",
       "role": "Google Business Profile, reviews, directories and consistent business details. Drafts only; the owner posts.",
       "status": "active",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#C68E6A",
         "hair": "#1E1E1E",
@@ -226,6 +304,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Wrote 2 Google posts for 24 and 27 Nov: the 200mm wedge wire floor waste and specification support"
+        },
         {
           "date": "2026-11-15",
           "text": "Made the square Google profile logo (white Neston logo on ink, 1080×1080)"
@@ -250,8 +332,8 @@
       "title": "Analytics Reporter",
       "role": "Reports from Search Console, GA4, Google Business Profile, diib and Kevin chat summaries. Read only.",
       "status": "active",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-16",
+      "last_update": "2026-11-16",
+      "next_run": "2026-11-23",
       "face": {
         "skin": "#8D5A3B",
         "hair": "#141414",
@@ -261,6 +343,18 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Weekly report: 13 Search clicks (up from 9), 700 impressions, avg position 9.6"
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Checked indexing: all key pages indexed; 1 new post not yet known to Google, 1 post with a duplicate URL"
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Google Profile: 4 views, 0 clicks, 0 calls this week (below the ~50–70 a month baseline)"
+        },
         {
           "date": "2026-11-15",
           "text": "Google Profile baseline: 201 views, 1 website click, 0 calls (Aug – 13 Nov)"
@@ -276,9 +370,9 @@
       "name": "Priya",
       "title": "Compliance Reviewer",
       "role": "Last check on everything external: Australian Consumer Law, NCC/AS and WaterMark claims, pricing, Spam Act, channel rules.",
-      "status": "standby",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-18",
+      "status": "active",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#B07A55",
         "hair": "#141414",
@@ -288,6 +382,14 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Reviewed the article, 6 posts, the reel and product copy: fixes applied, nothing on hold"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Flagged the NCC 2022 wording on the 52mm wedge wire page for a reword"
+        },
         {
           "date": "2026-11-15",
           "text": "Flagged the old Google description's \"every product WaterMark-certified\" claim"
@@ -299,9 +401,9 @@
       "name": "Felix",
       "title": "Product Copywriter",
       "role": "WooCommerce product and category copy, spec tables by model, finish and outlet, alt text. Never changes prices.",
-      "status": "standby",
-      "last_update": null,
-      "next_run": "2026-11-18",
+      "status": "active",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#F6D2B8",
         "hair": "#C9A15B",
@@ -310,7 +412,12 @@
         "extra": "none",
         "glasses": false
       },
-      "done": []
+      "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Drafted new copy for 5 product pages: 200mm floor waste, 2 wedge wire kits, 2 1200mm tile insert kits (doc only)"
+        }
+      ]
     },
     {
       "id": "neston-trade-specifier-outreach",
@@ -371,9 +478,9 @@
       "name": "Zane",
       "title": "Video Creator",
       "role": "One reel a week for Facebook, Instagram and LinkedIn: real product photos, an Australian voiceover and music, with the Neston logo on every frame. Never posts.",
-      "status": "standby",
-      "last_update": "2026-11-15",
-      "next_run": "2026-11-18",
+      "status": "active",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#E0AC84",
         "hair": "#2B1E16",
@@ -383,6 +490,14 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-19",
+          "text": "Reel for 23–29 Nov: new ending, with a brass square insert in a real tiled floor and a large logo"
+        },
+        {
+          "date": "2026-11-18",
+          "text": "Made reel 1: Square Tile Insert vs Square Max (10mm or 20mm tile), 25 s with voiceover and music"
+        },
         {
           "date": "2026-11-15",
           "text": "Set up the Neston reel builder (ink and brass branding, logo on every frame); house voice \"James - Australian\""
@@ -394,9 +509,9 @@
       "name": "Luca",
       "title": "Social Media Manager",
       "role": "LinkedIn for specifiers and trade, plus Facebook and Instagram for design and local trades. Posts, carousels, reel scripts. Never posts itself.",
-      "status": "standby",
-      "last_update": null,
-      "next_run": "2026-11-18",
+      "status": "active",
+      "last_update": "2026-11-18",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#C68E6A",
         "hair": "#2B1E16",
@@ -405,7 +520,12 @@
         "extra": "headphones",
         "glasses": false
       },
-      "done": []
+      "done": [
+        {
+          "date": "2026-11-18",
+          "text": "Wrote 2 LinkedIn and 2 Facebook/Instagram posts for 23–29 Nov, with Neston product photos"
+        }
+      ]
     },
     {
       "id": "neston-email-marketer",
@@ -448,9 +568,9 @@
       "name": "Kai",
       "title": "Chat Optimiser (for Kevin)",
       "role": "Reviews Kevin's chats, finds missed answers and lost leads, and proposes knowledge-base updates. Never edits Kevin itself.",
-      "status": "standby",
-      "last_update": null,
-      "next_run": "2026-11-16",
+      "status": "active",
+      "last_update": "2026-11-16",
+      "next_run": "2026-11-23",
       "face": {
         "skin": "#E8B894",
         "hair": "#C9A15B",
@@ -459,56 +579,74 @@
         "extra": "headphones",
         "glasses": true
       },
-      "done": []
+      "done": [
+        {
+          "date": "2026-11-16",
+          "text": "Kevin review: 1 chat; Kevin gave the tile insert guide to a visitor on a wedge wire drain page"
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Proposed a knowledge-file answer with both installation guides, plus a fix for the over-eager handoff flag"
+        }
+      ]
     }
   ],
   "latest": [
     {
-      "date": "2026-11-15",
-      "type": "Google Doc",
-      "title": "Google Business Profile Photo List",
-      "url": "https://docs.google.com/document/d/1bHNs-TGpkbpqhxJgiYeQfMcObqVeRTlglJMhEvoyGVE/edit",
-      "by": "neston-local-seo-gbp-manager"
-    },
-    {
-      "date": "2026-11-15",
-      "type": "Google Doc",
-      "title": "Google Business Profile Improvement Pack",
-      "url": "https://docs.google.com/document/d/1uyz0B2ClXLCdR4eCONaeUy_xu_PX5hRqu9-tXssnSUU/edit",
-      "by": "neston-local-seo-gbp-manager"
-    },
-    {
-      "date": "2026-11-15",
-      "type": "Audit",
-      "title": "Indexing Audit and Fix Plan",
-      "url": "https://docs.google.com/document/d/1hwYF72of8TsQ6RIQCtGZ07Fh1SZXQJDrHnqNnK4a5nA/edit",
+      "date": "2026-11-21",
+      "type": "Website",
+      "title": "Indexing fixes live on neston.com.au",
+      "url": "https://neston.com.au/linear-drains/",
       "by": "neston-seo-content-writer"
     },
     {
-      "date": "2026-11-15",
-      "type": "Brief",
-      "title": "Neston Marketing Brief (Brand)",
-      "url": "https://docs.google.com/document/d/16mzkXOMwcX0ZGfRfo-utX6oagRiZ_b0lJMA2NE83D68/edit",
-      "by": "neston-marketing-lead"
+      "date": "2026-11-18",
+      "type": "Folder",
+      "title": "Week of 23 Nov 2026: posts, images and reel",
+      "by": "neston-social-media-manager",
+      "url": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
     },
     {
-      "date": "2026-11-15",
-      "type": "Overview",
-      "title": "Neston Marketing Agent Team",
-      "url": "https://docs.google.com/document/d/1aGsH3l5VX2qSG8DCAK8ecghsoKexFOLK0rDEX_6vhTE/edit",
-      "by": "neston-marketing-lead"
+      "date": "2026-11-18",
+      "type": "Reel",
+      "title": "Reel 1: Square Tile Insert vs Square Max",
+      "by": "neston-video-creator",
+      "url": "https://drive.google.com/file/d/1Vyrqd2EnDW3s3cZYDuEIPaaZ9zY95qxc/view"
     },
     {
-      "date": "2026-11-14",
-      "type": "Journal post",
-      "title": "Zero Threshold Drains for Building Entries",
-      "url": "https://neston.com.au/zero-threshold-drain-building-entries/"
+      "date": "2026-11-18",
+      "type": "Draft",
+      "title": "Journal draft: Shower Drain Outlet Sizes in Australia",
+      "by": "neston-seo-content-writer",
+      "url": "https://docs.google.com/document/d/1uxOv58hjSqi7y4YhQ_8fOLrEDT_zXaIeHPUDVzpjFdg/edit"
     },
     {
-      "date": "2026-11-07",
-      "type": "Journal post",
-      "title": "Why Every Neston Drain Is 316 Stainless Steel",
-      "url": "https://neston.com.au/why-every-neston-drain-is-316-stainless-steel/"
+      "date": "2026-11-18",
+      "type": "Copy",
+      "title": "Product copy: wedge wire, 200mm floor waste, 1200mm kits",
+      "by": "neston-product-copywriter",
+      "url": "https://docs.google.com/document/d/1E6dDkz_VmzmgneMI8zOMzjFRe5sTFfWzpWdUlXsdtXc/edit"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "Report",
+      "title": "Weekly report",
+      "by": "neston-analytics-reporter",
+      "url": "https://docs.google.com/document/d/1Af3HJotE5-Hf-9kIeABsjvi6ux1HZP5tq4um6SKYuIk/edit"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "Review",
+      "title": "Kevin review",
+      "by": "neston-chat-optimiser",
+      "url": "https://docs.google.com/document/d/12zj58eRp2LR0caBeuVuyUumi-4Q68okOl5aQ9w4ZoYo/edit"
+    },
+    {
+      "date": "2026-11-16",
+      "type": "Plan",
+      "title": "Weekly plan",
+      "by": "neston-marketing-lead",
+      "url": "https://docs.google.com/document/d/1S7MJKYCVzs5FPTyzDz3G-MWIUgzfxLa7VzfHXR1cMvA/edit"
     }
   ]
 }

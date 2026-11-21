@@ -76,3 +76,10 @@ I can't see which URLs from here. Likely candidates: `/my-account/` sub-pages, `
   - "Neston: one-off - point range links at the landing pages (runs once)" (fix 2). It rewrites /product-category/<range>/ and /shop/#<range> links on Home, About, Contact, Terms, Reseller and Finishes (post_content and _elementor_data), then records the changed IDs in the option `neston_range_links_fixed`. Switch it off once that option exists.
 - Owner to do: Settings › General › Site Language → English (Australia). WPVibe can't install language packs.
 - No Duplicator backup since early Nov. Every change above can be undone (revisions, snippets off, the sitemap toggle).
+**21 Nov 2026 (later): fixes 1–4 live and checked.**
+- Snippet 381 (redirects) active: all 3 /product-category/<range>/ URLs return 301 to the landing pages.
+- Snippet 380 (one-off link fix) ran, then was switched off. No old links remain on Home, About, Contact, Reseller, Finishes or Terms.
+- Snippet 388 (term_link filter) active: product cards, the shop page and product pages link straight to /linear-drains/ etc. 0 /product-category/ links on the range, shop and product pages checked.
+- Blocksy default header hidden with Additional CSS (revision 387). The Neston header shows on every page that had it.
+- Site language is now en-AU (owner). Tagline and sitemap were done earlier.
+- Search Console: /zero-threshold-drain-building-entries/ is submitted and indexed (crawled 16 Nov). /outdoor-linear-drains/ is still "Google chose different canonical" from a 1 Oct crawl. The no-slash URL now 301s, so the owner should click Request indexing in Search Console (the API can't).
