@@ -85,12 +85,6 @@
     },
     {
       "priority": "low",
-      "text": "Change the WordPress author name from \"Neston Architectural Grates\"",
-      "why": "All 11 Journal posts still show the old name as the author.",
-      "how": "Users → Profile → Nickname and \"Display name publicly as\", or ask Claude to do it."
-    },
-    {
-      "priority": "low",
       "text": "Confirm facts still marked TBC in the brand brief",
       "why": "Warranty terms, WaterMark licence number, 2027 direct launch date, CPD accreditation, trade events.",
       "link": "https://docs.google.com/document/d/16mzkXOMwcX0ZGfRfo-utX6oagRiZ_b0lJMA2NE83D68/edit"
@@ -276,7 +270,7 @@
       "title": "Local SEO & Google Profile Manager",
       "role": "Google Business Profile, reviews, directories and consistent business details. Drafts only; the owner posts.",
       "status": "active",
-      "last_update": "2026-11-18",
+      "last_update": "2026-11-21",
       "next_run": "2026-11-25",
       "face": {
         "skin": "#C68E6A",
@@ -287,6 +281,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "WordPress author name changed to Neston Architectural Drains on all Journal posts"
+        },
         {
           "date": "2026-11-18",
           "text": "Wrote 2 Google posts for 24 and 27 Nov: the 200mm wedge wire floor waste and specification support"
