@@ -10,6 +10,7 @@ Every Neston marketing agent reads this file before it starts. If something here
 - **What we make:** 316 stainless steel linear drains (tile insert and grate), square tile insert grates/wastes, outdoor wedge wire linear drains and square wedge wire grates. Five matched PVD finishes: brushed stainless, brushed brass, brushed bronze, gun metal, matte black.
 - **Range size:** 28 products (per the reseller page, Nov 2026).
 - **Outlet sizes:** DN100 (89mm), DN80 (76mm), DN50 / DN40 (38mm). Check the product data for each model.
+- **Owner correction (21 Nov 2026):** the **52mm deep Linear Wedge Wire Drain** (1000mm and 2000mm kits) comes with **either a DN80 or a DN100 outlet**. The live WooCommerce pages still say "Loose DN80 Outlet" only, with one SKU (NS105WW52SS-1000 / -2000). Use DN80 **or** DN100 in all copy. The product codes for each outlet are **TBC**: don't invent them.
 - **Key product facts (from the site):** every drain is 316 stainless; V-bottom channel on the linear tile inserts; kits ship with loose end caps and a loose outlet, so they can be cut to size and positioned on site; heel-proof wedge wire for pedestrian and pool areas; custom stainless drains are available for projects.
 - **Certifications:** the site header says "WaterMark approved". Quote a WaterMark licence number or a specific product's certification **only** from the product data or a technical document. Licence number: **TBC**.
 - **Warranty:** **TBC.** Don't state any warranty length or terms until the team confirms them.
