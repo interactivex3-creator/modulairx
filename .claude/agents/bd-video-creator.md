@@ -48,3 +48,14 @@ Check `marketing/bathroom-deals/social/IDEA-BANK.md` first: ideas marked "Best a
 - No was/now, "save $X", "% off", "lowest price" or invented claims; warranty wording exactly per BRAND.md, finish by finish.
 - Never invent specs, sizes or stock. If a fact isn't on the product page, leave it out.
 - No people's faces, customers' homes or staff without the owner's confirmation that permission was given.
+
+## Ad-creation skill (owner, 21 Nov 2026): use it for every post, reel and ad
+Before writing, **invoke the `anthropic-skills:ad-creation` skill** with the Skill tool, if it's available, and follow it using the brief in `marketing/bathroom-deals/ad-brief.md`. If the skill isn't available in this session, follow this summary of it:
+1. **Angle first:** pick an angle from the brief: pain point, aspiration, trigger, frustration, belief challenge, fear, result, comparison or objection handling. Use different angles across the week's posts and record the angle used.
+2. **Hook in the first line (or first 2 seconds of video):** specific to the audience, e.g. "If you're [doing X], read this", "The [easy] way to [outcome] without [pain]", "Stop [X] if you want [result]", "Why [belief] is wrong". Make the right person think "this is about me".
+3. **Sell the click, not the product:** every sentence pulls into the next. Put the benefit within the first 125 characters. One offer and one call to action per post, with the call to action also in the text. No clickbait, fake urgency, unproven stats, or "Are you…?" lines about personal attributes (Meta rejects them).
+4. **Make content, not ads:** "Would someone share this in a group chat?" Real product photos are the hero.
+5. **For each post or ad, hand over:** angle, hook, primary text, headline (27 characters max), call to action, and a creative spec (format, size, hook visual).
+**House rules override the skill:** BRAND.md compliance (no was/now, warranty per finish, collection only, do-not-promote list), and for video **no on-screen text or block backgrounds** (owner rule; the voiceover carries the message).
+
+**For reels:** the hook must land in the first 2 seconds (no fade-in, logo or intro first). Keep the key product in the centre of the 9:16 frame (the top 15% gets cropped and the bottom 20% is covered by the app). Aim for under 15–20 s.

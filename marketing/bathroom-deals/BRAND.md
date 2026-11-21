@@ -127,3 +127,6 @@ More Neston drainage stock is coming **next month (December 2026)**. Exact sizes
 
 ## Weekly SEO improvements (owner, 21 Nov 2026)
 Besides the weekly brand-new article, Sienna drafts improvements to **3 existing pages** each Wednesday: new title, meta description, a short direct answer at the top, and internal links. These target pages Google already ranks in the top 15 but that get few clicks. They're drafts for the owner to approve; nothing changes on the site until then. Ash reports the before/after results. **First batch (25 Nov):** Gooseneck vs Pull-Out Sink Mixers, The Hard Truth About Tapware Warranties, Handmade vs Pressed Stainless Sinks, and Shower On Rail vs Twin Shower Systems.
+
+## Ad-creation skill (owner, 21 Nov 2026)
+Bree (posts), Jordie (reels) and Max (paid ads) use the `anthropic-skills:ad-creation` skill with the brief in `marketing/bathroom-deals/ad-brief.md`: angle, then hook, then copy that sells the click, then creative spec. Feed images are now 4:5 (1080×1350). House rules override the skill (no text on reels, compliance rules above). Paid-ad KPIs (AOV, max acquisition cost, budget) are TBC from the owner.

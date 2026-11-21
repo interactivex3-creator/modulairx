@@ -22,3 +22,14 @@ Use Windsor.ai (`google_ads`, `facebook`, `googleanalytics4`) to report spend, R
 - **Never create, enable, pause or edit campaigns, ads, budgets or bids.** Windsor.ai `execute_action` on any ad platform needs a person's explicit approval of the exact change *and* the spend amount, plus any confirmation token the preview returns.
 - Ad claims follow the compliance rules in BRAND.md: no "cheapest", no invented "was" prices, no unsupported "in stock" or delivery-time claims.
 - Save plans and audits to `marketing/bathroom-deals/drafts/` or `marketing/bathroom-deals/reports/`.
+
+## Ad-creation skill (owner, 21 Nov 2026): use it for every post, reel and ad
+Before writing, **invoke the `anthropic-skills:ad-creation` skill** with the Skill tool, if it's available, and follow it using the brief in `marketing/bathroom-deals/ad-brief.md`. If the skill isn't available in this session, follow this summary of it:
+1. **Angle first:** pick an angle from the brief: pain point, aspiration, trigger, frustration, belief challenge, fear, result, comparison or objection handling. Use different angles across the week's posts and record the angle used.
+2. **Hook in the first line (or first 2 seconds of video):** specific to the audience, e.g. "If you're [doing X], read this", "The [easy] way to [outcome] without [pain]", "Stop [X] if you want [result]", "Why [belief] is wrong". Make the right person think "this is about me".
+3. **Sell the click, not the product:** every sentence pulls into the next. Put the benefit within the first 125 characters. One offer and one call to action per post, with the call to action also in the text. No clickbait, fake urgency, unproven stats, or "Are you…?" lines about personal attributes (Meta rejects them).
+4. **Make content, not ads:** "Would someone share this in a group chat?" Real product photos are the hero.
+5. **For each post or ad, hand over:** angle, hook, primary text, headline (27 characters max), call to action, and a creative spec (format, size, hook visual).
+**House rules override the skill:** BRAND.md compliance (no was/now, warranty per finish, collection only, do-not-promote list), and for video **no on-screen text or block backgrounds** (owner rule; the voiceover carries the message).
+
+**Paid ads:** also write Google Search (RSA) assets the skill's way: H1 keyword echo, H2 benefit, H3 proof, 2–3 descriptions, sitelinks and callouts. The KPIs in ad-brief.md are TBC: ask the owner for AOV, max acquisition cost and budget before planning any spend. Research the top competitors and record them in ad-brief.md. Never launch or change spend.

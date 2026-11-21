@@ -27,7 +27,7 @@ Bathroom Deals schedules Facebook + Instagram posts by hand in **Business Suite 
 1. **Plan 3–4 posts** for the coming Mon–Sun. Use only **in-stock** products (check `stock_status` live), real current prices, and the warranty and delivery rules in BRAND.md. Vanities are **collection only**.
 2. **Week folder** `marketing/bathroom-deals/social/YYYY-MM-DD-week/` containing:
    - `post-N.txt`: the full caption, ready to paste (hook, body, CTA, then hashtags at the end). Write links as text ("bathroomdeals.au/contact"), never "link below", because Instagram captions aren't clickable.
-   - `post-N.jpg` (or `post-Na.jpg`, `post-Nb.jpg`… for carousels, in order): 1080×1080 JPG. Download our own product photos from bathroomdeals.au (the network allows it) with curl, then pad product cut-outs to a square on white, or centre-crop scene shots to a square, using Python/PIL. Look at every image before using it. Never use AI-generated product images.
+   - `post-N.jpg` (or `post-Na.jpg`, `post-Nb.jpg`… for carousels, in order): 1080×1350 (4:5) JPG. Download our own product photos from bathroomdeals.au (the network allows it) with curl, then pad product cut-outs to a square on white, or centre-crop scene shots to a square, using Python/PIL. Look at every image before using it. Never use AI-generated product images.
    - `README.md`: a table of each post (number, date/time in Brisbane, image files, text file, link), the 4-step loading instructions for the Bulk schedule form, and a stock-check reminder for low-stock items.
    - `posts.csv`: a record of the week (date, time, platforms, text, link, image, alt text).
 3. **Self-check the linked landing pages too**, not just the captions: no strikethrough or was/now prices, no wrong delivery or warranty claims, and everything in stock.
@@ -60,3 +60,14 @@ When asked, pull organic results through Windsor.ai (`instagram`, `facebook_orga
 - No fake giveaways, no fake reviews, and no "lowest price" claims. Price claims follow the compliance rules in BRAND.md.
 - Save calendars and copy to `marketing/bathroom-deals/drafts/`, and the weekly posting packs to `marketing/bathroom-deals/social/`.
 - Don't use "was/now", "save $X" or "% off" claims unless BRAND.md says reference-price evidence has been confirmed for that product.
+
+## Ad-creation skill (owner, 21 Nov 2026): use it for every post, reel and ad
+Before writing, **invoke the `anthropic-skills:ad-creation` skill** with the Skill tool, if it's available, and follow it using the brief in `marketing/bathroom-deals/ad-brief.md`. If the skill isn't available in this session, follow this summary of it:
+1. **Angle first:** pick an angle from the brief: pain point, aspiration, trigger, frustration, belief challenge, fear, result, comparison or objection handling. Use different angles across the week's posts and record the angle used.
+2. **Hook in the first line (or first 2 seconds of video):** specific to the audience, e.g. "If you're [doing X], read this", "The [easy] way to [outcome] without [pain]", "Stop [X] if you want [result]", "Why [belief] is wrong". Make the right person think "this is about me".
+3. **Sell the click, not the product:** every sentence pulls into the next. Put the benefit within the first 125 characters. One offer and one call to action per post, with the call to action also in the text. No clickbait, fake urgency, unproven stats, or "Are you…?" lines about personal attributes (Meta rejects them).
+4. **Make content, not ads:** "Would someone share this in a group chat?" Real product photos are the hero.
+5. **For each post or ad, hand over:** angle, hook, primary text, headline (27 characters max), call to action, and a creative spec (format, size, hook visual).
+**House rules override the skill:** BRAND.md compliance (no was/now, warranty per finish, collection only, do-not-promote list), and for video **no on-screen text or block backgrounds** (owner rule; the voiceover carries the message).
+
+**Feed images:** use **4:5 (1080×1350)**, the best-performing feed size, for Facebook and Instagram posts from now on (1:1 only when a carousel needs it). Google Business Profile images stay 1200×900.
