@@ -36,12 +36,12 @@
   ],
   "waiting": [
     {
-      "priority": "high",
-      "text": "Schedule the posts and reel for 23–29 Nov",
-      "why": "2 LinkedIn, 2 Facebook + Instagram, 2 Google posts and 1 reel are ready and compliance-checked.",
-      "how": "Open the \"Posts to publish\" doc in the folder and follow the steps for each platform.",
-      "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK",
-      "due": "2026-11-22"
+      "priority": "medium",
+      "text": "Post the 2 Google Business Profile updates (Tue 24 and Fri 27 Nov)",
+      "why": "Google posts can't be scheduled in Meta. Post them yourself on the day.",
+      "how": "business.google.com › Add update › photo gbp-N.jpg › paste text › Learn more › link › Post. Text is in the Week of 23 Nov posting doc.",
+      "link": "https://docs.google.com/document/d/1mCnJoI0Rzco8EwlPM9VeLYj41YU29JzPQieyFDdjen0/edit",
+      "due": "2026-11-24"
     },
     {
       "priority": "medium",
@@ -466,7 +466,7 @@
       "title": "Video Creator",
       "role": "One reel a week for Facebook, Instagram and LinkedIn: real product photos, an Australian voiceover and music, with the Neston logo on every frame. Never posts.",
       "status": "active",
-      "last_update": "2026-11-18",
+      "last_update": "2026-11-21",
       "next_run": "2026-11-25",
       "face": {
         "skin": "#E0AC84",
@@ -477,6 +477,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "Owner scheduled the 23–29 Nov LinkedIn, Facebook and Instagram posts and the reel"
+        },
         {
           "date": "2026-11-19",
           "text": "Reel for 23–29 Nov: new ending, with a brass square insert in a real tiled floor and a large logo"
@@ -497,7 +501,7 @@
       "title": "Social Media Manager",
       "role": "LinkedIn for specifiers and trade, plus Facebook and Instagram for design and local trades. Posts, carousels, reel scripts. Never posts itself.",
       "status": "active",
-      "last_update": "2026-11-18",
+      "last_update": "2026-11-21",
       "next_run": "2026-11-25",
       "face": {
         "skin": "#C68E6A",
@@ -508,6 +512,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "Owner scheduled the 23–29 Nov LinkedIn, Facebook and Instagram posts"
+        },
         {
           "date": "2026-11-18",
           "text": "Wrote 2 LinkedIn and 2 Facebook/Instagram posts for 23–29 Nov, with Neston product photos"
