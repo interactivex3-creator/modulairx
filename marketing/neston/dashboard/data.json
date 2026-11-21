@@ -44,14 +44,6 @@
       "due": "2026-11-22"
     },
     {
-      "priority": "high",
-      "text": "Review and publish the new Journal draft: Shower Drain Outlet Sizes in Australia: DN40, DN80 or DN100?",
-      "why": "Answers the \"shower drain size australia\" searches that no page covers yet. Saved as a draft only.",
-      "how": "Open the draft in WordPress, add a featured image, check it and publish.",
-      "link": "https://neston.com.au/wp-admin/post.php?post=378&action=edit",
-      "due": "2026-11-25"
-    },
-    {
       "priority": "medium",
       "text": "Add the wedge wire installation guide to Kevin's knowledge file",
       "why": "A visitor on a wedge wire drain page was given the tile insert guide. Kai drafted the answer.",
@@ -109,13 +101,6 @@
       "why": "The PDF is on the wedge wire product pages but not on /technical-documents/.",
       "how": "Edit the Technical Documents page and add the Linear Wedge Wire Drain PDF link.",
       "link": "https://neston.com.au/technical-documents/"
-    },
-    {
-      "priority": "low",
-      "text": "Reword the NCC 2022 line on the 52mm wedge wire drain page",
-      "why": "\"Suitable for minimum step down requirements under NCC 2022\" overstates it; the product copy doc has a compliant version.",
-      "how": "Copy the new short description from the product copy doc.",
-      "link": "https://docs.google.com/document/d/1E6dDkz_VmzmgneMI8zOMzjFRe5sTFfWzpWdUlXsdtXc/edit"
     },
     {
       "priority": "low",
@@ -261,6 +246,10 @@
       "done": [
         {
           "date": "2026-11-21",
+          "text": "Published \"Shower Drain Outlet Sizes in Australia: DN40, DN80 or DN100?\""
+        },
+        {
+          "date": "2026-11-21",
           "text": "Owner requested re-indexing of Outdoor Linear Drains in Search Console"
         },
         {
@@ -278,10 +267,6 @@
         {
           "date": "2026-11-15",
           "text": "Indexing audit: found duplicate range pages, a second header, the empty tagline and the en_US locale"
-        },
-        {
-          "date": "2026-11-15",
-          "text": "Wrote the redirect fix and the approval checklist"
         }
       ]
     },
@@ -400,7 +385,7 @@
       "title": "Product Copywriter",
       "role": "WooCommerce product and category copy, spec tables by model, finish and outlet, alt text. Never changes prices.",
       "status": "active",
-      "last_update": "2026-11-18",
+      "last_update": "2026-11-21",
       "next_run": "2026-11-25",
       "face": {
         "skin": "#F6D2B8",
@@ -411,6 +396,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-21",
+          "text": "New copy live on 6 product pages; 52mm kits now offer DN100 or DN80 outlets"
+        },
         {
           "date": "2026-11-18",
           "text": "Drafted new copy for 5 product pages: 200mm floor waste, 2 wedge wire kits, 2 1200mm tile insert kits (doc only)"
@@ -592,6 +581,20 @@
   "latest": [
     {
       "date": "2026-11-21",
+      "type": "Journal post",
+      "title": "Shower Drain Outlet Sizes in Australia: DN40, DN80 or DN100?",
+      "url": "https://neston.com.au/shower-drain-outlet-sizes-australia/",
+      "by": "neston-seo-content-writer"
+    },
+    {
+      "date": "2026-11-21",
+      "type": "Product pages",
+      "title": "52mm Deep Wedge Wire Drain: DN100 or DN80 outlet",
+      "url": "https://neston.com.au/product/linear-wedge-wire-drain-52mm-deep-brushed-stainless-steel-kit-1000mm/",
+      "by": "neston-product-copywriter"
+    },
+    {
+      "date": "2026-11-21",
       "type": "Website",
       "title": "Indexing fixes live on neston.com.au",
       "url": "https://neston.com.au/linear-drains/",
@@ -631,20 +634,6 @@
       "title": "Weekly report",
       "by": "neston-analytics-reporter",
       "url": "https://docs.google.com/document/d/1Af3HJotE5-Hf-9kIeABsjvi6ux1HZP5tq4um6SKYuIk/edit"
-    },
-    {
-      "date": "2026-11-16",
-      "type": "Review",
-      "title": "Kevin review",
-      "by": "neston-chat-optimiser",
-      "url": "https://docs.google.com/document/d/12zj58eRp2LR0caBeuVuyUumi-4Q68okOl5aQ9w4ZoYo/edit"
-    },
-    {
-      "date": "2026-11-16",
-      "type": "Plan",
-      "title": "Weekly plan",
-      "by": "neston-marketing-lead",
-      "url": "https://docs.google.com/document/d/1S7MJKYCVzs5FPTyzDz3G-MWIUgzfxLa7VzfHXR1cMvA/edit"
     }
   ]
 }
