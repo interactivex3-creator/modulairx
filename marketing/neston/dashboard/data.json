@@ -19,12 +19,13 @@
     {
       "day": "Wednesday",
       "time": "2:37 pm",
-      "what": "Weekly content: a Journal article draft, Google Business Profile posts, LinkedIn, Facebook and Instagram posts, 1 reel, compliance check",
+      "what": "Weekly content: a Journal article draft, Google Business Profile posts, LinkedIn, Facebook and Instagram posts, 1 reel, 1 spec sheet, compliance check",
       "agents": [
         "neston-seo-content-writer",
         "neston-local-seo-gbp-manager",
         "neston-social-media-manager",
         "neston-video-creator",
+        "neston-spec-sheet-designer",
         "neston-compliance-reviewer"
       ],
       "next": "2026-11-25",
@@ -160,7 +161,7 @@
         "date": "2026-11-25",
         "time": "2:37 pm",
         "kind": "run",
-        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, compliance check"
+        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, 1 spec sheet (linear tile insert kits), compliance check"
       },
       {
         "date": "2026-11-26",
@@ -467,9 +468,9 @@
       "name": "Iris",
       "title": "Spec Sheet Designer",
       "role": "Spec sheets, install guides, finish cards, brochures and price-list PDFs, made in Canva or Moda.",
-      "status": "standby",
-      "last_update": null,
-      "next_run": null,
+      "status": "active",
+      "last_update": "2026-11-22",
+      "next_run": "2026-11-25",
       "face": {
         "skin": "#F6D2B8",
         "hair": "#141414",
@@ -478,7 +479,12 @@
         "extra": "pencil",
         "glasses": true
       },
-      "done": []
+      "done": [
+        {
+          "date": "2026-11-22",
+          "text": "Switched on by the owner: one spec sheet or collateral piece every Wednesday, in the house spec sheet style"
+        }
+      ]
     },
     {
       "id": "neston-video-creator",
@@ -609,6 +615,13 @@
   "latest": [
     {
       "date": "2026-11-22",
+      "type": "Team",
+      "title": "Iris (spec sheets) switched on: first sheet Wed 25 Nov",
+      "url": "https://drive.google.com/drive/folders/14aSn-aeZ0jaKTxieLs1QlkNCCuvOdpuo",
+      "by": "neston-spec-sheet-designer"
+    },
+    {
+      "date": "2026-11-22",
       "type": "Website",
       "title": "Footer social links snippet ready (waiting on approval)",
       "url": "https://neston.com.au/",
@@ -669,13 +682,6 @@
       "title": "Product copy: wedge wire, 200mm floor waste, 1200mm kits",
       "by": "neston-product-copywriter",
       "url": "https://docs.google.com/document/d/1E6dDkz_VmzmgneMI8zOMzjFRe5sTFfWzpWdUlXsdtXc/edit"
-    },
-    {
-      "date": "2026-11-16",
-      "type": "Report",
-      "title": "Weekly report",
-      "by": "neston-analytics-reporter",
-      "url": "https://docs.google.com/document/d/1Af3HJotE5-Hf-9kIeABsjvi6ux1HZP5tq4um6SKYuIk/edit"
     }
   ]
 }
