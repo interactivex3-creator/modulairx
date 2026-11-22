@@ -133,3 +133,6 @@ Bree (posts), Jordie (reels) and Max (paid ads) use the `anthropic-skills:ad-cre
 
 ## Runway for reels (owner, 21 Nov 2026)
 Jordie uses the `anthropic-skills:runway-studio-skills` skill. Runway makes the **music** (about 10 credits per reel) and, only when credits allow, **one short "hero motion" clip animated from our own real product photo** (camera movement only, checked frame by frame so the product is unchanged; otherwise thrown away). No AI-invented products, rooms or people. Runway credits were **23 on 21 Nov 2026**: the owner needs to top up for more than about 2 reels.
+
+## YouTube (added 22 Nov 2026)
+Channel: **https://www.youtube.com/@bathroomdealsau**. The weekly reel is also posted as a YouTube Short, scheduled by the owner for the same time as the Facebook/Instagram reel. The weekly doc gives the title, description and steps. Same rules as reels: no on-screen text, no location, compliance per this brief.

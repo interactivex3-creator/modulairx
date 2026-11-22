@@ -77,3 +77,10 @@ For any Runway work on a reel, **invoke the `anthropic-skills:runway-studio-skil
 4. **Never** use Runway text-to-video or text-to-image to invent products, rooms or people, and never use Runway TTS instead of the house voice (ElevenLabs "Matt").
 
 In the hand-over, list the credits used and the credits left.
+
+## YouTube channel (owner, 22 Nov 2026)
+Bathroom Deals has a YouTube channel: **https://www.youtube.com/@bathroomdealsau**. Every weekly reel also goes there as a **YouTube Short**. Add a **"YouTube Short"** part to the reel section of the weekly "Posts to schedule" doc with:
+- **Title** (under 100 characters; the hook plus the product, no clickbait, ending with `#Shorts`), e.g. "Which finish would you pick? Lucito wall mixer in 4 finishes #Shorts".
+- **Description** (2–4 lines): what it is, the price(s), a full https link to the product or category page, and 3–5 hashtags. Same compliance rules as the caption, and no location.
+- **Steps:** studio.youtube.com (signed in to @bathroomdealsau) › **Create › Upload videos** › choose `reel-1.mp4` › paste the title and description › Thumbnail: upload `reel-1-cover.jpg` if offered › Audience: "No, it's not made for kids" › Visibility: **Schedule** for the same day and time as the Facebook/Instagram reel (Fri 7:30 pm Brisbane) › Schedule.
+- The reel is 9:16 and under 60 seconds, so YouTube makes it a Short automatically.

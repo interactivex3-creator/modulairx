@@ -30,6 +30,9 @@ Created 21 Nov 2026 from BRAND.md and the owner's decisions. The ad-creation ski
 - Crowded: big-box hardware, plumbing supply chains, showrooms and online-only sellers.
 - **Top competitors with links: TBC.** Max should research them before the first paid campaign and record them here.
 
+## Channels
+Facebook and Instagram (Bathroom Deals), Google Business Profile, YouTube (https://www.youtube.com/@bathroomdealsau, Shorts from the weekly reel), and the blog.
+
 ## Offer
 - **Landing pages:** product or category pages (in stock only), or `bathroomdeals.au/contact` for a package quote. Never older blog articles.
 - **The offer:** buy at the real current price, or "send us your schedule for a package quote". **No was/now, "save $X", "% off" or "lowest price" claims** (BRAND.md compliance). No fake urgency.
