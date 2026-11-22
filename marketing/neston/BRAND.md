@@ -67,6 +67,13 @@ Technical, precise, calm, architectural. Like an experienced hydraulic or plumbi
 
 ## Social media platforms
 Neston uses **LinkedIn, Facebook and Instagram** only.
+
+Page links (22 Nov 2026):
+- LinkedIn: https://www.linkedin.com/company/nestondrains/
+- Instagram: https://www.instagram.com/neston_architectural/
+- Facebook: https://www.facebook.com/share/1HZ4Qbx65B/ (a share link; replace it with the real page URL when the owner sends it)
+
+The site footer gets these links from the WPCode snippet "Neston: social links in footer". The AIOSEO social profiles are filled in by the owner.
 - **LinkedIn:** architects, builders, hydraulic consultants and resellers. Technical posts, compliance explainers, new releases, reseller news.
 - **Instagram:** designers and the trade. Detail shots, finishes, installs, short reels.
 - **Facebook:** plumbers, tilers, builders and local QLD. It's usually the same post as Instagram, scheduled together in Meta Business Suite.
