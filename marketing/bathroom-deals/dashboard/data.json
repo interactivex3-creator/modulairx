@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-23",
   "schedule": [
     {
       "day": "Monday",
@@ -9,11 +9,11 @@
         "bd-analytics-reporter",
         "bd-marketing-lead"
       ],
-      "next": "2026-11-23",
-      "last_run": "2026-11-16",
+      "next": "2026-11-30",
+      "last_run": "2026-11-23",
       "last_status": "ok",
       "connectors_ok": true,
-      "connector_note": "All 4 connectors worked (WordPress, Windsor.ai, Google Drive, Netlify)"
+      "connector_note": "All 3 connectors worked (WordPress, Windsor.ai, Google Drive). Netlify not used on Mondays."
     },
     {
       "day": "Wednesday",
@@ -40,8 +40,8 @@
       "title": "Marketing Lead",
       "role": "Plans each week, sets the 3 priorities and briefs the rest of the team.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-23",
+      "last_update": "2026-11-23",
+      "next_run": "2026-11-30",
       "face": {
         "skin": "#F1C7A3",
         "hair": "#3B2A20",
@@ -51,6 +51,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-23",
+          "text": "Weekly plan for 30 Nov – 6 Dec: 3 priorities and briefs (4 posts, basin mixer reel, 10 product pages, new basin mixer article, 4 SEO page fixes)"
+        },
         {
           "date": "2026-11-16",
           "text": "Weekly plan for 23–29 Nov: 3 priorities and briefs (4 posts, 1 reel, 9 product pages, new vanity size article)"
@@ -75,8 +79,8 @@
       "title": "Analytics Reporter",
       "role": "Weekly numbers from Google Analytics, Search Console, WooCommerce and Merchant Center, with bot traffic separated out.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-23",
+      "last_update": "2026-11-23",
+      "next_run": "2026-11-30",
       "face": {
         "skin": "#C68E6A",
         "hair": "#1E1E1E",
@@ -86,6 +90,18 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-23",
+          "text": "Weekly report: Australian visitors steady, search position up 6 places, add-to-cart bots back, 4 new products need a price check"
+        },
+        {
+          "date": "2026-11-23",
+          "text": "New \"Pages to improve\" list: 4 guides on Google's first page that get almost no clicks; baseline saved to measure the fixes"
+        },
+        {
+          "date": "2026-11-23",
+          "text": "Shopping check: all 230 listings still active; old Squarespace feed still showing 3 sold-out items as in stock"
+        },
         {
           "date": "2026-11-16",
           "text": "Merchant Center check: WooCommerce feed matches the shop; found an old Squarespace feed with out-of-date prices"
@@ -97,14 +113,6 @@
         {
           "date": "2026-11-10",
           "text": "Weekly report: real Australian visitors vs overseas bot traffic"
-        },
-        {
-          "date": "2026-11-08",
-          "text": "Baseline report: traffic, search, Merchant Center and sales"
-        },
-        {
-          "date": "2026-11-08",
-          "text": "Found the add-to-cart spikes were bots, not real shoppers"
         }
       ]
     },
@@ -356,12 +364,33 @@
   ],
   "waiting": [
     {
-      "text": "Schedule the 23–29 Nov posts and reel",
-      "why": "4 Facebook/Instagram posts (Tue–Sun) and the Friday reel are ready in Drive.",
-      "due": "2026-11-23",
+      "text": "Check the prices on 4 new products",
+      "why": "Tirolo 900 vanities (oak and gloss white), Shaker 900 wall-hung vanity and Tarnos 450 shaving cabinet show a was/now price. Was/now is only allowed if they really sold at the higher price. We won't feature them until you decide.",
+      "due": "2026-11-25",
       "priority": "high",
-      "how": "business.facebook.com › Planner › Schedule › Bulk schedule posts (reel: Create reel). Steps are in the doc in the folder.",
-      "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
+      "how": "WordPress › Products › each product › set the sale price as the regular price (as done on 8 Nov), or tell us the reference price is real",
+      "link": "https://docs.google.com/document/d/1TGxCgFXh31j3-hbtmIYfHVul9i37eFe6flenT5aXgsM/edit"
+    },
+    {
+      "text": "Disconnect Squarespace from Google Merchant Center",
+      "why": "The old Squarespace feed (old prices, no links) was deleted on 16 Nov but came back on its own (new ID 10795606907), so the Squarespace link to Google is still active.",
+      "due": null,
+      "priority": "high",
+      "how": "1) In Squarespace (if the old site still exists): Commerce › Selling tools / Google › Disconnect. 2) merchants.google.com › Settings (cog) › Apps and services (or Linked accounts) › remove Squarespace. 3) Data sources › Squarespace-3d64b156 › ⋮ › Delete.",
+      "link": "https://docs.google.com/document/d/1rQoA2uTPqtOPrvSdyt8jz1ssvK7T2uAJ6IQj2mBOMt8/edit"
+    },
+    {
+      "text": "Stop the add-to-cart bots",
+      "why": "29 bot add-to-carts from overseas on 20–22 Nov (no orders, no Australians).",
+      "due": null,
+      "priority": "medium",
+      "how": "WordPress › Payments (WooPayments) › Settings › Fraud protection, or add an add-to-cart rate limiter"
+    },
+    {
+      "text": "Approve the 4 SEO page fixes after Wednesday",
+      "why": "Gooseneck, tapware warranty, handmade sink and shower-rail guides are on Google's first page but get almost no clicks. Note the date you apply them so Ash can measure them.",
+      "due": "2026-11-30",
+      "priority": "medium"
     },
     {
       "text": "Post the 2 Google updates",
@@ -440,7 +469,7 @@
         "date": "2026-11-24",
         "time": "7:30 pm",
         "kind": "facebook",
-        "what": "Post 1: Forio double-bowl quartz sinks ($785 / $1,049)",
+        "what": "Post 1: Forio double-bowl quartz sinks ($785 / $1,049) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
@@ -453,7 +482,7 @@
         "date": "2026-11-26",
         "time": "7:30 pm",
         "kind": "facebook",
-        "what": "Post 2: Lucito floor-mounted bath filler, 5 finishes ($749 / $799)",
+        "what": "Post 2: Lucito floor-mounted bath filler, 5 finishes ($749 / $799) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
@@ -467,27 +496,41 @@
         "date": "2026-11-27",
         "time": "7:30 pm",
         "kind": "reel",
-        "what": "Reel: Lucito wall mixer and spout, 4 finishes ($219 / $249)",
+        "what": "Reel: Lucito wall mixer and spout, 4 finishes ($219 / $249) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
         "date": "2026-11-28",
         "time": "9:00 am",
         "kind": "facebook",
-        "what": "Post 3: Lucito twin shower on rail ($489 / $529)",
+        "what": "Post 3: Lucito twin shower on rail ($489 / $529) (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       },
       {
         "date": "2026-11-29",
         "time": "10:00 am",
         "kind": "facebook",
-        "what": "Post 4: Lucito toilet roll holder, 6 finishes ($33 / $37), or the vanity article if published",
+        "what": "Post 4: Lucito toilet roll holder, 6 finishes ($33 / $37), or the vanity article if published (scheduled ✓)",
         "link": "https://drive.google.com/drive/folders/1EUGdoI9Jd8CdP6tvPq2n-fvl8J26lss1"
       }
     ],
     "note": "Posts, reel and Google updates are in the Week of 23 Nov 2026 folder in Drive."
   },
   "latest": [
+    {
+      "date": "2026-11-23",
+      "type": "Report",
+      "title": "Weekly report, 16–22 Nov",
+      "by": "bd-analytics-reporter",
+      "url": "https://docs.google.com/document/d/1rQoA2uTPqtOPrvSdyt8jz1ssvK7T2uAJ6IQj2mBOMt8/edit"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "Plan",
+      "title": "Weekly plan, 23 Nov (for 30 Nov – 6 Dec)",
+      "by": "bd-marketing-lead",
+      "url": "https://docs.google.com/document/d/1TGxCgFXh31j3-hbtmIYfHVul9i37eFe6flenT5aXgsM/edit"
+    },
     {
       "date": "2026-11-19",
       "type": "Blog article",
@@ -529,20 +572,6 @@
       "title": "Weekly plan, 16 Nov (for 23–29 Nov)",
       "by": "bd-marketing-lead",
       "url": "https://docs.google.com/document/d/1rwFvfpquBIfga3VAioulI3oBS6qiyy0Xyh9hhOC_QsM/edit"
-    },
-    {
-      "date": "2026-11-16",
-      "type": "Report",
-      "title": "Weekly report, 9–15 Nov",
-      "by": "bd-analytics-reporter",
-      "url": "https://docs.google.com/document/d/1QMAz5SP0LIEpbsAVoudcXuL0LcyQToC9zhdCDmzZja0/edit"
-    },
-    {
-      "date": "2026-11-13",
-      "type": "Reel",
-      "title": "Sample reel: Lucito Shower Shelf, 6 finishes",
-      "by": "bd-video-creator",
-      "url": "https://drive.google.com/file/d/13aXX8GkwPJugzkSOjkO1P3sjcDPVmxz5/view"
     }
   ]
 }
