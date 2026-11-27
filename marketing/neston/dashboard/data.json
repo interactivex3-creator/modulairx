@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-27",
   "schedule": [
     {
       "day": "Monday",
@@ -10,10 +10,10 @@
         "neston-marketing-lead",
         "neston-chat-optimiser"
       ],
-      "next": "2026-11-23",
+      "next": "2026-11-30",
       "connectors_ok": true,
-      "connector_note": "All 5 connectors worked (Search Console via Easy MCP, Google Business Profile, Gmail, Drive, Netlify). GA4 not used.",
-      "last_run": "2026-11-16",
+      "connector_note": "All 5 connectors worked. Reseller form entries need WPForms Pro to count.",
+      "last_run": "2026-11-23",
       "last_status": "ok"
     },
     {
@@ -28,34 +28,59 @@
         "neston-spec-sheet-designer",
         "neston-compliance-reviewer"
       ],
-      "next": "2026-11-25",
+      "next": "2026-12-02",
       "connectors_ok": true,
-      "connector_note": "All connectors worked (WordPress, Drive, ElevenLabs, Runway, Netlify). Runway credits are low.",
-      "last_run": "2026-11-18",
-      "last_status": "ok"
+      "connector_note": "25 Nov run stopped after 2 minutes: the account usage limit was reached. No content was made for 30 Nov–6 Dec.",
+      "last_run": "2026-11-25",
+      "last_status": "failed"
     }
   ],
   "waiting": [
     {
       "priority": "high",
-      "text": "Approve and switch on the footer social links snippet",
-      "why": "Adds Facebook, Instagram and LinkedIn icons to the footer on every page. Right now the site doesn't link to any Neston social page, so Google can't connect them to the business.",
-      "how": "Open the approval link, approve, then wp-admin › Code Snippets › turn on \"Neston: social links in footer\". Tell Claude when it's on so it can check the pages.",
-      "link": "https://mcp.wpvibe.ai/approve/op_087ed90366f54fb1?t=NYcHUtS5kWw39jyV1-Qu8yf6JqW3iFzSrb_aAYDaqZI",
-      "due": "2026-11-23"
+      "text": "Switch on the footer social links snippet (#415)",
+      "why": "You approved it on 27 Nov, but it's saved OFF, so the icons aren't on the site yet.",
+      "how": "wp-admin › Code Snippets › \"Neston: social links in footer\" › Active › Update. Tell Claude so it can check the pages.",
+      "due": "2026-11-28"
+    },
+    {
+      "priority": "high",
+      "text": "Decide: re-run the Wednesday content for 30 Nov–6 Dec",
+      "why": "The 25 Nov run failed (usage limit), so there are no posts, reel, article or spec sheet for next week.",
+      "how": "Ask Claude to run it now, or skip a week.",
+      "due": "2026-11-29"
+    },
+    {
+      "priority": "medium",
+      "text": "Request indexing for the 3 range pages",
+      "why": "From Monday's report: /linear-drains/, /square-tile-insert-grates/ and /outdoor-drains/.",
+      "how": "Search Console › URL inspection › paste each URL › Request indexing.",
+      "link": "https://docs.google.com/document/d/1omHe4R4V2ws5MzyOdOkkQVwzqtra4-c-Od7oOucpm70/edit"
+    },
+    {
+      "priority": "medium",
+      "text": "Decide how to count reseller enquiries",
+      "why": "The contact form entries can't be counted without WPForms Pro, so the weekly report can't track enquiries.",
+      "link": "https://docs.google.com/document/d/1omHe4R4V2ws5MzyOdOkkQVwzqtra4-c-Od7oOucpm70/edit"
+    },
+    {
+      "priority": "medium",
+      "text": "Confirm 3 points on the RRP price list",
+      "why": "1200mm coloured kits $479 (site) vs $469 (workbook); 330mm grate $319 vs $299; component codes not on the website.",
+      "link": "https://docs.google.com/document/d/1PnW8hloMQbQG7ctoGbVGSSUdPRJW2t5yC4zUhrzP3jA/edit"
     },
     {
       "priority": "medium",
       "text": "Add the social links and business details in AIOSEO",
       "why": "AIOSEO's social profiles, logo and phone are all empty, so Google gets no list of Neston's official pages.",
-      "how": "AIOSEO › Social Networks › Social Profiles: Facebook, Instagram (instagram.com/neston_architectural), LinkedIn (linkedin.com/company/nestondrains) › Save. Then Search Appearance › Global Settings › Knowledge Graph: Organization, Neston Architectural Drains, +61 481 080 060, square logo › Save.",
+      "how": "AIOSEO › Social Networks › Social Profiles: Facebook, Instagram (instagram.com/neston_architectural), LinkedIn (linkedin.com/company/nestondrains) › Save. Then Search Appearance › Global Settings › Knowledge Graph: Organization, Neston Architectural Drains, square logo › Save.",
       "due": "2026-11-24"
     },
     {
       "priority": "medium",
       "text": "Send the real Facebook page address",
       "why": "The link you sent is a share link. It works for visitors, but Google and AIOSEO need the real page address.",
-      "how": "Open the page on a computer and copy the address bar (facebook.com/…), or check Settings › Page setup › Username. Reply in Claude."
+      "how": "Meta Business Suite › Settings › Business assets › Pages › Neston › copy the Page ID and send it in Claude."
     },
     {
       "priority": "medium",
@@ -63,22 +88,6 @@
       "why": "Adds the wedge wire and linear installation guides plus the handoff rule to Kevin's knowledge file (with a backup).",
       "how": "Use the approval link from Claude, turn the snippet on, open any wp-admin page once, then turn it off. Claude checks it ran.",
       "due": "2026-11-23"
-    },
-    {
-      "priority": "medium",
-      "text": "Schedule the LinkedIn post: DN40 isn't 40mm (Fri 27 Nov, 8:30 am)",
-      "why": "Promotes the new outlet sizes Journal guide to plumbers and specifiers.",
-      "how": "LinkedIn › Neston page › Start a post › add the image and alt text › paste the text › clock icon › Fri 27 Nov 8:30 am › Schedule.",
-      "link": "https://docs.google.com/document/d/1cROu9Q9qQh5jyEdGP7bE3kpHddPhnbzpXvvy6MVeOiA/edit",
-      "due": "2026-11-27"
-    },
-    {
-      "priority": "medium",
-      "text": "Post the 2 Google Business Profile updates (Tue 24 and Fri 27 Nov)",
-      "why": "Google posts can't be scheduled in Meta. Post them yourself on the day.",
-      "how": "business.google.com › Add update › photo gbp-N.jpg › paste text › Learn more › link › Post. Text is in the Week of 23 Nov posting doc.",
-      "link": "https://docs.google.com/document/d/1mCnJoI0Rzco8EwlPM9VeLYj41YU29JzPQieyFDdjen0/edit",
-      "due": "2026-11-24"
     },
     {
       "priority": "medium",
@@ -121,81 +130,81 @@
   ],
   "calendar": {
     "week_of": "2026-11-23",
-    "note": "Planned for next week. The owner posts and approves everything; nothing goes out automatically.",
+    "note": "Week of 23 Nov: all posts are done. The 25 Nov content run failed (usage limit), so next week has no posts yet.",
     "items": [
       {
         "date": "2026-11-23",
         "time": "8:13 am",
         "kind": "run",
-        "what": "Monday run: weekly report and plan"
+        "what": "Done ✓ Monday run: weekly report and plan"
       },
       {
         "date": "2026-11-23",
         "time": "7:00 pm",
         "kind": "facebook",
-        "what": "Facebook + Instagram post 1: wedge wire drain installation guide",
+        "what": "Posted ✓ Facebook + Instagram post 1: wedge wire drain installation guide",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-24",
         "time": "8:00 am",
         "kind": "reel",
-        "what": "Reel on LinkedIn: Square Tile Insert or Square Max? 10mm or 20mm tile",
+        "what": "Posted ✓ Reel on LinkedIn: Square Tile Insert or Square Max? 10mm or 20mm tile",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-24",
         "time": "10:00 am",
         "kind": "google",
-        "what": "Google post: 200mm square wedge wire floor waste",
+        "what": "Posted ✓ Google post: 200mm square wedge wire floor waste",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-25",
         "time": "8:30 am",
         "kind": "linkedin",
-        "what": "LinkedIn post: linear or square? Let the floor layout decide",
+        "what": "Posted ✓ LinkedIn post: linear or square? Let the floor layout decide",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-25",
         "time": "2:37 pm",
         "kind": "run",
-        "what": "Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, 1 spec sheet (linear tile insert kits), compliance check"
+        "what": "FAILED (usage limit) · Wednesday run: Journal article draft, Google, LinkedIn, Facebook and Instagram posts, 1 reel, 1 spec sheet (linear tile insert kits), compliance check"
       },
       {
         "date": "2026-11-26",
         "time": "8:30 am",
         "kind": "linkedin",
-        "what": "LinkedIn post: stocking Neston, for resellers",
+        "what": "Posted ✓ LinkedIn post: stocking Neston, for resellers",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-26",
         "time": "7:00 pm",
         "kind": "reel",
-        "what": "Reel on Facebook + Instagram: Square Tile Insert or Square Max?",
+        "what": "Posted ✓ Reel on Facebook + Instagram: Square Tile Insert or Square Max?",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-27",
         "time": "8:30 am",
         "kind": "linkedin",
-        "what": "LinkedIn post: DN40 isn't 40mm (shower drain outlet sizes guide)",
+        "what": "Posted ✓ LinkedIn post: DN40 isn't 40mm (shower drain outlet sizes guide)",
         "link": "https://docs.google.com/document/d/1cROu9Q9qQh5jyEdGP7bE3kpHddPhnbzpXvvy6MVeOiA/edit"
       },
       {
         "date": "2026-11-27",
         "time": "10:00 am",
         "kind": "google",
-        "what": "Google post: specification and detailing support",
+        "what": "Posted ✓ Google post: specification and detailing support",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       },
       {
         "date": "2026-11-28",
         "time": "9:00 am",
         "kind": "facebook",
-        "what": "Facebook + Instagram post 2: brushed brass linear tile insert",
+        "what": "Posted ✓ Facebook + Instagram post 2: brushed brass linear tile insert",
         "link": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
       }
     ]
@@ -207,8 +216,8 @@
       "title": "Marketing Lead",
       "role": "Plans campaigns and the calendar, coordinates the team, and runs the 2027 direct-launch plan. Reseller-first until then.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-18",
+      "last_update": "2026-11-23",
+      "next_run": "2026-11-30",
       "face": {
         "skin": "#F1C7A3",
         "hair": "#2B1E16",
@@ -218,6 +227,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-23",
+          "text": "Weekly plan for 30 Nov–6 Dec: where-to-buy, Google profile basics, better titles on 2 posts; brief for a custom-length linear drains article"
+        },
         {
           "date": "2026-11-16",
           "text": "Set this week's 3 priorities: indexing fixes, more clicks from pages that already rank, Google Profile basics"
@@ -251,7 +264,7 @@
       "role": "Technical Journal guides (zero-threshold, NCC 2022, 316 vs 304, falls and outlets) and on-page and technical SEO. Saves drafts only.",
       "status": "active",
       "last_update": "2026-11-21",
-      "next_run": "2026-11-25",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#E8B894",
         "hair": "#6B4226",
@@ -293,8 +306,8 @@
       "title": "Local SEO & Google Profile Manager",
       "role": "Google Business Profile, reviews, directories and consistent business details. Drafts only; the owner posts.",
       "status": "active",
-      "last_update": "2026-11-21",
-      "next_run": "2026-11-25",
+      "last_update": "2026-11-27",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#C68E6A",
         "hair": "#1E1E1E",
@@ -304,6 +317,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-27",
+          "text": "Owner posted both Google posts (24 and 27 Nov)"
+        },
         {
           "date": "2026-11-21",
           "text": "WordPress author name changed to Neston Architectural Drains on all Journal posts"
@@ -336,8 +353,8 @@
       "title": "Analytics Reporter",
       "role": "Reports from Search Console, GA4, Google Business Profile, diib and Kevin chat summaries. Read only.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-23",
+      "last_update": "2026-11-23",
+      "next_run": "2026-11-30",
       "face": {
         "skin": "#8D5A3B",
         "hair": "#141414",
@@ -347,6 +364,10 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-23",
+          "text": "Weekly report 16–22 Nov: search clicks 20 (from 14), avg position 8.6; all 7 key pages indexed; Google profile 9 views, 0 clicks"
+        },
         {
           "date": "2026-11-16",
           "text": "Weekly report: 13 Search clicks (up from 9), 700 impressions, avg position 9.6"
@@ -376,7 +397,7 @@
       "role": "Last check on everything external: Australian Consumer Law, NCC/AS and WaterMark claims, pricing, Spam Act, channel rules.",
       "status": "active",
       "last_update": "2026-11-18",
-      "next_run": "2026-11-25",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#B07A55",
         "hair": "#141414",
@@ -407,7 +428,7 @@
       "role": "WooCommerce product and category copy, spec tables by model, finish and outlet, alt text. Never changes prices.",
       "status": "active",
       "last_update": "2026-11-21",
-      "next_run": "2026-11-25",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#F6D2B8",
         "hair": "#C9A15B",
@@ -470,7 +491,7 @@
       "role": "Spec sheets, install guides, finish cards, brochures and price-list PDFs, made in Canva or Moda.",
       "status": "active",
       "last_update": "2026-11-22",
-      "next_run": "2026-11-25",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#F6D2B8",
         "hair": "#141414",
@@ -492,8 +513,8 @@
       "title": "Video Creator",
       "role": "One reel a week for Facebook, Instagram and LinkedIn: real product photos, an Australian voiceover and music, with the Neston logo on every frame. Never posts.",
       "status": "active",
-      "last_update": "2026-11-21",
-      "next_run": "2026-11-25",
+      "last_update": "2026-11-27",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#E0AC84",
         "hair": "#2B1E16",
@@ -503,6 +524,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-27",
+          "text": "Owner posted the Square Tile Insert vs Square Max reel on LinkedIn, Facebook and Instagram"
+        },
         {
           "date": "2026-11-21",
           "text": "Owner scheduled the 23–29 Nov LinkedIn, Facebook and Instagram posts and the reel"
@@ -527,8 +552,8 @@
       "title": "Social Media Manager",
       "role": "LinkedIn for specifiers and trade, plus Facebook and Instagram for design and local trades. Posts, carousels, reel scripts. Never posts itself.",
       "status": "active",
-      "last_update": "2026-11-21",
-      "next_run": "2026-11-25",
+      "last_update": "2026-11-27",
+      "next_run": "2026-12-02",
       "face": {
         "skin": "#C68E6A",
         "hair": "#2B1E16",
@@ -538,6 +563,10 @@
         "glasses": false
       },
       "done": [
+        {
+          "date": "2026-11-27",
+          "text": "Owner posted all 23–29 Nov LinkedIn, Facebook and Instagram posts, plus the DN40 LinkedIn post"
+        },
         {
           "date": "2026-11-21",
           "text": "Owner scheduled the 23–29 Nov LinkedIn, Facebook and Instagram posts"
@@ -590,8 +619,8 @@
       "title": "Chat Optimiser (for Kevin)",
       "role": "Reviews Kevin's chats, finds missed answers and lost leads, and proposes knowledge-base updates. Never edits Kevin itself.",
       "status": "active",
-      "last_update": "2026-11-16",
-      "next_run": "2026-11-23",
+      "last_update": "2026-11-23",
+      "next_run": "2026-11-30",
       "face": {
         "skin": "#E8B894",
         "hair": "#C9A15B",
@@ -601,6 +630,10 @@
         "glasses": true
       },
       "done": [
+        {
+          "date": "2026-11-23",
+          "text": "Kevin review: 1 chat, a delivery question; lead lost because no contact details were taken. Drafted a where-to-buy answer"
+        },
         {
           "date": "2026-11-16",
           "text": "Kevin review: 1 chat; Kevin gave the tile insert guide to a visitor on a wedge wire drain page"
@@ -613,6 +646,41 @@
     }
   ],
   "latest": [
+    {
+      "date": "2026-11-27",
+      "type": "Social",
+      "title": "All 23–29 Nov posts and the reel posted by the owner",
+      "url": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK",
+      "by": "neston-social-media-manager"
+    },
+    {
+      "date": "2026-11-22",
+      "type": "Price list",
+      "title": "RRP price list (Nov 2026) for approval",
+      "url": "https://drive.google.com/file/d/1V_HvzIJSwnk26mYJ_wA5cPAD9GN4z8bX/view",
+      "by": "neston-spec-sheet-designer"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "Weekly plan",
+      "title": "Weekly plan: 30 Nov–6 Dec",
+      "url": "https://docs.google.com/document/d/1Pg_smzhy_Y3A6CCnZ9IFzIGzgBFFOLv7zVa_uGghCSU/edit",
+      "by": "neston-marketing-lead"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "Kevin review",
+      "title": "Kevin review: 16–22 Nov",
+      "url": "https://docs.google.com/document/d/1LpeY6_uakYVf0ro9s9LTDsIlxHwE2b1aKilRTpfxwmg/edit",
+      "by": "neston-chat-optimiser"
+    },
+    {
+      "date": "2026-11-23",
+      "type": "Weekly report",
+      "title": "Weekly report: 16–22 Nov",
+      "url": "https://docs.google.com/document/d/1omHe4R4V2ws5MzyOdOkkQVwzqtra4-c-Od7oOucpm70/edit",
+      "by": "neston-analytics-reporter"
+    },
     {
       "date": "2026-11-22",
       "type": "Team",
@@ -661,27 +729,6 @@
       "title": "Week of 23 Nov 2026: posts, images and reel",
       "by": "neston-social-media-manager",
       "url": "https://drive.google.com/drive/folders/1491sHNBWMyK5bP8zzgt4qJvXYqgv-ciK"
-    },
-    {
-      "date": "2026-11-18",
-      "type": "Reel",
-      "title": "Reel 1: Square Tile Insert vs Square Max",
-      "by": "neston-video-creator",
-      "url": "https://drive.google.com/file/d/1Vyrqd2EnDW3s3cZYDuEIPaaZ9zY95qxc/view"
-    },
-    {
-      "date": "2026-11-18",
-      "type": "Draft",
-      "title": "Journal draft: Shower Drain Outlet Sizes in Australia",
-      "by": "neston-seo-content-writer",
-      "url": "https://docs.google.com/document/d/1uxOv58hjSqi7y4YhQ_8fOLrEDT_zXaIeHPUDVzpjFdg/edit"
-    },
-    {
-      "date": "2026-11-18",
-      "type": "Copy",
-      "title": "Product copy: wedge wire, 200mm floor waste, 1200mm kits",
-      "by": "neston-product-copywriter",
-      "url": "https://docs.google.com/document/d/1E6dDkz_VmzmgneMI8zOMzjFRe5sTFfWzpWdUlXsdtXc/edit"
     }
   ]
 }
