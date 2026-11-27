@@ -1,7 +1,7 @@
 # Neston RRP price list (Nov 2026): notes for approval
 
 **File:** `Neston-RRP-Price-List-Nov-2026.pdf` (A4, 5 pages, 103 lines). It uses the house spec-sheet style: ink header, white logo and Geist Mono labels.
-**Status:** draft for the owner to approve. Don't send it to resellers or put it on the site until it's approved.
+**Status:** prices approved by the owner on 27 Nov 2026 ("go with the higher prices"): $479 for the 1200mm coloured kits and $319 for the 330mm grate, which is what the PDF already shows. Still open: the components section (point 2) and the finish names (point 3).
 
 **Compliance check (BRAND.md rules): PASS, with 3 items to confirm below.**
 - RRP only: no trade prices, no was/now pricing, and nothing claiming to be "best" or "cheapest".
