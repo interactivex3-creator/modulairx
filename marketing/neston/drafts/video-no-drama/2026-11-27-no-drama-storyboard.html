@@ -1,0 +1,356 @@
+<title>Neston "No Drama" Storyboard</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Montserrat:wght@600;800&display=swap">
+<style>
+/* Layout: a production sheet. Each scene is a 9:16 frame beside its script notes, read top to bottom like a shooting board. */
+:root{
+  --paper:#ECEAE5; --surface:#F7F6F3; --ink:#1E1E1E; --muted:#5E5C58; --line:#D3D0C8;
+  --brass:#B08D57; --rust:#A4452C; --flag-bg:#F4E9D8;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Geist",system-ui,sans-serif; --mono:"Geist Mono",ui-monospace,monospace;
+  --frame-type:"Anton","Impact","Arial Narrow",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#161616; --surface:#1F1F1E; --ink:#EDEBE6; --muted:#A5A29B; --line:#34332F; --brass:#C9A56C; --rust:#D0684C; --flag-bg:#2B241A; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#161616; --surface:#1F1F1E; --ink:#EDEBE6; --muted:#A5A29B; --line:#34332F; --brass:#C9A56C; --rust:#D0684C; --flag-bg:#2B241A; color-scheme:dark}
+
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--body)}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,5vw,46px);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:22px;margin-bottom:14px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
+.lede{max-width:64ch;color:var(--muted);margin:14px 0 0}
+.specs{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font:13px var(--mono);color:var(--muted)}
+.specs b{color:var(--ink);font-weight:500}
+section{margin-top:52px}
+
+/* Flag box */
+.flag{background:var(--flag-bg);border-left:3px solid var(--brass);padding:18px 20px;border-radius:2px}
+.flag h3{font-size:16px;margin-bottom:6px}
+.flag p{margin:0;max-width:72ch}
+
+/* Style DNA */
+.dna{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.dna div{border-top:1px solid var(--line);padding-top:10px}
+.dna b{display:block;font-family:var(--display);font-weight:600;margin-bottom:4px}
+.dna p{margin:0;color:var(--muted);font-size:14px}
+
+/* Scenes */
+.scene{display:grid;grid-template-columns:230px minmax(0,1fr);gap:26px;padding:26px 0;border-top:1px solid var(--line)}
+.scene:last-child{border-bottom:1px solid var(--line)}
+@media (max-width:620px){.scene{grid-template-columns:1fr}.scene .frame{width:min(260px,100%)}}
+.meta{display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;margin-bottom:10px}
+.tc{font:500 13px var(--mono);font-variant-numeric:tabular-nums;color:var(--brass)}
+.meta h3{font-size:18px}
+.vo{font-family:var(--display);font-weight:600;font-size:18px;line-height:1.35;margin:0 0 14px;max-width:46ch}
+.vo::before{content:"VO  ";font:500 11px var(--mono);letter-spacing:.1em;color:var(--muted);vertical-align:2px}
+dl{display:grid;grid-template-columns:96px minmax(0,1fr);gap:6px 14px;margin:0;font-size:14px}
+dt{font:500 11px/1.9 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+dd{margin:0}
+.note{margin-top:12px;font-size:13px;color:var(--muted);border-left:2px solid var(--line);padding-left:10px}
+
+/* ---------- The video frames (fixed look: they are the film, not the page) ---------- */
+.frame{position:relative;width:100%;max-width:100%;aspect-ratio:9/16;overflow:hidden;container-type:inline-size;border-radius:3px;
+  background:
+    radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(40,36,30,.42) 100%),
+    radial-gradient(circle at 18% 22%,rgba(176,141,87,.16),transparent 40%),
+    radial-gradient(circle at 85% 75%,rgba(110,120,128,.22),transparent 45%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .2  0 0 0 0 .18  0 0 0 0 .15  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+    #D9D5CC;
+  box-shadow:0 1px 0 rgba(0,0,0,.06),0 8px 24px -12px rgba(0,0,0,.35);color:#1E1E1E;font-family:var(--frame-type);text-transform:uppercase;line-height:.92}
+.frame .t{position:absolute;left:7cqw;right:7cqw}
+.s1{font-size:7cqw}.s2{font-size:11cqw}.s3{font-size:16cqw}.s4{font-size:24cqw}.s5{font-size:36cqw}
+.frame img{position:absolute;mix-blend-mode:multiply;max-width:none}
+.whip{position:absolute;inset:0;background:linear-gradient(100deg,transparent 20%,rgba(30,30,30,.14) 45%,transparent 70%);filter:blur(2px)}
+.stamp{position:absolute;border:1.4cqw solid #B02A20;color:#B02A20;padding:1cqw 3cqw;transform:rotate(-14deg);font-size:13cqw;line-height:1;opacity:.9;
+  mask-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/><feComponentTransfer><feFuncA type='discrete' tableValues='1 1 1 1 1 1 0 1 1 1'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>")}
+.prop{position:absolute;border:1px dashed rgba(30,30,30,.45);font:500 3.6cqw/1.25 var(--mono);text-transform:none;color:rgba(30,30,30,.7);display:flex;align-items:center;justify-content:center;text-align:center;padding:2cqw;background:rgba(255,255,255,.18)}
+.bubble{position:absolute;background:#F7F6F3;border-radius:50%;padding:3cqw 5cqw;font:italic 600 6cqw/1 var(--display);text-transform:none;color:#A4452C;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.vert{position:absolute;left:4cqw;top:14%;writing-mode:vertical-rl;transform:rotate(180deg);font:800 7cqw/1 "Montserrat",sans-serif;letter-spacing:.3em;white-space:nowrap}
+.rust{color:#7A3A22}
+.sw{position:absolute;left:7cqw;right:7cqw;bottom:9%;display:flex;gap:2cqw}
+.sw i{flex:1;aspect-ratio:1;border-radius:50%;box-shadow:inset 0 0 0 .6cqw rgba(0,0,0,.12)}
+.endcard img{mix-blend-mode:normal}
+
+/* Build plan */
+ol.plan{padding-left:20px;margin:0;max-width:70ch}
+ol.plan li{margin-bottom:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tablewrap{overflow-x:auto}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.chip{display:inline-block;font:500 11px var(--mono);padding:2px 7px;border-radius:2px;background:var(--flag-bg);color:var(--ink);white-space:nowrap}
+.script{background:var(--surface);border:1px solid var(--line);padding:18px 20px;font-family:var(--display);font-weight:600;line-height:1.6;max-width:70ch}
+@media (prefers-reduced-motion:no-preference){.frame{transition:transform .2s}.frame:hover{transform:translateY(-2px)}}
+</style>
+
+<div class="wrap">
+  <p class="eyebrow">Storyboard v2 · for review before build</p>
+  <h1>Neston: All of the Drain, None of the Drama</h1>
+  <p class="lede">A 30-second vertical reel in the style of the Bios Life "None of the Bull" ad: dry voiceover, heavy type that builds word by word, cut-out vintage imagery as punchlines, one rubber-stamp gag and whip-blur cuts. Rebuilt in Neston's palette, using Neston's real product photos and only the proof points in BRAND.md.</p>
+  <div class="specs">
+    <span><b>30 s</b> · 10 scenes</span><span><b>1080×1920</b> · 9:16 · 30 fps</span>
+    <span>VO <b>James – Australian</b> (house voice)</span><span>Audience <b>trade + specifiers</b> (Phase 1)</span>
+    <span>CTA <b>Ask your reseller</b></span>
+  </div>
+
+  <section>
+    <div class="flag">
+      <h3>Approved exception: on-screen text allowed for this video</h3>
+      <p>BRAND.md (15 Nov 2026) says Neston videos carry no on-screen text. The owner overrode that rule for this reel on 27 Nov 2026, so the kinetic type stays. The rule still applies to the regular weekly reels.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What we're taking from the reference</h2>
+    <div class="dna">
+      <div><b>Textured ground</b><p>Their blue-grey grunge paper becomes a warm concrete-screed texture with a heavy vignette and a faint brass tint.</p></div>
+      <div><b>Type that builds</b><p>Huge condensed ink capitals land word by word with the VO. Size jumps carry the joke: small setup, giant payoff.</p></div>
+      <div><b>Cut-out punchlines</b><p>Vintage engravings and postcards dropped in flat, with no shadows. Public-domain or licensed only, and no recognisable real people.</p></div>
+      <div><b>One stamp gag</b><p>Their red "STUPID" becomes a red "WISHFUL THINKING". It mocks the spec decision, never the viewer.</p></div>
+      <div><b>Whip-blur cuts</b><p>Directional motion blur between beats, with the product spinning out on the tagline.</p></div>
+      <div><b>Deadpan voice</b><p>Fast and dry, never shouty. That also keeps us inside Neston's calm voice: no hype words, no exclamation marks.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Scenes</h2>
+
+    <!-- 1 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="t s2" style="top:30%">You want</div>
+        <div class="t s4" style="top:40%">A drain?</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:00.0 – 0:02.5</span><h3>1 · Hook</h3></div>
+        <p class="vo">You want a drain?</p>
+        <dl>
+          <dt>On screen</dt><dd>"YOU WANT" small, then "A DRAIN?" slams in huge.</dd>
+          <dt>Motion</dt><dd>Hard cut in from black frame 0. Each word snaps in with a slight overshoot. A slow 3% push-in holds through the scene.</dd>
+          <dt>Sound</dt><dd>Music kicks in on frame 1. A low thud lands on "drain".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="t s2" style="top:24%">How about an</div>
+        <div class="t s3" style="top:34%">Architectural</div>
+        <div class="t s4" style="top:46%">Drain</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:02.5 – 0:05.0</span><h3>2 · The pitch</h3></div>
+        <p class="vo">How about an architectural drain…</p>
+        <dl>
+          <dt>On screen</dt><dd>"HOW ABOUT AN" / "ARCHITECTURAL" / "DRAIN", stacked as the words are spoken.</dd>
+          <dt>Motion</dt><dd>Lines type on from the left with a short motion trail, like the reference's "How about smart energy".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="prop" style="right:0;bottom:0;width:78%;height:52%">Public-domain engraving:<br>Roman sewer arch<br>(Cloaca Maxima, 1700s etching)</div>
+        <div class="t s4" style="top:12%">Not that</div>
+        <div class="t s4" style="top:31%">kind.</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:05.0 – 0:07.0</span><h3>3 · "Not that type" gag</h3></div>
+        <p class="vo">…no. Not that kind.</p>
+        <dl>
+          <dt>On screen</dt><dd>"NOT THAT KIND." over an old engraving of a Roman sewer, since the Romans did "architectural drains" first.</dd>
+          <dt>Motion</dt><dd>The engraving slides up from the bottom edge as a flat cut-out. The type punches on "kind".</dd>
+          <dt>Ref beat</dt><dd>Bios Life's wind turbines under "Not that type".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="vert">NESTON</div>
+        <div class="t s2" style="top:14%;left:16cqw">The</div>
+        <div class="t s5" style="top:20%;left:16cqw">316</div>
+        <div class="t s2" style="top:46%;left:16cqw">Stainless steel<br>drain</div>
+        <img src="img/brass-kit.jpg" alt="Neston brushed brass linear tile insert drain kit" style="width:120%;left:-6%;bottom:6%">
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:07.0 – 0:10.5</span><h3>4 · Hero reveal</h3></div>
+        <p class="vo">Neston. The three-sixteen stainless steel drain.</p>
+        <dl>
+          <dt>On screen</dt><dd>The NESTON wordmark runs vertically up the left edge, as Bios Life does. "THE / 316 / STAINLESS STEEL DRAIN" builds beside it.</dd>
+          <dt>Visual</dt><dd>Real photo: the brushed brass 1200mm tile insert kit, set into the paper like it's sitting in a screed bed.</dd>
+          <dt>Motion</dt><dd>The kit rises into place on "Neston". At the end, everything whips off to the right with motion blur.</dd>
+          <dt>Proof point</dt><dd>#1 in BRAND.md: 316 across the whole range.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="t s1" style="top:9%">Plenty of drains are</div>
+        <div class="t s5" style="top:14%">304.</div>
+        <div class="t s3" style="top:39%">Fine.</div>
+        <div class="t s2" style="top:52%">If everyone<br>cleans up.</div>
+        <div class="prop" style="right:0;bottom:0;width:70%;height:30%">Vintage cleaning illustration:<br>scrub brush and bucket<br>(PD / licensed)</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:10.5 – 0:14.0</span><h3>5 · Roast the alternative</h3></div>
+        <p class="vo">Plenty of drains are three-oh-four. Which is fine… if everyone cleans up properly.</p>
+        <dl>
+          <dt>On screen</dt><dd>A giant "304." then "FINE." then "IF EVERYONE CLEANS UP." Soap suds and a few loose hairs creep across the frame as the illustration drops in.</dd>
+          <dt>Motion</dt><dd>The suds spread organically over about 1 second. The illustration drops in with a little paper flutter.</dd>
+          <dt>Ref beat</dt><dd>"9 donuts" and "Toledo", where the joke lands on the competitor.</dd>
+        </dl>
+        <p class="note">Claim check: no brand is named. 304 is described as fine with proper care, and 316 is not claimed to be bleach-proof or maintenance-free. The compliance reviewer signs off on this line before build.</p>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="t s2" style="top:20%">Counting on</div>
+        <div class="t s4" style="top:27%">That</div>
+        <div class="t s2" style="top:44%">is just…</div>
+        <div class="stamp" style="left:6%;top:56%">Wishful<br>thinking</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:14.0 – 0:17.0</span><h3>6 · The stamp</h3></div>
+        <p class="vo">Counting on that is just…</p>
+        <dl>
+          <dt>On screen</dt><dd>The line builds, then a red "WISHFUL THINKING" rubber stamp slams across it on the pause.</dd>
+          <dt>Motion</dt><dd>The stamp scales from 140% to 100% in 3 frames with a 2-frame camera shake. The ink texture stays grainy.</dd>
+          <dt>Sound</dt><dd>A stamp thunk. The music drops out for half a beat.</dd>
+          <dt>Ref beat</dt><dd>"Drinking anything else is just… STUPID".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="t s2" style="top:8%">We've got</div>
+        <div class="t s5" style="top:14%">Five</div>
+        <div class="t s2" style="top:40%">matched<br>finishes</div>
+        <img src="img/stainless-kit.jpg" alt="" style="width:78%;right:-6%;top:56%">
+        <img src="img/bronze-kit.jpg" alt="" style="width:78%;right:-2%;top:61%">
+        <img src="img/gunmetal-kit.jpg" alt="" style="width:78%;right:2%;top:66%">
+        <img src="img/black-kit.jpg" alt="Five Neston linear drain kits in five finishes" style="width:78%;right:6%;top:71%">
+        <div class="sw"><i style="background:#C9CACC"></i><i style="background:#B08D57"></i><i style="background:#7B5A43"></i><i style="background:#4A4B4D"></i><i style="background:#1E1E1E"></i></div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:17.0 – 0:21.0</span><h3>7 · The brag</h3></div>
+        <p class="vo">We've got five matched finishes. Stainless, brass, bronze, gun metal… and black.</p>
+        <dl>
+          <dt>On screen</dt><dd>"WE'VE GOT FIVE MATCHED FINISHES". Five real kit photos stack in, one on each finish name, and a swatch pops for each.</dd>
+          <dt>Motion</dt><dd>Kits drop in on the beat, about 0.35 s apart, with a small bounce on each.</dd>
+          <dt>Proof point</dt><dd>#2 in BRAND.md: five matched PVD finishes.</dd>
+          <dt>Ref beat</dt><dd>"We've got matcha, hand harvested…".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="bubble" style="right:6%;top:8%">I'm so proud.</div>
+        <div class="prop" style="right:0;top:18%;width:58%;height:40%">Vintage illustration:<br>1950s tradesman<br>with spirit level<br>(PD / licensed)</div>
+        <div class="t s3" style="top:60%">Cut to size</div>
+        <div class="t s4" style="top:70%">on site</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:21.0 – 0:24.5</span><h3>8 · Make your plumber proud</h3></div>
+        <p class="vo">Kits you cut to size on site. Your plumber will be so proud.</p>
+        <dl>
+          <dt>On screen</dt><dd>"CUT TO SIZE ON SITE" under a vintage tradesman illustration with an "I'm so proud." speech bubble.</dd>
+          <dt>Motion</dt><dd>A saw-cut wipe slices "CUT TO SIZE" in two, then it snaps back. The bubble pops on "proud".</dd>
+          <dt>Proof point</dt><dd>#3 in BRAND.md: cut-to-size kits with a loose outlet and end caps.</dd>
+          <dt>Ref beat</dt><dd>"Make your mother proud".</dd>
+        </dl>
+        <p class="note">Use an illustration rather than a photo of a real person. The reference used Wernher von Braun, and the brief rules out recognisable people without permission.</p>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="scene">
+      <div class="frame">
+        <div class="whip"></div>
+        <div class="t s2" style="top:22%">All of the</div>
+        <div class="t s4" style="top:30%">Drain</div>
+        <img src="img/brass-kit.jpg" alt="" style="width:70%;left:15%;top:42%;transform:rotate(-6deg)">
+        <div class="t s2" style="top:69%">None of the</div>
+        <div class="t s4" style="top:76%">Drama</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:24.5 – 0:27.0</span><h3>9 · Tagline</h3></div>
+        <p class="vo">All of the drain. None of the drama.</p>
+        <dl>
+          <dt>On screen</dt><dd>"ALL OF THE DRAIN" above the brass kit, "NONE OF THE DRAMA" below.</dd>
+          <dt>Motion</dt><dd>The kit and type lock up, hold for 1 s, then the whole group spins and whip-blurs away, exactly like the reference's "All of the energy, none of the crash".</dd>
+        </dl>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="scene">
+      <div class="frame endcard">
+        <img src="img/bronze-marble-shower.jpg" alt="Neston brushed bronze linear drain in a marble walk-in shower" style="inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%">
+        <img src="img/logo-white.png" alt="Neston logo" style="width:56%;left:22%;top:38%;filter:invert(1);mix-blend-mode:multiply">
+        <div style="position:absolute;left:0;right:0;top:52.5%;text-align:center;font:600 4.2cqw/1.4 'Montserrat',sans-serif;text-transform:none;letter-spacing:.02em">Available through Neston resellers<br>neston.com.au</div>
+      </div>
+      <div>
+        <div class="meta"><span class="tc">0:27.0 – 0:30.0</span><h3>10 · End card</h3></div>
+        <p class="vo">Neston. Ask your reseller.</p>
+        <dl>
+          <dt>On screen</dt><dd>The large Neston logo in ink on the marble wall of a walk-in shower, with the brushed bronze linear drain along the floor below it. "Available through Neston resellers · neston.com.au" sits under the logo.</dd>
+          <dt>Why not black</dt><dd>The reference ends on a black URL card, but the owner rejected dark blocks and grey fallback end cards, so we use the installed photo as the brief asks.</dd>
+          <dt>Motion</dt><dd>A slow 4% push-in toward the drain while the logo fades up.</dd>
+          <dt>Sound</dt><dd>The music resolves on the logo, with a clean ending.</dd>
+        </dl>
+        <p class="note">Phase 1: no price and no "buy now". The CTA points to resellers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Full voiceover script</h2>
+    <div class="script">You want a drain? How about an architectural drain… no. Not that kind. Neston. The three-sixteen stainless steel drain. Plenty of drains are three-oh-four. Which is fine… if everyone cleans up properly. Counting on that is just… [stamp]. We've got five matched finishes. Stainless, brass, bronze, gun metal… and black. Kits you cut to size on site. Your plumber will be so proud. All of the drain. None of the drama. Neston. Ask your reseller.</div>
+    <p class="lede">74 words in 30 s, which is fast and deadpan like the reference. If James can't hold that pace cleanly, cut scene 3's "no." and "Which is".</p>
+  </section>
+
+  <section>
+    <h2>Brand checks</h2>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Rule (BRAND.md)</th><th>How this storyboard handles it</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>No on-screen text on videos</td><td>Overridden by the owner for this reel (27 Nov 2026).</td><td><span class="chip">Approved</span></td></tr>
+        <tr><td>Calm, technical voice; no hype or exclamation marks</td><td>The humour is dry and has no superlatives. Real numbers (316, 304, five finishes) carry the brag.</td><td><span class="chip">Owner taste call</span></td></tr>
+        <tr><td>Only listed proof points</td><td>Uses #1 (316), #2 (five PVD finishes) and #3 (cut-to-size kits). No warranty, no WaterMark claim, no flow or slip figures.</td><td><span class="chip">OK</span></td></tr>
+        <tr><td>304 vs 316 comparison</td><td>Generic grade comparison with no competitor named. Urban-use angle. Check it against the Journal post.</td><td><span class="chip">Compliance review</span></td></tr>
+        <tr><td>Phase 1: no prices, no direct buy</td><td>The CTA is "Ask your reseller".</td><td><span class="chip">OK</span></td></tr>
+        <tr><td>Real product photos, no renders or AI product footage</td><td>All product shots come from neston.com.au. Vintage props are public-domain or licensed.</td><td><span class="chip">OK</span></td></tr>
+        <tr><td>No identifiable people without permission</td><td>Illustrations and engravings only.</td><td><span class="chip">OK</span></td></tr>
+        <tr><td>Installation by a licensed plumber</td><td>The VO already says "your plumber". The caption adds "Install by a licensed plumber".</td><td><span class="chip">OK</span></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Build plan once approved</h2>
+    <ol class="plan">
+      <li><b>Compliance pass</b> on the script and on-screen text (neston-compliance-reviewer).</li>
+      <li><b>Voiceover:</b> ElevenLabs, house voice James – Australian, read deadpan. Scenes are cued to the VO's silences.</li>
+      <li><b>Music:</b> a Runway instrumental, punchier than the usual architectural bed (about 120 BPM, driving drums and bass, with a drop-out for the stamp). Kept at least 6 dB under the voice.</li>
+      <li><b>Props:</b> source the public-domain Roman sewer engraving, cleaning illustration and tradesman illustration, and check each licence.</li>
+      <li><b>Build</b> as a HyperFrames (HTML/GSAP) composition at 1080×1920, because the current make_reel.py can't do kinetic type. Then render the MP4 and a cover frame.</li>
+      <li><b>Hand-over:</b> MP4, cover, Instagram/Facebook and LinkedIn captions, and alt text. The owner posts.</li>
+    </ol>
+    <p class="lede">Type option: the frames use Anton for the reference's condensed punch. Montserrat ExtraBold stays closer to the Neston site but reads wider and less "shouty". Anton is my pick for this piece.</p>
+  </section>
+</div>
